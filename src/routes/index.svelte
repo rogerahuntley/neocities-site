@@ -1,2 +1,1 @@
-blorp! coming soon
-blizzorp! coming soon too
+hello neocities!
