@@ -1,0 +1,45 @@
+:global {
+
+  // root sizes
+  :root {
+    @include media("<tablet"){
+      font-size: 6vmin;
+    }
+    @include media(">=tablet", "<desktop"){
+      font-size: 4vmin;
+    }
+    @include media(">=desktop"){
+      font-size: 3vh;
+    }
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  // helpers
+
+  .hide-mobile{
+    @include media("<tablet"){
+      display:none;
+    }
+  }
+
+  .hide-tablet{
+    @include media(">=tablet", "<desktop"){
+      display:none;
+    }
+  }
+
+  .hide-desktop{
+    @include media(">=desktop"){
+      display:none;
+    }
+  }
+
+}
