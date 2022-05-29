@@ -2,6 +2,7 @@ import adapter from '@sveltejs/adapter-static';
 import sveltePreprocess from 'svelte-preprocess';
 import { resolve } from 'path';
 import { mdsvex } from 'mdsvex';
+import autoprefixer from 'autoprefixer'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -14,7 +15,10 @@ const config = {
           @import './src/styles/variables.scss';
           @import 'include-media/dist/_include-media.scss';
         `
-      }
+      }, 
+      postcss: {
+        plugins: [autoprefixer]
+      },
     }),
     mdsvex({
       extensions: ['.md']
@@ -34,6 +38,7 @@ const config = {
           '@': resolve('./src'),
           '$stores': resolve('./src/stores'),
           '$types': resolve('./src/types'),
+          '$posts': resolve('./src/posts'),
         }
       }
     }
