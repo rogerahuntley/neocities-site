@@ -21,7 +21,10 @@ const config = {
       },
     }),
     mdsvex({
-      extensions: ['.md']
+      extensions: ['.md'],
+      layout: {
+        post: 'src/routes/post/_post.svelte'
+      }
     })
   ],
   
@@ -38,7 +41,7 @@ const config = {
           '@': resolve('./src'),
           '$stores': resolve('./src/stores'),
           '$types': resolve('./src/types'),
-          '$posts': resolve('./src/posts'),
+          '$posts': resolve('./src/routes/post'),
         }
       }
     }
