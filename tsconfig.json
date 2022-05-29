@@ -1,26 +1,26 @@
 {
-	"extends": "./.svelte-kit/tsconfig.json",
-	"compilerOptions": {
-		"allowJs": true,
-		"checkJs": true,
-		"outDir": "build",
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"lib": ["es2020", "DOM"],
-		"moduleResolution": "node",
-		"module": "es2020",
-		"resolveJsonModule": true,
-		"skipLibCheck": true,
-		"sourceMap": true,
-		"strict": true,
-		"target": "es2020",
-		"noImplicitAny": false,
-		"paths": {
-			"$lib": ["src/lib"],
-			"$lib/*": ["src/lib/*"],
-			"$stores/*": ["src/stores/*"],
-			"$types/*": ["src/types/*"],
-			"@/*": ["src/*"]
-		}
-	}
+  "extends": "./.svelte-kit/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "outDir": "build",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2020", "DOM"],
+    "moduleResolution": "node",
+    "module": "es2020",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2020",
+    "noImplicitAny": false,
+    "paths": {
+      "$lib": ["src/lib"],
+      "$lib/*": ["src/lib/*"],
+      "$stores/*": ["src/stores/*"],
+      "$types/*": ["src/types/*"],
+      "@/*": ["src/*"]
+    }
+  }
 }
