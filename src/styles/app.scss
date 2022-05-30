@@ -43,5 +43,41 @@
       display:none;
     }
   }
+  
+  #svelte { // basically body
+    display: grid;
+    
+    grid-template-areas:  "header"
+                          "navbar"
+                          "main"
+                          "footer";
+    grid-template-rows: auto auto 1fr auto;
 
+    @include media(">=tablet"){
+      grid-template-areas:  "header header"
+                            "navbar main"
+                            "footer footer";
+      grid-template-rows: auto 1fr auto;
+    }
+
+    // set defaults for children
+    .header, #header, & > header {
+      grid-area: header;
+    }
+    .navbar, #navbar, & > nav {
+      grid-area: navbar;
+    }
+    .main, #main, & > main {
+      grid-area: main;
+    }
+    .footer, #footer, & > footer {
+      grid-area: footer;
+    }
+  }
+
+  @for $i from 1 through 6 {
+    h#{7 - $i} {
+        font-size: calc(3.4em / 6 * $i);
+    }
+  }
 }
