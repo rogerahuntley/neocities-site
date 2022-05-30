@@ -1,3 +1,7 @@
+<header>
+  roger
+</header>
+
 <nav>
   <ul>
     <li>
@@ -9,6 +13,14 @@
   </ul>
 </nav>
 
+<aside>
+  boop!
+</aside>
+
 <main>
   <slot />
 </main>
+
+<footer>
+  huntley
+</footer>

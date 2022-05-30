@@ -16,12 +16,21 @@
     height: 100%;
   }
 
+  // generic stuff
+
   body {
-    height: 100%;
+    min-height: 100%;
   }
 
   button {
     cursor: pointer;
+  }
+
+  // header sizes lol
+  @for $i from 1 through 6 {
+    h#{7 - $i} {
+        font-size: calc(2rem / 6 * $i);
+    }
   }
 
   // helpers
@@ -44,40 +53,64 @@
     }
   }
   
+  // set up main grid
+
   #svelte { // basically body
     display: grid;
-    
+    margin: auto;
+    background: url("/images/train.jpg");
+    background-position: 25%;
+    background-size: cover;
+    gap: .2rem;
+
     grid-template-areas:  "header"
-                          "navbar"
+                          "nav"
+                          "aside"
                           "main"
                           "footer";
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto auto auto 1fr auto;
 
-    @include media(">=tablet"){
-      grid-template-areas:  "header header"
-                            "navbar main"
+    @include media(">=tablet", "<desktop"){
+      grid-template-areas:  "header main"
+                            "nav main"
+                            "aside main"
                             "footer footer";
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-columns: 5rem 1fr;
+      max-width: 50rem;
+    }
+
+    @include media(">=desktop"){
+      grid-template-areas:  "header header header"
+                            "nav main aside"
+                            "footer footer footer";
       grid-template-rows: auto 1fr auto;
+      grid-template-columns: 5rem 1fr 5rem;
+      max-width: 50rem;
     }
 
     // set defaults for children
-    .header, #header, & > header {
-      grid-area: header;
+    @mixin defaults($element) {
+      grid-area: $element;
+      background-color: rgba(whitesmoke, .8);
+      border-radius: .2rem;
+      padding: .2rem;
     }
-    .navbar, #navbar, & > nav {
-      grid-area: navbar;
-    }
-    .main, #main, & > main {
-      grid-area: main;
-    }
-    .footer, #footer, & > footer {
-      grid-area: footer;
-    }
-  }
 
-  @for $i from 1 through 6 {
-    h#{7 - $i} {
-        font-size: calc(3.4em / 6 * $i);
+    & > .header, & > #header, & > header {
+      @include defaults(header);
+    }
+    & > .nav, & > #nav, & > nav {
+      @include defaults(nav);
+    }
+    & > .aside, & > #aside, & > aside {
+      @include defaults(aside);
+    }
+    & > .main, & > #main, & > main {
+      @include defaults(main);
+    }
+    & > .footer, & > #footer, & > footer {
+      @include defaults(footer);
     }
   }
 }

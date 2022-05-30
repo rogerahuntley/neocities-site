@@ -20,7 +20,7 @@
   {#each posts as post}
     <li>
       <h2>
-        <a href={`post/${post.path}`}>
+        <a href={`/post/${post.path}`}>
           {post.metadata.title}
         </a>
       </h2>

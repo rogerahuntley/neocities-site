@@ -44,7 +44,8 @@ const config = {
           '$posts': resolve('./src/routes/post'),
         }
       }
-    }
+    },
+    trailingSlash: 'always'
   }
 };
 
