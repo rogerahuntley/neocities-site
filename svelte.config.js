@@ -21,14 +21,15 @@ const config = {
       },
     }),
     mdsvex({
-      extensions: ['.md'],
+      extensions: ['.md', '.svx'],
       layout: {
-        post: 'src/routes/post/_post.svelte'
+        post: 'src/routes/post/_post.svelte',
+        lexicon: 'src/lib/lexicon/_lexicon.svelte'
       }
     })
   ],
   
-  extensions: ['.svelte', '.md'],
+  extensions: ['.svelte', '.md', '.svx'],
 
   kit: {
     adapter: adapter(),

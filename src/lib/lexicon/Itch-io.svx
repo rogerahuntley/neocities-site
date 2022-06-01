@@ -1,0 +1,7 @@
+---
+name: Itch.io
+---
+
+Itch.io is an amazing platform for independent digital creators with a focus on game development. I hesitate to say it’s an amazing marketplace (although that is its biggest namesake) because it’s a marketplace and *so* much more. Itch is probably primarily thought of as a place to host your bedroom indie works, while simultaneously being a place to find a ton of great titles, tools and works made by other people. Again, I hesitate to say *games*, because you can upload tabletop games, art software, game assets, comics and more – on one collective marketplace. It offers different kinds of sales architectures: traditional sales, paying forward, pay what you want, free, bundles, etc. 
+
+On top of all of this, however, itch.io is a platform for creators. Itch is also home to those wishing to host game jams, write devlogs, and talk in dev forums. You can follow your favorite creators, give feedback on projects, participate in community discussions, and explore through a huge repository of works by passionate creatives.

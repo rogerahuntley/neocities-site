@@ -2,19 +2,6 @@
 
 :global {
 
-  // root sizes
-  :root {
-    @include media("<tablet"){
-      font-size: 6vmin;
-    }
-    @include media(">=tablet", "<desktop"){
-      font-size: 4vmin;
-    }
-    @include media(">=desktop"){
-      font-size: 3vh;
-    }
-  }
-
   // generic stuff
 
   html, body {
@@ -28,7 +15,29 @@
   // header sizes lol
   @for $i from 1 through 6 {
     h#{7 - $i} {
-        font-size: calc(2rem / 6 * $i);
+        font-size: calc(1.6rem / 6 * $i);
+    }
+  }
+
+  // helpers
+
+  .hidden {
+    display: none;
+  }
+
+  // responsive stuff
+
+  // root sizes
+
+  :root {
+    @include media("<tablet"){
+      font-size: 6vmin;
+    }
+    @include media(">=tablet", "<desktop"){
+      font-size: 4vmin;
+    }
+    @include media(">=desktop"){
+      font-size: 3vh;
     }
   }
 

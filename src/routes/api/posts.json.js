@@ -1,6 +1,6 @@
 // returns list of all post
 export const get = async () => {
-  const postFiles = import.meta.glob('$posts/**/*.md');
+  const postFiles = import.meta.glob('$posts/**/*.svx');
 
   const allPosts = await Promise.all(
     Object.entries(postFiles).map(async ([path, resolver]) => {
@@ -8,7 +8,7 @@ export const get = async () => {
 
       return {
         metadata,
-        path: path.replace(".md", "")
+        path: path.replace(".svx", "")
       }
     })
   )
