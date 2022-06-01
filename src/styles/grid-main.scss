@@ -1,0 +1,59 @@
+:global {
+  #grid-main { // basically body
+    height: 100%;
+    display: grid;
+    margin: auto;
+    gap: .2rem;
+    padding: .2rem;
+
+    grid-template-areas:  "header"
+                          "nav"
+                          "aside"
+                          "main"
+                          "footer";
+    grid-template-rows: auto auto auto 1fr auto;
+
+    @include media(">=tablet", "<desktop"){
+      grid-template-areas:  "header main"
+                            "nav main"
+                            "aside main"
+                            "footer footer";
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-columns: 5rem 1fr;
+      max-width: 50rem;
+    }
+
+    @include media(">=desktop"){
+      grid-template-areas:  "header header header"
+                            "nav main aside"
+                            "footer footer footer";
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns: 5rem 1fr 5rem;
+      max-width: 50rem;
+    }
+
+    // set defaults for children
+    @mixin defaults($element) {
+      grid-area: $element;
+      background-color: rgba(whitesmoke, .8);
+      border-radius: .2rem;
+      padding: .2rem;
+    }
+
+    & > .header, & > #header, & > header {
+      @include defaults(header);
+    }
+    & > .nav, & > #nav, & > nav {
+      @include defaults(nav);
+    }
+    & > .aside, & > #aside, & > aside {
+      @include defaults(aside);
+    }
+    & > .main, & > #main, & > main {
+      @include defaults(main);
+    }
+    & > .footer, & > #footer, & > footer {
+      @include defaults(footer);
+    }
+  }
+}
