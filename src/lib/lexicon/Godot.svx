@@ -1,12 +1,17 @@
 ---
 name: Godot
+site: https://godotengine.org/
+discord: https://discord.com/invite/4JBkykG
+twitter: https://twitter.com/godotengine
 ---
 
 Godot is a super-cool, lightweight, open-source game engine. And I mean – super cool. *mr freeze* And super open-source. (MIT License) If you’re active at all in the game development community, you’ve almost certainly heard of Godot - those who use it, *adore* it. That’s because it’s easy to use, community driven, extensible, and just plain *fun*. Sure, some people get kind of put-off by the cult-like following Godot has garnered, but I think that the passion is warranted. It is, however, not without *some* limitations. Unreal Engine and Unity completely outclass it when it comes to 3D game development (although I feel like the reverse can be said about 2D). That said, the upcoming Godot 4 release (feel like we’ve been waiting for godot 4 forever) should close that gap in performance, as well as coming with a ton of other changes and improvements. Keep an eye out for news [here](https://godotengine.org/news).
 
+---
+
 Text-based rabbit holes:
 
-* [Official Docs](https://docs.godotengine.org/en/stable/index.html) (They're actually quite good)
+* [Official Docs](https://docs.godotengine.org/en/stable/index.html) (They're really quite good)
 * [Godot Recipes](https://kidscancode.org/godot_recipes/basics/)
 * [carrotcake devlog](https://blog.carrotcake.studio/)
 
@@ -16,5 +21,3 @@ Godot Youtubers:
 * [uheartbeast](https://www.youtube.com/c/uheartbeast)
 * [GodotAcademy](https://www.youtube.com/c/GodotAcademy)
 * [Gdquest](https://www.youtube.com/c/Gdquest)
-
-Note: I’ve also heard good things about [Bevy](https://bevyengine.org/), and would love to try that out sometime soon.

@@ -1,5 +1,8 @@
 ---
 name: Godot Wild Jam
+site: https://godotwildjam.com/
+discord: https://discord.com/invite/eUYMFqT
+twitter: https://twitter.com/godotjam
 ---
 
 The Godot Wild Jam is a regular Godot-based game jam that is really popular in the Godot Community. This Jam is for a week (9 days, covers two weekends) every month. The themes of this jam are randomized and then community chosen, if that sounds interesting to you, check out the discord, or play some of the games on itch.io!
