@@ -1,0 +1,14 @@
+---
+title: Updates to the site
+date: "2022-6-3"
+---
+
+gaming gaming gaming gaming gaming
+
+added mdsvex
+
+formatted main front end, stilling working on inital designs and media queries - might end up having a slim vesion for mobile and full for desktop/ tablet, wacky desktop styles are so much funner
+
+3-4 other personal sites for reference:
+[https://www.furudean.com/](furudean.com)
+add more
