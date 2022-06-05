@@ -4,12 +4,23 @@
 
   // generic stuff
 
-  html, body {
-    height: 100%;
-  }
-
   button {
     cursor: pointer;
+  }
+
+  pre {
+    font-family: monospace;
+    white-space: pre-wrap;
+  }
+
+  code {
+    font-family: monospace;
+    font-size: .8rem;
+  }
+
+  p {
+    display: block;
+    margin-block: .5em;
   }
 
   // header sizes lol
@@ -37,7 +48,7 @@
       font-size: 4vmin;
     }
     @include media(">=desktop"){
-      font-size: 3vh;
+      font-size: 2vh;
     }
   }
 

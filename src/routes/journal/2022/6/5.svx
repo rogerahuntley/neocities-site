@@ -1,0 +1,132 @@
+---
+title: Updates to the site 2
+date: "2022-6-5"
+category: "meta"
+---
+
+<script>
+  import Godot from '$lib/lexicon/Godot.svx';
+  import GodotE from '$lib/examples/2022-6-5/example.svx';
+</script>
+
+I added some components that can be abstracted away and referenced in multiple places across the website -- right now this includes:
+
+* Lexicon (info on Godot, GWJ, Itch)
+* Lists (lists of related links I can drop anywhere)
+* Contant Info
+
+What's really nice about having these is that I can write them up in markdown using mdsvex, and by using front matter I can style that infomation using a mdsvex template.
+
+Take this example, pulled from `Godot.svx`
+
+```markdown
+---
+name: Godot
+site: https://godotengine.org/
+discord: https://discord.com/invite/4JBkykG
+twitter: https://twitter.com/godotengine
+---
+
+Godot is a super-cool, lightweight, open-source game engine.
+```
+
+and this is pulled from '_lexicon.svelte'
+
+```svelte
+<script>
+	export let name = null,
+		site = null,
+		discord = null,
+		twitter = null;
+
+	let hidden = true;
+
+	const toggle = () => {
+		hidden = !hidden;
+	};
+</script>
+
+<button on:click={toggle}>{name}</button>
+{#if !hidden}
+	<aside>
+		<a href={site}>website</a>
+		<a href={discord}>discord</a>
+		<a href={twitter}>twitter</a>
+		<slot />
+	</aside>
+{/if}
+```
+
+which creates a component like you see here:
+
+<GodotE />
+
+Althought I may have made some changes since writing this article, so here's the updated version:
+
+<Godot />
+
+> Note: I went back and converted some existing content from previous articles into these components, turning these into "living" entries
+
+## Style Updates
+
+### CSS Features
+
+So right now, the site looks kind of monkey. 🍌
+
+This is because I'm using a css lib ([the-new-css-reset](https://elad2412.github.io/the-new-css-reset/)) to clear all css styles. I was having issues with Safari where buttons and other elements looked completely different than expected. I was trying to override them, and when I went to look on my phone, the website looked completely different than it did on my Chrome Browser.
+
+I knew I needed a solution. There have been files and libs to do this for ages (css versioning is tricky, but [*CSS3* dates back to pre-Y2k](https://www.w3.org/Style/CSS20/)), but web browsers can do so much more now. the-new-css-reset is remarkably simple, and I like that simplicity. It also clears all css styles, making everything (buttons, links, etc) look like plain text. 🤯
+
+
+So the site looks like plain-text until I specifically re-enable any css feature. I've already done so with a few elements: hx, button, pre tags -- but there's still a lot of work to do. My `app.css` now looks something like this:
+
+```css
+// generic stuff
+html, body {
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+pre {
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+code {
+  font-family: monospace;
+  font-size: .8rem;
+}
+
+// header sizes lol
+@for $i from 1 through 6 {
+  h#{7 - $i} {
+      font-size: calc(1.6rem / 6 * $i);
+  }
+}
+```
+
+### Media Queries
+
+A huge part in making a website responsive is using media queries. For that, I'm using [include-media](https://www.npmjs.com/package/include-media) and [svelte-media-query](https://www.npmjs.com/package/svelte-media-query). The main section of code driving the website and its scale looks like this:
+
+```css
+:root {
+  @include media("<tablet"){
+    font-size: 6vmin;
+  }
+  @include media(">=tablet", "<desktop"){
+    font-size: 4vmin;
+  }
+  @include media(">=desktop"){
+    font-size: 2vh;
+  }
+}
+```
+
+When sizing things later, I resize elements and text by setting their value in `rem`s. Anything that depends on the size of nearby text (header padding, that sort of thing), I set their value in `em`s. A good writeup on the differences and why/how to use them is available [here](https://css-tricks.com/rem-global-em-local/).
+
+Additionally, the site is currently responsive and laid out using [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout). Grid is pretty cool for building out structures in more than one direction ([Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) changed my life, but you can't rely on `wrap` for everything), so I use it to build out the template for the header, nav, content, aside, footer. I can adjust this layout easily using [CSS Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) to other layouts that fit the content better.
+

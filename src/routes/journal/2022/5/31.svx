@@ -42,7 +42,7 @@ That’s right – new levels coming soon!! I’ve been waiting for a while thou
 
 So this game was largely finished in the span of a week because I did it for a game jam, and I was super happy about my progress and scale. This was my first entry into the Godot Wild Jam, now that I had become familiar with Godot and the toolset. It was a really good time, and I largely delivered on what I wanted to set out to do. However: I was sitting down on the last day to finish up the story, sound effects, and add a few more minigames, when..
 
-#### wacky I realized I only had 16 minutes to upload the final project
+#### I realized I only had 16 minutes to upload the final project
 
 So I rushed the main menu and the last final touches, hoping the HTML5 export would be good enough and uploaded it to itch.io. The version on my itch.io page mainly works, but it never got that polish I intended to add in the end. That 16 minute sprint added in a few bugs as I rushed to add credits and fix other last-minute bugs. I’m still very pleased with the project, I just want to put the bow on top.
 

@@ -1,9 +1,5 @@
 <script>
-	export let name = null,
-		site = null,
-		discord = null,
-		twitter = null;
-
+	export let name = null;
 	let hidden = true;
 
 	const toggle = () => {
@@ -14,9 +10,6 @@
 <button on:click={toggle}>{name}</button>
 {#if !hidden}
 	<aside>
-		<a href={site}>website</a>
-		<a href={discord}>discord</a>
-		<a href={twitter}>twitter</a>
 		<slot />
 	</aside>
 {/if}
