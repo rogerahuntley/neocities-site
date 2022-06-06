@@ -1,0 +1,7 @@
+---
+title: Working Copy
+date: “2022-6-6"
+category: “meta”
+---
+
+Now *this* is awesome. I downloaded an app on my iPhone called 'Working Copy' which allows me to clone my project, edit files, and push back to my server -- using Git. At home I have a server that runs a script on the 'post-receive' git hook, and when I push onto the 'main' branch script my server will copy the branch, build the project and deploy it to neocities. 
