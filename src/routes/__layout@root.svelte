@@ -24,9 +24,6 @@
 <style lang="scss">
 	@import 'src/styles/grid-main.scss';
 	:global(#grid-main) {
-		* {
-		}
-
 		header,
 		footer {
 			text-align: center;

@@ -3,6 +3,7 @@ import sveltePreprocess from 'svelte-preprocess';
 import { resolve } from 'path';
 import { mdsvex } from 'mdsvex';
 import autoprefixer from 'autoprefixer';
+import postcsshfix from 'postcss-100vh-fix';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -17,7 +18,7 @@ const config = {
         `
       }, 
       postcss: {
-        plugins: [autoprefixer]
+        plugins: [autoprefixer, postcsshfix]
       },
     }),
     mdsvex({
