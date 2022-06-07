@@ -1,9 +1,9 @@
 ---
 title: Haircut
-date: "2022-5-27"
+date: "2022-05-27"
 ---
 
 I got a haircut -- from ponytail to.. regular?
 
- ![My haircut before](/images/haircut/before.jpeg "Ye old haircut")
- ![My haircut after](/images/haircut/after.jpeg "My cut, G")
+![My haircut before](/images/journal/20220527/haircut/before.jpeg "Ye old haircut")
+![My haircut after](/images/journal/20220527/haircut/after.jpeg "My cut, G")

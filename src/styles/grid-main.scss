@@ -12,30 +12,28 @@
                           "main"
                           "footer";
     grid-template-rows: auto auto auto 1fr auto;
+    max-width: 60rem;
 
     @include media(">=tablet", "<desktop"){
-      grid-template-areas:  "header main"
-                            "nav main"
+      grid-template-areas:  "header nav"
                             "aside main"
                             "footer footer";
-      grid-template-rows: auto auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
       grid-template-columns: 5rem 1fr;
-      max-width: 50rem;
     }
 
     @include media(">=desktop"){
-      grid-template-areas:  "header header header"
-                            "nav main aside"
-                            "footer footer footer";
+      grid-template-areas:  "header nav"
+                            "aside main"
+                            "footer footer";
       grid-template-rows: auto 1fr auto;
-      grid-template-columns: 5rem 1fr 5rem;
-      max-width: 50rem;
+      grid-template-columns: 5rem 1fr 5rem; // actually centers it hehe
+      padding-inline: 5rem;
     }
 
     // set defaults for children
     @mixin defaults($element) {
       grid-area: $element;
-      background-color: rgba(whitesmoke, .8);
       border-radius: .2rem;
       padding: .2rem;
     }

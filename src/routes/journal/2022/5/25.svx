@@ -1,6 +1,6 @@
 ---
 title: Discovered Yesterweb
-date: "2022-5-25"
+date: "2022-05-25"
 ---
 
 Today I discovered yesterweb\* and this was so intriguing to me. yesterweb is an entrypoint to an underground network of a thriving Web 1.0. There is so much to explore, and read - so much depth often lacking from social media - and so much collective effort put into blogs, art, essays and personal websites. People make such interesting stuff when they’re this far from operating under “web norms”, and it just oozes nothing but passion. It feels *punk*. The collective websites listed here could be explored for hours - and as they link into neocities, they could be explored forever. It feels like diving into a deep and cold ocean of creativity and personality. Is this what surfing the web is supposed to be like?
@@ -9,12 +9,12 @@ Free and detached from the requirements of social media - the idea of having a s
 
 ---
 
-Let's take it again from the top.
+### Let's take it again from the top.
 
 Today I discovered yesterweb\* and this was so intriguing to me - I’m a web developer by trade, and trying to keep up and learn new technologies is both exhausting and extremely interesting. I’ve also taught myself everything I know, inventing wheel after wheel (simply because I couldn’t find any answers that didn’t require jQuery and I had a point to make), and that got me where I am today. I have been making websites for myself since 2014, and in March of this year (2022) I discovered what AngularJS actually did. I cannot think of how much time and effort it would have afforded me if I hadn’t just *enjoyed* the feeling of opening a blank .html document and wiring stuff up from scratch. Having tried it since, Angular requires a mind-boggling amount of boilerplate - factories, controllers, directives. I may have been better off not knowing.
 
 > Note: I have been playing around with Svelte and I absolutely love it. Moving forward, this is going to be my framework of choice. I feel that it keeps the spirit of clean, hand-rolled web development intact. For example, each svelte file is split up into the following:
-> ```
+> ```svelte
 > <script\>
 > 
 > html

@@ -1,6 +1,6 @@
 ---
 title: Personal Website Planning
-date: "2022-5-28"
+date: "2022-05-28"
 ---
 
 Here’s the plan: build a Web 1.0 website / blog thing? I’m planning on using sveltekit with static rendering. I already have the static rendering working and automatically deploying to neocities. I have to put some thought into what I want in neocities and if I want a separate personal website, but I think I should stop using steal.dog as a personal website and just use it as an app container. Anyway — I’ve set up my neocities with sveltekit and when I git push, it deploys. Super cool. Basically done, right?

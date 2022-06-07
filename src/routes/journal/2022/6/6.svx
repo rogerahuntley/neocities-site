@@ -1,9 +1,9 @@
 ---
 title: Working Copy / Server thoughts
-date: “2022-6-6"
+date: “2022-06-06"
 category: “meta”
 ---
 
-Now *this* is awesome. I downloaded an app on my iPhone called 'Working Copy' which allows me to clone my project, edit files, and push back to my server -- using Git. At home I have a server that runs a script on the 'post-receive' git hook, and when I push onto the 'main' branch my server will copy the branch, build the project and deploy it to neocities.
+Now *this* is awesome. I downloaded an app on my iPhone called `Working Copy` which allows me to clone my project, edit files, and push back to my server -- using Git. At home I have a server that runs a script on the `post-receive` git hook, and when I push onto the `main` branch my server will copy the branch, build the project and deploy it to neocities.
 
 I do want to look at reducing my server footprint and getting rid of my personal server, relying more on neocities for static sites and github for CI/CD, but I'm not sure if it is worth switching to Vercel / Netlify for the API stuff in my other projects. Every additional service comes with a price.

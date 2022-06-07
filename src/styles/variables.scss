@@ -1,17 +1,3 @@
-// change these //
-
-$primary-color: #D7CEC7;
-$primary-dark: #565656;
-$primary-accent: #76323F;
-$primary-accent-2: #C09F80;
-$black: #222222;
-$white: #F5F5F5;
-
-// app colors //
-
-
-
-
 // font styles //
 
 $font-primary: "Roboto Flex", sans-serif;
@@ -23,3 +9,19 @@ $mobile: 20em;
 $tablet: 48em;
 $desktop: 64em;
 $breakpoints: (mobile: $mobile, tablet: $tablet, desktop: $desktop);
+
+// colors //
+
+$blue: #4A49BC;
+$white: #E5E5F5;
+
+$bg-main: $blue;
+$fg-main: $white;
+
+$link: #BFBEE7;
+$link-hover: #B2B1E2;
+$link-accent: #4A97BD;
+
+$code-bg: #BD4AA4;
+
+$accent-color: #393795;

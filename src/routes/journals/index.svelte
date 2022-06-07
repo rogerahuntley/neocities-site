@@ -18,7 +18,7 @@
 <ul>
 	{#each journals as journal}
 		<li>
-			<a href={`/journal/${journal.path}`}>
+			<a href={`/journal/${journal.path}/`}>
 				{journal.metadata.title}
 			</a>
 		</li>

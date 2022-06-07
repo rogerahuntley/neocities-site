@@ -1,6 +1,6 @@
 ---
 title: Updates to the site 2
-date: "2022-6-5"
+date: "2022-06-05"
 category: "meta"
 ---
 
@@ -77,13 +77,12 @@ This is because I'm using a css lib ([the-new-css-reset](https://elad2412.github
 
 I knew I needed a solution. There have been files and libs to do this for ages (css versioning is tricky, but [*CSS3* dates back to pre-Y2k](https://www.w3.org/Style/CSS20/)), but web browsers can do so much more now. the-new-css-reset is remarkably simple, and I like that simplicity. It also clears all css styles, making everything (buttons, links, etc) look like plain text. 🤯
 
-
 So the site looks like plain-text until I specifically re-enable any css feature. I've already done so with a few elements: hx, button, pre tags -- but there's still a lot of work to do. My `app.css` now looks something like this:
 
 ```css
 // generic stuff
 html, body {
-  height: 100%;
+  min-height: 100vh;
 }
 
 button {
@@ -100,6 +99,11 @@ code {
   font-size: .8rem;
 }
 
+p {
+  display: block;
+  margin-block: .5em;
+}
+
 // header sizes lol
 @for $i from 1 through 6 {
   h#{7 - $i} {
@@ -108,6 +112,8 @@ code {
 }
 ```
 
+>Note: I did have to install [postcss-100vh-fix](https://www.npmjs.com/package/postcss-100vh-fix) to handle selectively replace `100vh` with `-webkit-fill-available` (it doesn't work right on Safari)
+
 ### Media Queries
 
 A huge part in making a website responsive is using media queries. For that, I'm using [include-media](https://www.npmjs.com/package/include-media) and [svelte-media-query](https://www.npmjs.com/package/svelte-media-query). The main section of code driving the website and its scale looks like this:
@@ -115,18 +121,18 @@ A huge part in making a website responsive is using media queries. For that, I'm
 ```css
 :root {
   @include media("<tablet"){
-    font-size: 6vmin;
+    font-size: clamp(3vw, 6vw, 8vh);
   }
   @include media(">=tablet", "<desktop"){
-    font-size: 4vmin;
+    font-size: clamp(2vw, 4vw, 6vh);
   }
   @include media(">=desktop"){
-    font-size: 2vh;
+    font-size: clamp(1vw, 2vw, 4vh);
   }
 }
 ```
 
-When sizing things later, I resize elements and text by setting their value in `rem`s. Anything that depends on the size of nearby text (header padding, that sort of thing), I set their value in `em`s. A good writeup on the differences and why/how to use them is available [here](https://css-tricks.com/rem-global-em-local/).
+When sizing things later, I resize elements and text by setting their value in `rem`. Anything that depends on the size of nearby text (header padding, that sort of thing), I set their value in `em`. A good writeup on the differences and why/how to use them is available [here](https://css-tricks.com/rem-global-em-local/).
 
 Additionally, the site is currently responsive and laid out using [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout). Grid is pretty cool for building out structures in more than one direction ([Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) changed my life, but you can't rely on `wrap` for everything), so I use it to build out the template for the header, nav, content, aside, footer. I can adjust this layout easily using [CSS Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) to other layouts that fit the content better.
 

@@ -1,15 +1,21 @@
 @import 'the-new-css-reset/css/reset.css';
+@import './prism/prism.scss';
 
 :global {
 
   // generic stuff
   html, body {
-    min-height: 100%;
     min-height: 100vh;
   }
 
   button {
     cursor: pointer;
+  }
+
+  blockquote {
+    padding: .2em 1em;
+    margin: .8em 0;
+    border-left: .2em solid $accent-color;
   }
 
   pre {
@@ -23,21 +29,50 @@
   }
 
   p {
+    font-weight: 300;
     display: block;
     margin-block: .5em;
+    letter-spacing: .02em;
+    line-height: 1.2em;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    font-weight: 500;
   }
 
   // header sizes lol
   @for $i from 1 through 6 {
     h#{7 - $i} {
         font-size: calc(1.6rem / 6 * $i);
+        font-weight: calc(300 + 500 / 6 * $i);
+        letter-spacing: .025em;
+        margin-block: 1em .25em;
     }
   }
 
-  // helpers
+  // color and variable-driven stylings
 
-  .hidden {
-    display: none;
+  body {
+    background-color: $blue;
+    color: $white;
+    font-family: $font-primary;
+    font-weight: 500;
+  }
+
+  a {
+    color: $link;
+
+    &:hover {
+      color: $link-hover;
+    }
+
+    &:active {
+      color: $link-accent;
+    }
   }
 
   // responsive stuff
@@ -52,7 +87,7 @@
       font-size: clamp(2vw, 4vw, 6vh);
     }
     @include media(">=desktop"){
-      font-size: clamp(1vw, 2vw, 4vh);
+      font-size: clamp(1vw, 2vw, 2.5vh);
     }
   }
 

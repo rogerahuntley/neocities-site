@@ -1,22 +1,30 @@
 <script>
+	import Folder from '$lib/folder.svelte';
 	export let name = null,
 		site = null,
 		discord = null,
 		twitter = null;
 
-	let hidden = true;
+	var getAttributes = () => {
+		var attributes = [];
 
-	const toggle = () => {
-		hidden = !hidden;
+		var add = (name, url) => {
+			if (url) {
+				attributes.push({
+					name: name,
+					url: url
+				});
+			}
+		};
+
+		add('website', site);
+		add('discord', discord);
+		add('twitter', twitter);
+
+		return attributes;
 	};
 </script>
 
-<button on:click={toggle}>{name}</button>
-{#if !hidden}
-	<aside>
-		<a href={site}>website</a>
-		<a href={discord}>discord</a>
-		<a href={twitter}>twitter</a>
-		<slot />
-	</aside>
-{/if}
+<Folder {name} attributes={getAttributes()}>
+	<slot />
+</Folder>
