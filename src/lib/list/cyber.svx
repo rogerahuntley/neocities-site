@@ -1,9 +1,9 @@
 ---
 name: Cyber-related
 ---
-* https://cyberpunk-life.neocities.org/
-* https://v0id.neocities.org/
-* https://mogami.neocities.org/
-* https://newchapter.neocities.org/
-* https://unplug.neocities.org/
-* https://ternox.com/
+* [cyberpunk-life](https://cyberpunk-life.neocities.org/)
+* [v0id](https://v0id.neocities.org/)
+* [mogami](https://mogami.neocities.org/)
+* [newchapter](https://newchapter.neocities.org/)
+* [unplug](https://unplug.neocities.org/)
+* [ternox](https://ternox.com/)

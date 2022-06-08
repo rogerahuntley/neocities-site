@@ -1,5 +1,5 @@
 <script>
-	import Folder from '$lib/folder.svelte';
+	import Folder from '$lib/Folder.svelte';
 	export let name = null;
 </script>
 

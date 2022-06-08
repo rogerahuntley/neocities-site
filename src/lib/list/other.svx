@@ -1,4 +1,5 @@
 ---
 name: Misc Links
 ---
-https://www.postcrossing.com/
+* [postcrossing](https://www.postcrossing.com/)
+* [vgmuseum](http://www.vgmuseum.com/mrp/)

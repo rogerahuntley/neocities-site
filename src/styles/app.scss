@@ -8,6 +8,13 @@
     min-height: 100vh;
   }
 
+  body {
+    background-color: $blue;
+    color: $white;
+    font-family: $font-primary;
+    font-weight: 500;
+  }
+
   button {
     cursor: pointer;
   }
@@ -18,18 +25,14 @@
     border-left: .2em solid $accent-color;
   }
 
-  pre {
-    font-family: monospace;
-    white-space: pre-wrap;
-  }
-
   code {
-    font-family: monospace;
-    font-size: .8rem;
+    font-family: "Roboto Mono", monospace;
+    font-size: .9rem;
+    font-weight: 500;
   }
 
   p {
-    font-weight: 300;
+    font-weight: 200;
     display: block;
     margin-block: .5em;
     letter-spacing: .02em;
@@ -49,22 +52,14 @@
     h#{7 - $i} {
         font-size: calc(1.6rem / 6 * $i);
         font-weight: calc(300 + 500 / 6 * $i);
-        letter-spacing: .025em;
+        letter-spacing: .0em;
         margin-block: 1em .25em;
     }
   }
 
-  // color and variable-driven stylings
-
-  body {
-    background-color: $blue;
-    color: $white;
-    font-family: $font-primary;
-    font-weight: 500;
-  }
-
   a {
     color: $link;
+    font-weight: 400;
 
     &:hover {
       color: $link-hover;
@@ -88,6 +83,12 @@
     }
     @include media(">=desktop"){
       font-size: clamp(1vw, 2vw, 2.5vh);
+    }
+  }
+
+  ul {
+    li {
+      font-weight: 100;
     }
   }
 

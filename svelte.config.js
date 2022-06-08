@@ -18,7 +18,10 @@ const config = {
         `
       }, 
       postcss: {
-        plugins: [autoprefixer, postcsshfix]
+        plugins: [
+          autoprefixer,
+          postcsshfix
+        ]
       },
     }),
     mdsvex({

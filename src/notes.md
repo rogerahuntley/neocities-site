@@ -1,0 +1,1 @@
+write a blog post about https://neocities.org/api/info?sitename=stealdog

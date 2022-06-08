@@ -15,16 +15,16 @@
     max-width: 60rem;
 
     @include media(">=tablet", "<desktop"){
-      grid-template-areas:  "header nav"
-                            "aside main"
+      grid-template-areas:  "header aside"
+                            "nav main"
                             "footer footer";
       grid-template-rows: auto 1fr auto;
       grid-template-columns: 5rem 1fr;
     }
 
     @include media(">=desktop"){
-      grid-template-areas:  "header nav"
-                            "aside main"
+      grid-template-areas:  "header aside"
+                            "nav main"
                             "footer footer";
       grid-template-rows: auto 1fr auto;
       grid-template-columns: 5rem 1fr 5rem; // actually centers it hehe

@@ -1,5 +1,5 @@
 ---
-title: Updates to the site 2
+title: More Updates
 date: "2022-06-05"
 category: "meta"
 ---
@@ -116,7 +116,7 @@ p {
 
 ### Media Queries
 
-A huge part in making a website responsive is using media queries. For that, I'm using [include-media](https://www.npmjs.com/package/include-media) and [svelte-media-query](https://www.npmjs.com/package/svelte-media-query). The main section of code driving the website and its scale looks like this:
+A huge part in making a website responsive is using media queries. For that, I'm using [`include-media`](https://www.npmjs.com/package/include-media) and [`svelte-media-query`](https://www.npmjs.com/package/svelte-media-query). The main section of code driving the website and its scale looks like this:
 
 ```css
 :root {

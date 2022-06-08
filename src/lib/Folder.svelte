@@ -27,7 +27,7 @@
 		{/if}
 	</button>
 	{#if !hidden}
-		<aside>
+		<aside class="folder-body">
 			<blockquote class="folder-attributes">
 				<ul>
 					{#each attributes as attr}
@@ -47,6 +47,10 @@
 
 	.folder {
 		margin-block: 0.2em;
+	}
+
+	.folder-body {
+		margin-top: -1px;
 	}
 
 	.folder-attributes ul {

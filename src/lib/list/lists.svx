@@ -1,7 +1,7 @@
 ---
 name: Other Lists
 ---
-https://links.yesterweb.org/
-https://sadgrl.online/links.html
-https://districts.neocities.org/
-https://littlefufu.neocities.org/links.html
+* [yesterweb](https://links.yesterweb.org/)
+* [sadgrl.online](https://sadgrl.online/links.html)
+* [districts](https://districts.neocities.org/)
+* [littlefufu](https://littlefufu.neocities.org/links.html)

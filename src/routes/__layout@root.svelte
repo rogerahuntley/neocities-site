@@ -1,4 +1,7 @@
 <script>
+	import Count from '$lib/Count.svelte';
+	export let data;
+
 	let hidden = true;
 
 	const toggle = () => {
@@ -8,6 +11,7 @@
 
 <div id="grid-main">
 	<header>
+		stealdog
 		<span on:click={toggle} id="mobile-menu" class="material-icons">menu</span>
 	</header>
 
@@ -22,7 +26,7 @@
 		</ul>
 	</nav>
 
-	<aside>boop!</aside>
+	<aside><Count {data} /></aside>
 
 	<main>
 		<slot />
@@ -50,11 +54,10 @@
 	nav ul {
 		display: flex;
 		flex-direction: column;
-		gap: 0.4em;
 
 		@include media('>=tablet') {
-			flex-direction: row;
 			order: 2;
+			gap: 0.4em;
 		}
 	}
 

@@ -1,10 +1,10 @@
 ---
 name: Personal Websites
 ---
-* [furudean](https://www.furudean.com/)
 * [scarbyte](https://scarbyte.com/)
 * [medulladeath](https://medulladeath.neocities.org/)
 * [jameso2](https://jameso2.neocities.org/)
+* [furudean](https://www.furudean.com/)
 * [misterdizzy](https://misterdizzy.neocities.org/)
 * [dinner](https://dinner.neocities.org/)
 * [shintoo](https://shintoo.neocities.org/about.html)
