@@ -1,5 +1,7 @@
 ---
 name: Misc Links
 ---
-* [postcrossing](https://www.postcrossing.com/)
-* [vgmuseum](http://www.vgmuseum.com/mrp/)
+* [postcrossing](https://www.postcrossing.com/) random postcard penpal service
+* [vgmuseum](http://www.vgmuseum.com/mrp/) love letter to castlevania
+* [mydora](https://mydora.restorativland.org/) myspace music archive
+* [froghand](https://froghand.neocities.org/thespongebobsquarepantsthemoviethegamethereview.html) SpongeBob SquarePants: The Movie: The Game: The Review

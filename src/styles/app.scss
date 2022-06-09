@@ -82,7 +82,7 @@
       font-size: clamp(2vw, 4vw, 6vh);
     }
     @include media(">=desktop"){
-      font-size: clamp(1vw, 2vw, 2.5vh);
+      font-size: clamp(1vw, 2vw, 2rem);
     }
   }
 

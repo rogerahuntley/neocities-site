@@ -1,0 +1,4 @@
+---
+name: Articles
+---
+* [Self-Dialogue as a Journaling Strategy](https://sadgrl.online/blog/entries/selfinterview.html)
