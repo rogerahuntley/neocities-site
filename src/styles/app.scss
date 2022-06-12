@@ -35,7 +35,7 @@
     font-weight: 200;
     display: block;
     margin-block: .5em;
-    letter-spacing: .02em;
+    letter-spacing: .01em;
     line-height: 1.2em;
   }
 
@@ -45,6 +45,23 @@
 
   strong {
     font-weight: 500;
+  }
+
+  del {
+    text-decoration: line-through;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    margin-block: .4rem;
+
+    @include media(">desktop"){
+      width: inherit;
+      margin-inline: auto;
+    }
+    
+    box-shadow: 0 0 .1rem #000;
   }
 
   // header sizes lol
@@ -110,5 +127,10 @@
     @include media(">=desktop"){
       display:none;
     }
+  }
+
+  .center {
+    display: flex;
+    place-content: center;
   }
 }

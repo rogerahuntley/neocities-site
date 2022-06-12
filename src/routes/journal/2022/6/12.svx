@@ -1,0 +1,33 @@
+
+
+---
+title: Stealdog CSS Overhaul
+date: '2022-06-12'
+tags: meta
+---
+
+This is a sneak preview of the site updates. Well, technically it's not even a preview *nor* is it a sneak -- these features are now live! I wanted to do some more documentation on them, but they ended up being a lot more time consuming / exhausting than I anticipated. Anyway, here's ~~wonderwall~~ some pictures.
+
+Before:
+![The site before the update](/images/journal/20220612/before.png "Yuck")
+
+After:
+![The site after the update](/images/journal/20220612/after.png "Behold the glory")
+
+A look at breadcrumbs:
+![Breadcrumb feature for navigation](/images/journal/20220612/breadcrumbs.png "Never get lost again")
+
+The new journal page w/ tags:
+![New page for organizing journal entries](/images/journal/20220612/journals.png "So clean you could eat off of it")
+
+New lexicon "closed" design:
+![Lexicon tab with the definition hidden](/images/journal/20220612/lexicon-closed.png "New and improved: you don't have to read this info over and over again")
+
+Lexicon open:
+![Lexicon tab with the definition open](/images/journal/20220612/lexicon-open.png "...but you can if you want")
+
+I've done a lot of formatting work, and the site should be mobile-responsive again (I was having some issues with the code blocks -- they're gonna break mid-line on mobile now, but they won't overflow anymore). I'm a big fan of it, I think the very simple few-color design is working really well here and I have very little history with good graphic design. Feel free to look around and see how things work.
+
+### Looking ahead
+
+There's a few formatting changes I still want to do -- a ton of tweaking. I also want to add stuff like music recs, lists, shrines, articles?, that sort of thing -- so that the website here isn't just journals. *HOWEVER*, I'm really happy with how the site is looking right now, and I think I'm overdue to spend some time making the content to fill it with 😅.

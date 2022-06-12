@@ -1,7 +1,36 @@
-hello neocities!
+<script context="module">
+  export const load = async ({ fetch }) => {
+    const journals = await fetch('/api/journals.json');
+    const allJournals = await journals.json();
 
-... and we back
+    const data = await fetch('api/neocities.json');
+    const jsonData = await data.json();
+
+    return {
+      props: {
+        journals: allJournals,
+        data: jsonData
+      }
+    };
+  };
+</script>
+
+<script>
+  import { title } from '$stores/title.store';
+  import { JournalLink } from '$lib/journals/index';
+  title.set('Home');
+
+  export let journals;
+  export let data;
+  console.log(data);
+</script>
+
+hello neocities! ... and we back
 
 <br /><br />
 
-feel free to explore... but bear this in mind - this website is unfinished. I'm writing journals, but I haven't gotten the markdown formatting down yet for this site. Until then, they're gonna look a little bit funny.
+latest journal: <JournalLink journal={journals.at(-1)} />
+
+<br />
+
+Visitor count (at last compile): {data.info.views}

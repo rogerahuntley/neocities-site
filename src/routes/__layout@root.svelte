@@ -1,6 +1,23 @@
+<script context="module">
+	export const load = async ({ fetch }) => {
+		const sitedata = await fetch('/api/neocities.json');
+		const sitedataJson = await sitedata.json();
+
+		return {
+			props: {
+				data: sitedataJson
+			}
+		};
+	};
+</script>
+
 <script>
-	import Count from '$lib/Count.svelte';
+	import Count from '$lib/main/Count.svelte';
+	import Breadcrumbs from '$lib/main/Breadcrumbs.svelte';
+	import { getContext } from 'svelte';
 	export let data;
+
+	import { title } from '@/stores/title.store';
 
 	let hidden = true;
 
@@ -8,6 +25,10 @@
 		hidden = !hidden;
 	};
 </script>
+
+<svelte:head>
+	<title>stealdog - {$title}</title>
+</svelte:head>
 
 <div id="grid-main">
 	<header>
@@ -21,18 +42,24 @@
 				<a href="/">home</a>
 			</li>
 			<li>
-				<a href="/journals/">journal</a>
+				<a href="/journal/">journal</a>
 			</li>
 		</ul>
 	</nav>
 
-	<aside><Count {data} /></aside>
+	<aside>
+		{$title}
+	</aside>
 
 	<main>
 		<slot />
 	</main>
 
-	<footer />
+	<footer class="center">
+		<span class="hide-mobile">
+			<Breadcrumbs />
+		</span>
+	</footer>
 </div>
 
 <style lang="scss">
@@ -45,6 +72,7 @@
 
 		#mobile-menu {
 			font-size: 1.2em;
+			cursor: pointer;
 			@include media('>=tablet') {
 				display: none;
 			}
@@ -54,10 +82,11 @@
 	nav ul {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-end;
 
 		@include media('>=tablet') {
+			align-items: flex-start;
 			order: 2;
-			gap: 0.4em;
 		}
 	}
 

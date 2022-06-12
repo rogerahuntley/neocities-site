@@ -1,6 +1,6 @@
 // returns list of all journal
 export const get = async () => {
-  const journalFiles = import.meta.glob('$journals/**/*.svx');
+  const journalFiles = import.meta.glob('$journal/**/*.svx');
 
   const allJournals = await Promise.all(
     Object.entries(journalFiles).map(async ([path, resolver]) => {
@@ -13,7 +13,13 @@ export const get = async () => {
     })
   )
 
-  return {
-    body: allJournals
+  if (allJournals) {
+    return {
+      body: allJournals.sort((a, b) => a.metadata.date.localeCompare(b.metadata.date) )
+    };
   }
+
+  return {
+    status: 404
+  };
 }

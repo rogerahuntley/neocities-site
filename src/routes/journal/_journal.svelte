@@ -1,24 +1,28 @@
 <!-- _journal.svelte -->
 <script>
-	export let title;
-	export let date;
+  export let title;
+  export let date;
+
+  let formattedDate = new Date(date).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric" })
 </script>
 
 <div class="journal">
-	<h1 class="journal-title">{title}</h1>
+  <h1 class="journal-title">{title}</h1>
 
-	<p class="journal-details">Published: {date}</p>
+  <p class="journal-details">{formattedDate}</p>
 
-	<slot class="journal-body" />
+  <slot class="journal-body" />
 </div>
 
-<style>
-	.journal-title {
-		margin: 0;
-	}
 
-	.journal-details {
-		margin-top: 0.1em;
-		margin-bottom: 1em;
-	}
+<style lang="scss">
+  .journal-title {
+    margin: 0;
+  }
+
+  .journal-details {
+    margin-top: 0.1em;
+    margin-bottom: 1em;
+    font-weight: 400;
+  }
 </style>

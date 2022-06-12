@@ -47,7 +47,7 @@ const config = {
           '@': resolve('./src'),
           '$stores': resolve('./src/stores'),
           '$types': resolve('./src/types'),
-          '$journals': resolve('./src/routes/journal'),
+          '$journal': resolve('./src/routes/journal'),
         }
       }
     },
