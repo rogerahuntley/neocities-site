@@ -3,7 +3,7 @@
   export let title;
   export let date;
 
-  let formattedDate = new Date(date).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric" })
+  let formattedDate = new Date(date).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric", timeZone: 'UTC' })
 </script>
 
 <div class="journal">
