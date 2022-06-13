@@ -10,6 +10,14 @@ const config = {
   // Consult https://github.com/sveltejs/svelte-preprocess
   // for more information about preprocessors
   preprocess: [
+    mdsvex({
+      extensions: ['.md', '.svx'],
+      layout: {
+        journal: 'src/routes/journal/_journal.svelte',
+        lexicon: 'src/lib/lexicon/_lexicon.svelte',
+        lists: 'src/lib/lists/_list.svelte'
+      }
+    }),
     sveltePreprocess({
       scss: {
         prependData: `
@@ -23,14 +31,6 @@ const config = {
           postcsshfix
         ]
       },
-    }),
-    mdsvex({
-      extensions: ['.md', '.svx'],
-      layout: {
-        journal: 'src/routes/journal/_journal.svelte',
-        lexicon: 'src/lib/lexicon/_lexicon.svelte',
-        list: 'src/lib/list/_list.svelte'
-      }
     })
   ],
   

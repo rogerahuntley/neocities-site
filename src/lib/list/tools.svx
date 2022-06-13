@@ -1,9 +1,0 @@
----
-name: Tools
----
-* [https://www.websiteout.net/counter.php](counter) website hit counter
-* [https://sadgrl.online/webmastery/downloads/fonts.html](sadgrl.online) fonts
-* [https://gifcities.org/](gifcities) gifts
-* [https://www.toptal.com/designers/subtlepatterns/](subtlepatterns) patterns
-* [https://rvklein.me/proj/emsqpat/](emsqpat) patterns 2
-* [https://doodad.dev/dither-me-this/](dither-me-this) ditherizer

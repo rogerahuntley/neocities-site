@@ -26,6 +26,9 @@ New lexicon "closed" design:
 Lexicon open:
 ![Lexicon tab with the definition open](/images/journal/20220612/lexicon-open.png "...but you can if you want")
 
+Lists:
+![Lists page with all closed link folders](/images/journal/20220612/lists.png "the information super-highway")
+
 I've done a lot of formatting work, and the site should be mobile-responsive again (I was having some issues with the code blocks -- they're gonna break mid-line on mobile now, but they won't overflow anymore). I'm a big fan of it, I think the very simple few-color design is working really well here and I have very little history with good graphic design. Feel free to look around and see how things work.
 
 ### Looking ahead

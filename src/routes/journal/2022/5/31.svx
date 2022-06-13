@@ -5,9 +5,7 @@ tags: personal gamedev
 ---
 
 <script>
-  import Godot from '$lib/lexicon/Godot.svx';
-  import GodotWJ from '$lib/lexicon/Godot-Wild-Jam.svx';
-  import Itch from '$lib/lexicon/Itch-io.svx';
+  import { Godot, GodotWildJam, ItchIo } from '$lib/lexicon/index';
 </script>
 
 So, the next project I’m looking towards working on is… my last few projects. For me to explain, let’s take a few steps back.
@@ -20,8 +18,8 @@ So, the next project I’m looking towards working on is… my last few projects
 *GODOT*
 
 <Godot />
-<GodotWJ />
-<Itch />
+<GodotWildJam />
+<ItchIo />
 
 ---
 

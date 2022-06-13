@@ -5,7 +5,7 @@ tags: meta
 ---
 
 <script>
-  import Personal from '$lib/list/personal.svx';
+  import { Personal } from '$lib/lists/index';
 </script>
 
 gaming gaming gaming gaming gaming

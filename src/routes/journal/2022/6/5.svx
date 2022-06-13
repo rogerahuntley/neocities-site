@@ -5,7 +5,7 @@ tags: meta programming
 ---
 
 <script>
-  import Godot from '$lib/lexicon/Godot.svx';
+  import { Godot } from '$lib/lexicon/index';
   import GodotE from '$lib/examples/2022-6-5/example.svx';
 </script>
 
@@ -34,26 +34,26 @@ and this is pulled from `_lexicon.svelte`
 
 ```svelte
 <script>
-	export let name = null,
-		site = null,
-		discord = null,
-		twitter = null;
+  export let name = null,
+    site = null,
+    discord = null,
+    twitter = null;
 
-	let hidden = true;
+  let hidden = true;
 
-	const toggle = () => {
-		hidden = !hidden;
-	};
+  const toggle = () => {
+    hidden = !hidden;
+  };
 </script>
 
 <button on:click={toggle}>{name}</button>
 {#if !hidden}
-	<aside>
-		<a href={site}>website</a>
-		<a href={discord}>discord</a>
-		<a href={twitter}>twitter</a>
-		<slot />
-	</aside>
+  <aside>
+    <a href={site}>website</a>
+    <a href={discord}>discord</a>
+    <a href={twitter}>twitter</a>
+    <slot />
+  </aside>
 {/if}
 ```
 
