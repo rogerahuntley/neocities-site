@@ -51,7 +51,7 @@ const config = {
         }
       }
     },
-    trailingSlash: 'always'
+    trailingSlash: 'ignore'
   }
 };
 
