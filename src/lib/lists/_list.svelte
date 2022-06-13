@@ -10,16 +10,11 @@
 </Folder>
 
 <style lang="scss">
-  :global {
-    .lists li {
-      text-align: right;
-      a {
-        text-align: left;
-      }
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      gap: 0.3em;
-    }
+  .lists :global(li) {
+    text-align: right;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.3em;
   }
 </style>
