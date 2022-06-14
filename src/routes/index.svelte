@@ -29,3 +29,6 @@
 <p>latest journal: <JournalLink journal={journals.at(-1)} /></p>
 <p>Visitor count (at last compile): {data.info.views}</p>
 <p>New! Check out my <a href="/lists/">lists</a>!</p>
+<p>
+  Now with <a href="https://github.com/marketplace/actions/deploy-to-neocities">GitHub Actions</a> 😉
+</p>
