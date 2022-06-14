@@ -13,7 +13,6 @@
 
 <script>
   import Breadcrumbs from '$lib/main/Breadcrumbs.svelte';
-  export let data;
 
   import { title } from '@/stores/title.store';
 
