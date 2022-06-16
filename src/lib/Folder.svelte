@@ -11,7 +11,7 @@
 
   export let name;
 
-  let hidden = browser ? true : false;
+  let hidden = browser;
 
   const toggle = () => {
     hidden = !hidden;

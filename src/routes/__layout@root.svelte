@@ -9,17 +9,32 @@
       }
     };
   };
+
+  // this is kind of insane, but i was looking at making an un-hydratable page
+  // basically, svelte will compile a layout and then the page
+  // i can't "title" data back up to layout via store because it's already been compiled
+  // this will save some hassle at least with my individual pages
+
+  export const getTitle = (path) => {
+    var title = path.split('/').filter((i) => i)[0] || 'Home';
+    title = title.charAt(0).toUpperCase() + title.slice(1);
+    return title;
+  };
 </script>
 
 <script>
   import Breadcrumbs from '$lib/main/Breadcrumbs.svelte';
-  import Title from '$lib/main/Title.svelte';
-  import { getTitle } from '$lib/main/Title.svelte';
+  import { title as titleStore } from '$stores/title.store';
   import { page } from '$app/stores';
+  import { browser } from '$app/env';
 
-  let headTitle = `stealdog - ${getTitle($page.url.pathname)}`;
+  let title, headTitle;
 
-  let hidden = true;
+  $: titleStore.set(title);
+  $: title = getTitle($page.url.pathname);
+  $: headTitle = `stealdog - ${title}`;
+
+  let hidden = browser;
 
   const toggle = () => {
     hidden = !hidden;
@@ -39,19 +54,19 @@
   <nav class:hidden>
     <ul>
       <li>
-        <a href="/">home</a>
+        <a sveltekit:prefetch href="/">home</a>
       </li>
       <li>
-        <a href="/journal/">journal</a>
+        <a sveltekit:prefetch href="/journal/">journal</a>
       </li>
       <li>
-        <a href="/lists/">lists</a>
+        <a sveltekit:prefetch href="/lists/">lists</a>
       </li>
     </ul>
   </nav>
 
   <aside>
-    <Title />
+    {title}
   </aside>
 
   <main>

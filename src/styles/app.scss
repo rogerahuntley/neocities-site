@@ -34,9 +34,11 @@
   p {
     font-weight: 200;
     display: block;
-    margin-block: .5em;
     letter-spacing: .01em;
     line-height: 1.2em;
+    &:not(:first-child) {
+      margin-block: .5em;
+    }
   }
 
   em {
@@ -70,7 +72,9 @@
         font-size: calc(1.6rem / 6 * $i);
         font-weight: calc(300 + 500 / 6 * $i);
         letter-spacing: .0em;
-        margin-block: 1em .25em;
+        &:not(:first-child){
+          margin-block: 1em .25em;
+        }
     }
   }
 

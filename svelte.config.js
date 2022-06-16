@@ -53,10 +53,7 @@ const config = {
         }
       }
     },
-    trailingSlash: 'ignore',
-    browser: {
-      router: false
-    }
+    trailingSlash: 'ignore'
   }
 };
 
