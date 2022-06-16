@@ -1,4 +1,4 @@
-export type journal = {
+type journal = {
     metadata: {
       title: string;
       date: string;
@@ -6,3 +6,13 @@ export type journal = {
     };
     path: string;
   };
+
+type nestedDate = {
+  [key: string]: journal[];
+};
+
+type nestedDates = {
+  [key: string]: nestedDate;
+};
+
+export type { journal, nestedDate, nestedDates }

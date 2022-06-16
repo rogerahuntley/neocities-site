@@ -1,6 +1,6 @@
 <script lang="ts">
   import { JournalLink } from './index';
-  import type { journal } from '$types/journal';
+  import type { journal } from '$types/journal.type';
   export let journals: journal[];
 </script>
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { journal } from '$types/journal';
+  import type { journal } from '$types/journal.type';
   import { JournalTag } from './index';
 
   export let journal: journal;

@@ -1,11 +1,9 @@
 <script lang="ts">
-  import type { nestedDates } from './__layout.svelte';
-  import type { journal } from '$types/journal.type';
+  import type { journal, nestedDates } from '$types/journal.type';
   import { getContext } from 'svelte';
   import { page } from '$app/stores';
 
-  import { nestDates } from './__layout.svelte';
-  import { JournalsList, JournalsLink } from '$lib/journals';
+  import { JournalsList, JournalsLink, nestDates } from '$lib/journals';
   import Year from './[year]/index.svelte';
 
   let dates: nestedDates, undated: journal[];

@@ -2,10 +2,12 @@
 	import { metadata, default as Godot } from '$lib/examples/2022-6-5/Godot.svx';
 
 	let {name, site, discord, twitter} = metadata;
+
+	let hidden = false;
 </script>
 
 <script>
-	let hidden = true;
+  hidden = true;
 
   const toggle = () => {
     hidden = !hidden;

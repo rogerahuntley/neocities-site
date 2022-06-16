@@ -10,6 +10,7 @@ name: Personal Websites
 * [shintoo](https://shintoo.neocities.org/about.html)
 * [geekalicious](https://geekalicious.org/)
 * [digitalwellbeing](https://omoulo.com/digitalwellbeing.html)
+* [personaletrainer](https://personaletrainer.com/)
 * [lukesmith](https://lukesmith.xyz/)
 * [sempiternus](https://sempiternus.neocities.org/)
 * [wilton](https://wilton.neocities.org/)

@@ -1,11 +1,9 @@
 <script lang="ts">
-  import type { nestedDate } from '../__layout.svelte';
-  import type { journal } from '$types/journal.type';
+  import type { journal, nestedDate } from '$types/journal.type';
   import { getContext } from 'svelte';
   import { page } from '$app/stores';
 
-  import { filter, nestDates } from '../__layout.svelte';
-  import { JournalsLink } from '$lib/journals';
+  import { JournalsLink, filter, nestDates } from '$lib/journals';
 
   import Month from './[month]/index.svelte';
 
