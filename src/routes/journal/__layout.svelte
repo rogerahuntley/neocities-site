@@ -1,6 +1,5 @@
 <script context="module" lang="ts">
   import { toMonthName } from '$lib/journals';
-  import { title } from '$stores/title.store';
 
   export const load = async ({ fetch }) => {
     const journals = await fetch('/api/journals.json');
@@ -18,8 +17,6 @@
   import { page } from '$app/stores';
   import type { journal } from '@/types/journal.type';
   import { setContext } from 'svelte';
-
-  title.set('Journal');
 
   export let journals: journal[];
 

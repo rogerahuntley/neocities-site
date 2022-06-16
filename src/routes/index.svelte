@@ -1,7 +1,4 @@
 <script context="module">
-  import { title } from '$stores/title.store';
-  title.set('Home');
-
   export const load = async ({ fetch }) => {
     const journals = await fetch('/api/journals.json');
     const allJournals = await journals.json();
@@ -19,7 +16,6 @@
 </script>
 
 <script>
-  title.set('Home');
   import { JournalLink } from '$lib/journals/index';
 
   export let journals;
@@ -27,7 +23,8 @@
 </script>
 
 <p>welcome to my home page</p>
-<p>latest journal: <JournalLink journal={journals.at(-1)} /></p>
+<p>latest journal:</p>
+<JournalLink journal={journals.at(-1)} />
 <p>Visitor count (at last compile): {data.info.views}</p>
 <p>New! Check out my <a href="/lists/">lists</a>!</p>
 <p>
