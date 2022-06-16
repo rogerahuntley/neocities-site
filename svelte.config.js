@@ -37,7 +37,9 @@ const config = {
   extensions: ['.svelte', '.md', '.svx'],
 
   kit: {
-    adapter: adapter(),
+    adapter: adapter({
+      fallback: 'not_found.html'
+    }),
     prerender: {
       default: true
     },
@@ -51,7 +53,10 @@ const config = {
         }
       }
     },
-    trailingSlash: 'ignore'
+    trailingSlash: 'ignore',
+    browser: {
+      router: false
+    }
   }
 };
 
