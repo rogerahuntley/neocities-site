@@ -41,6 +41,6 @@
   Full stop 🤯, but not commas. It just looks weird to end a line like this 😅.
 </p>
 <p>
-  Also: this site is fully accessible without JavaScript! I might add some CSS transitions for some
-  of the elements.
+  Also: this site is fully accessible without JavaScript! I might have to add some CSS transitions
+  for some of the elements because they *flash* on refresh (before the javascript loads).
 </p>
