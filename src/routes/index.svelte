@@ -34,14 +34,8 @@
 </p>
 <p>
   Soon I'll write up a doc on using <code>emoji</code> as punctuation, but for now, here goes:
-  <br />
   <strong>Emoji can replace periods.</strong>
-  <br />
   Full stop 🤯, but not commas. It just looks weird to end a line like this 😅.
-</p>
-<p>
-  Also: this site is fully accessible without JavaScript! I might have to add some CSS transitions
-  for some of the elements because they *flash* on refresh (before the javascript loads).
 </p>
 
 <style lang="scss">

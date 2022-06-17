@@ -57,10 +57,8 @@
   }
 
   .journals-title {
+    @extend .underline;
     font-size: 1.2em;
-    text-decoration: underline;
-    text-decoration-thickness: 0.05rem;
-    text-underline-offset: 0.1rem;
     margin-bottom: 0.4rem;
   }
 

@@ -25,3 +25,19 @@ $link-accent: #4A97BD;
 $code-bg: #BD4AA4;
 
 $accent-color: #393795;
+
+$rounded: .6em;
+$less-rounded: .4em;
+
+:global {
+  .center {
+    display: flex;
+    place-content: center;
+  }
+
+  .underline {
+    text-decoration: underline;
+    text-decoration-thickness: 0.05rem;
+    text-underline-offset: 0.1rem;
+  }
+}

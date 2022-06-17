@@ -11,10 +11,11 @@
 
   .journal-link-tag {
     font-size: 0.4em;
-    font-weight: 600;
-    border-radius: 0.6em;
+    font-weight: 800;
+    border-radius: $rounded;
     background-color: $tag-color;
     margin-top: 0.4em;
     padding: 0.5em;
+    text-decoration: inherit;
   }
 </style>

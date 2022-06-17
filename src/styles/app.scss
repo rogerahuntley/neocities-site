@@ -27,8 +27,12 @@
 
   code {
     font-family: "Roboto Mono", monospace;
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 500;
+    background-color: $accent-color;
+    padding-inline: .4em;
+    padding-bottom: .1em;
+    border-radius: $less-rounded;
   }
 
   p {
@@ -91,6 +95,10 @@
     }
   }
 
+  p a {
+    @extend .underline;
+  }
+
   // responsive stuff
 
   // root sizes
@@ -113,6 +121,15 @@
     }
   }
 
+  ol {
+    padding-left: 1.2rem;
+    li {
+      display: list-item;
+      font-weight: 100;
+      list-style-type: upper-roman;
+    }
+  }
+
   // helpers
 
   .hide-mobile{
@@ -131,10 +148,5 @@
     @include media(">=desktop"){
       display:none;
     }
-  }
-
-  .center {
-    display: flex;
-    place-content: center;
   }
 }

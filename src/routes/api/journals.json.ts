@@ -6,6 +6,10 @@ export const get = async () => {
     Object.entries(journalFiles).map(async ([path, resolver]) => {
       const { metadata } = await resolver()
 
+      if(metadata.hidden){
+        return undefined;
+      }
+      
       return {
         metadata,
         path: path.replace(".svx", "")
@@ -13,9 +17,11 @@ export const get = async () => {
     })
   )
 
-  if (allJournals) {
+  const filtered = allJournals.filter(i => i) as { metadata, path }[];
+
+  if (filtered) {
     return {
-      body: allJournals.sort((a, b) => a.metadata.date.localeCompare(b.metadata.date) )
+      body: filtered.sort((a, b) => a.metadata.date.localeCompare(b.metadata.date) )
     };
   }
 

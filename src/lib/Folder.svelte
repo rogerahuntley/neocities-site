@@ -11,7 +11,7 @@
 
   export let name;
 
-  let hidden = browser;
+  let hidden = true;
 
   const toggle = () => {
     hidden = !hidden;
@@ -57,45 +57,40 @@
   .folder-name {
     background-color: $folder-color;
     padding: 0.2em 0.5em;
-    border-radius: 0.6em 0.6em 0 0;
+    border-radius: $less-rounded $less-rounded 0 0;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
 
     .material-icons {
       font-size: 1em;
     }
 
     &.hidden {
-      border-radius: 0.6em;
-    }
-  }
-
-  @keyframes hydrate {
-    from {
-      display: none;
-    }
-    to {
-      display: inherit;
+      border-radius: $less-rounded;
     }
   }
 
   aside {
     &.hidden {
       &:not(.browser) {
-        // dunno why this isn't loading, fix later
-        animation-name: hydrate;
-        animation-delay: 10s;
-        animation-duration: 10s;
+        //display: some;
       }
 
       &.browser {
         display: none;
       }
     }
+
+    a {
+      @extend .underline;
+    }
   }
 
   blockquote {
     margin: 0;
     padding: 1em;
-    border-radius: 0 0.6em 0.6em 0.6em;
+    border-radius: 0 $less-rounded $less-rounded $less-rounded;
     background-color: $folder-color;
   }
 </style>
