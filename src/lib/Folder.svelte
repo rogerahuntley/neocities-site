@@ -1,6 +1,5 @@
 <script lang="ts">
   import { browser } from '$app/env';
-  import { fade } from 'svelte/transition';
 
   type attribute = {
     url: string;
@@ -8,7 +7,6 @@
   };
 
   export let attributes: attribute[] = [];
-
   export let name;
 
   let hidden = true;
@@ -19,7 +17,7 @@
 </script>
 
 <div class="folder">
-  <button class="folder-name" class:hidden on:click={toggle}>
+  <button class="folder-name" class:browser class:hidden on:click={toggle}>
     {name}
     <span class="material-icons">{hidden ? 'book' : 'menu_book'}</span>
   </button>
@@ -68,6 +66,10 @@
 
     &.hidden {
       border-radius: $less-rounded;
+    }
+
+    &:not(.browser) {
+      border-radius: $less-rounded $less-rounded 0 0;
     }
   }
 

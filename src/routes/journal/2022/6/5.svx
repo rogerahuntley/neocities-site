@@ -59,7 +59,7 @@ and this is pulled from `_lexicon.svelte`
 
 which creates a component like you see here:
 
-<GodotE />
+> <GodotE />
 
 Althought I may have made some changes since writing this article, so here's the updated version:
 
