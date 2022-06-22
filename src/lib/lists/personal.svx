@@ -1,6 +1,8 @@
 ---
 name: Personal Websites
 ---
+* [van life](https://vanlife.neocities.org/events.html)
+* [grossgirl94](https://grossgirl94.neocities.org/)
 * [scarbyte](https://scarbyte.com/)
 * [medulladeath](https://medulladeath.neocities.org/)
 * [jameso2](https://jameso2.neocities.org/)

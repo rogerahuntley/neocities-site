@@ -28,6 +28,5 @@
   .journal-details {
     margin-top: 0.1em;
     margin-bottom: 1em;
-    font-weight: 400;
   }
 </style>

@@ -1,0 +1,61 @@
+
+// font imports //
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Fira+Code&family=Roboto+Slab&family=Rubik:wght@300&family=Ubuntu:ital@1&display=swap');
+// font styles //
+
+$font-title: "Roboto Slab", serif;
+$font-primary: "Rubik", sans-serif;//"Roboto Flex", sans-serif;
+$font-secondary: "Cabin", sans-serif;//"Cabin", "Roboto Flex", sans-serif;
+
+$font-accent: cursive;//"Dancing Script", cursive;
+$font-mono: 'Fira Code', monospace;//'Roboto Mono', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+$font-aside: 'Ubuntu', sans-serif;//'Ubuntu';
+
+:global {
+
+  // base fonts
+  .font-primary {
+    font-family: $font-primary;
+    font-weight: 200;
+  }
+
+  .font-secondary {
+    @extend .font-primary;
+    font-family: $font-secondary;
+  }
+
+  .font-title {
+    font-family: $font-title;
+  }
+
+  .font-accent {
+    font-family: $font-accent;
+  }
+
+  .font-mono {
+    font-family: $font-mono;
+    font-size: 0.8em;
+  }
+
+  .font-aside {
+    font-family: $font-aside;
+  }
+
+  // more custom
+  .font-paragraph {
+    @extend .font-primary;
+    font-weight: 200;
+    font-size: 1em;
+  }
+
+  .font-link {
+    @extend .font-secondary;
+    font-weight: 400;
+  }
+
+  .font-li {
+    @extend .font-primary;
+    font-size: 1em;
+  }
+}

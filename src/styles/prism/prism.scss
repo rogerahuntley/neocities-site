@@ -3,13 +3,9 @@
 :global {
   code, pre {
     &[class*="language-"] {
-      white-space: pre-wrap;
+      @extend .font-mono;
       width: auto;
       tab-size: 1;
-      font-size: .6rem;
-      font-family: 'Roboto Mono';
-      font-weight: 400;
-      font-size: .8rem;
     }
   }
 
@@ -17,5 +13,9 @@
     margin-block: 1rem;
     max-width: clamp(0%, 25rem, 100%);
     margin-inline: auto;
+
+    code {
+      padding: 0;
+    }
   }
 }

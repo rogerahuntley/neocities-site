@@ -47,7 +47,7 @@
 
 <div id="grid-main">
   <header>
-    stealdog
+    <a href="/">stealdog</a>
     <span on:click={toggle} id="mobile-menu" class="material-icons">menu</span>
   </header>
 
@@ -66,7 +66,7 @@
   </nav>
 
   <aside>
-    {title}
+    <span class="font-title">{title}</span>
   </aside>
 
   <main>
@@ -115,7 +115,6 @@
   }
 
   main {
-    font-weight: 300;
     overflow: auto;
   }
 </style>

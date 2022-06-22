@@ -1,6 +1,15 @@
 ---
 name: Tools
 ---
+
+<p></p>
+
+### gamedev
+* [Game-Jam-Tools-Resources](https://github.com/kobitoko/Game-Jam-Tools-Resources) repo list of useful tools
+
+<div class="hr">🔨🔨🔨🔨🔨🔨</div>
+
+### webdev
 * [counter](https://www.websiteout.net/counter.php) website hit counter
 * [sadgrl.online](https://sadgrl.online/webmastery/downloads/fonts.html) fonts
 * [gifcities](https://gifcities.org/) gifts

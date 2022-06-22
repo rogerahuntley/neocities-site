@@ -1,5 +1,5 @@
 ---
-name: Cyber-related
+name: Cyber-sites
 ---
 * [cyberpunk-life](https://cyberpunk-life.neocities.org/)
 * [v0id](https://v0id.neocities.org/)

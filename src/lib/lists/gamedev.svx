@@ -1,4 +1,0 @@
----
-name: Gamedev Tools
----
-* [gamedev tools](https://github.com/kobitoko/Game-Jam-Tools-Resources)

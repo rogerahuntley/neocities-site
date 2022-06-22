@@ -11,7 +11,6 @@
 
   .journal-link-tag {
     font-size: 0.4em;
-    font-weight: 800;
     border-radius: $rounded;
     background-color: $tag-color;
     margin-top: 0.4em;

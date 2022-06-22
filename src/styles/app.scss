@@ -9,10 +9,9 @@
   }
 
   body {
+    @extend .font-primary;
     background-color: $blue;
     color: $white;
-    font-family: $font-primary;
-    font-weight: 500;
   }
 
   button {
@@ -26,9 +25,7 @@
   }
 
   code {
-    font-family: "Roboto Mono", monospace;
-    font-size: .8rem;
-    font-weight: 500;
+    @extend .font-mono;
     background-color: $accent-color;
     padding-inline: .4em;
     padding-bottom: .1em;
@@ -36,10 +33,10 @@
   }
 
   p {
-    font-weight: 200;
+    @extend .font-paragraph;
     display: block;
     letter-spacing: .01em;
-    line-height: 1.2em;
+    line-height: 1.4em;
     &:not(:first-child) {
       margin-block: .5em;
     }
@@ -50,7 +47,7 @@
   }
 
   strong {
-    font-weight: 500;
+    font-weight: bold;
   }
 
   del {
@@ -73,6 +70,7 @@
   // header sizes lol
   @for $i from 1 through 6 {
     h#{7 - $i} {
+        @extend .font-title;
         font-size: calc(1.6rem / 6 * $i);
         font-weight: calc(300 + 500 / 6 * $i);
         letter-spacing: .0em;
@@ -83,8 +81,8 @@
   }
 
   a {
+    @extend .font-link;
     color: $link;
-    font-weight: 400;
 
     &:hover {
       color: $link-hover;
@@ -108,16 +106,16 @@
       font-size: clamp(3vw, 6vw, 8vh);
     }
     @include media(">=tablet", "<desktop"){
-      font-size: clamp(2vw, 4vw, 6vh);
+      font-size: clamp(2vw, 3.6vw, 5.6vh);
     }
     @include media(">=desktop"){
-      font-size: clamp(1vw, 2vw, 2rem);
+      font-size: clamp(1vw, 1.8vw, 1.8rem);
     }
   }
 
   ul {
     li {
-      font-weight: 100;
+      @extend .font-li;
     }
   }
 
@@ -125,7 +123,6 @@
     padding-left: 1.2rem;
     li {
       display: list-item;
-      font-weight: 100;
       list-style-type: upper-roman;
     }
   }

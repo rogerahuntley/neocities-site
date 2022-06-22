@@ -1,7 +1,4 @@
-// font styles //
-
-$font-primary: "Roboto Flex", sans-serif;
-$font-accent: "Dancing Script", cursive;
+@import './fonts.scss';
 
 // app sizes //
 
@@ -37,11 +34,13 @@ $less-rounded: .4em;
 
   .underline {
     text-decoration: underline;
-    text-decoration-thickness: 0.05rem;
-    text-underline-offset: 0.1rem;
+    text-decoration-thickness: 0.05em;
+    text-underline-offset: 0.1em;
   }
 
   .hr {
+    @extend .center;
+    @extend .font-aside;
     margin: 1rem;
   }
 }

@@ -33,3 +33,10 @@ This is basically a generated list of all the metadata / front matter for each o
 
 #### Neocities Info [🔗](/api/neocities.json)
 This is basically a 'pseudo' forwarder to [neocities.org/api/list](https://neocities.org/api/info?sitename=stealdog). You can't directly ping the api from a neocities site because of cross-site scripting errors, [and I don't think that's changing anytime soon](https://github.com/neocities/neocities/pull/196). This stores the result at compile time and is then saved in this file, which can be accessed from this front end. Right now I have the view counter on the [home page](/), and this is how I do that. I originally just ran a 'fetch' on the api, but it needed some extra parameters, and I ended up installing the [neocities package for node](https://github.com/neocities/neocities-node).
+
+### June 21
+
+I went through the CSS and made more sense of the font variables, putting most of the font-specific code in one file and finding some new ones with Google Fonts.
+
+This is what it looks like now:
+![Example of what the page looks like now](/images/journals/20220700/newcss.png "so pretty")
