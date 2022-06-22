@@ -39,4 +39,4 @@ This is basically a 'pseudo' forwarder to [neocities.org/api/list](https://neoci
 I went through the CSS and made more sense of the font variables, putting most of the font-specific code in one file and finding some new ones with Google Fonts.
 
 This is what it looks like now:
-![Example of what the page looks like now](/images/journals/20220700/newcss.png "so pretty")
+![Example of what the page looks like now](/images/journal/20220700/newcss.png "so pretty")
