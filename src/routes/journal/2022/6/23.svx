@@ -1,0 +1,7 @@
+
+---
+title: California
+date: '2022-06-23'
+tags: personal travel
+hidden: true
+---
