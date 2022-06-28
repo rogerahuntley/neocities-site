@@ -11,7 +11,8 @@ name: Tools
 
 ### webdev
 * [counter](https://www.websiteout.net/counter.php) website hit counter
-* [sadgrl.online](https://sadgrl.online/webmastery/downloads/fonts.html) fonts
+* [typewolf](https://www.typewolf.com/) fonts
+* [sadgrl.online](https://sadgrl.online/webmastery/downloads/fonts.html) fonts 2
 * [gifcities](https://gifcities.org/) gifts
 * [subtlepatterns](https://www.toptal.com/designers/subtlepatterns/) patterns
 * [emsqpat](https://rvklein.me/proj/emsqpat/) patterns 2

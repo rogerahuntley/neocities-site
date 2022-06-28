@@ -22,7 +22,7 @@
   export let data;
 </script>
 
-<h3>welcome to my home page</h3>
+<h3>~ Welcome to my Home Page ~</h3>
 <div id="latest">
   latest journal:
   <JournalLink journal={journals.at(-1)} />
@@ -30,7 +30,7 @@
 <p>Visitor count (at last compile): {data.info.views}</p>
 <p>New! Check out my <a href="/lists/">lists</a>!</p>
 <p>
-  Now with <a href="https://github.com/marketplace/actions/deploy-to-neocities">GitHub Actions</a> 😉
+  Now with <a href="/journal/2022/6/13">GitHub Actions</a> 😉
 </p>
 <p>
   Soon I'll write up a doc on using <code>emoji</code> as punctuation, but for now, here goes:

@@ -10,7 +10,7 @@
     };
   };
 
-  // this is kind of insane, but i was looking at making an un-hydratable page
+  // this is kind of insane, but i was looking at making an un-hydratable page (javascriptless)
   // basically, svelte will compile a layout and then the page
   // i can't "title" data back up to layout via store because it's already been compiled
   // this will save some hassle at least with my individual pages
@@ -58,6 +58,12 @@
       </li>
       <li>
         <a sveltekit:prefetch href="/journal/">journal</a>
+      </li>
+      <li style="display: none">
+        <a sveltekit:prefetch href="/travel/">travel log</a>
+      </li>
+      <li style="display: none">
+        <a sveltekit:prefetch href="/lists/">shrines</a>
       </li>
       <li>
         <a sveltekit:prefetch href="/lists/">lists</a>

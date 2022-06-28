@@ -1,10 +1,10 @@
 
 // font imports //
 
-@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Fira+Code&family=Roboto+Slab&family=Rubik:wght@300&family=Ubuntu:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Fira+Code&family=Fira+Sans&family=Roboto+Slab&family=Concert+One&family=Rubik:wght@300&family=Ubuntu:ital@1&display=swap');
 // font styles //
 
-$font-title: "Roboto Slab", serif;
+$font-title: "Concert One", "Roboto Slab", serif;
 $font-primary: "Rubik", sans-serif;//"Roboto Flex", sans-serif;
 $font-secondary: "Cabin", sans-serif;//"Cabin", "Roboto Flex", sans-serif;
 
@@ -57,5 +57,9 @@ $font-aside: 'Ubuntu', sans-serif;//'Ubuntu';
   .font-li {
     @extend .font-primary;
     font-size: 1em;
+  }
+
+  .font-goofy {
+    
   }
 }

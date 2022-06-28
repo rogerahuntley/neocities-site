@@ -2,7 +2,9 @@ type journal = {
     metadata: {
       title: string;
       date: string;
-      tags: string;
+      tags?: string;
+      travel?: string;
+      hidden?: boolean;
     };
     path: string;
   };

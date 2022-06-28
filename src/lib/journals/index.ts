@@ -19,13 +19,14 @@ function toMonthInt(monthName){
   return isNaN(monthName) ? months.indexOf(monthName) : monthName;
 };
 
-function filter(journals: journal[], params: { year?: string; month?: string }) {
+function filter(journals: journal[], params: { year?: string; month?: string; travel?: string; }) {
   return journals.filter((journal) => {
-    if (!params || (!params.year && !params.month)) return true;
+    if (!params) return true;
 
     const date = new Date(journal.metadata.date);
     if (params.year && date.getFullYear() != parseInt(params.year)) return false;
     if (params.month && date.getMonth() + 1 != toMonthInt(params.month)) return false;
+    if (params.travel && journal.metadata.travel != params.travel) return false;
 
     return true;
   });
