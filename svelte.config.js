@@ -37,9 +37,7 @@ const config = {
   extensions: ['.svelte', '.md', '.svx'],
 
   kit: {
-    adapter: adapter({
-      fallback: 'not_found.html'
-    }),
+    adapter: adapter(),
     prerender: {
       default: true
     },
