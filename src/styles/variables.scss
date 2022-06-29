@@ -5,26 +5,30 @@
 $mobile: 20em;
 $tablet: 48em;
 $desktop: 64em;
-$breakpoints: (mobile: $mobile, tablet: $tablet, desktop: $desktop);
+$breakpoints: (
+  mobile: $mobile,
+  tablet: $tablet,
+  desktop: $desktop
+);
 
 // colors //
 
-$blue: #4A49BC;
-$white: #E5E5F5;
+$blue: #4a49bc;
+$white: #e5e5f5;
 
 $bg-main: $blue;
 $fg-main: $white;
 
-$link: #BFBEE7;
-$link-hover: #B2B1E2;
-$link-accent: #4A97BD;
+$link: #bfbee7;
+$link-hover: #b2b1e2;
+$link-accent: #4a97bd;
 
-$code-bg: #BD4AA4;
+$code-bg: #bd4aa4;
 
 $accent-color: #393795;
 
-$rounded: .6em;
-$less-rounded: .4em;
+$rounded: 0.6em;
+$less-rounded: 0.4em;
 
 :global {
   .center {
@@ -42,5 +46,13 @@ $less-rounded: .4em;
     @extend .center;
     @extend .font-aside;
     margin: 1rem;
+  }
+
+  .banner {
+    width: 100%;
+  }
+
+  .banner-contents > * {
+    width: 100%;
   }
 }

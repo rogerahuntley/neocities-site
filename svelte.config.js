@@ -14,6 +14,7 @@ const config = {
       extensions: ['.md', '.svx'],
       layout: {
         journal: 'src/routes/journal/_journal.svelte',
+        travel: 'src/lib/travel/_place.svelte',
         lexicon: 'src/lib/lexicon/_lexicon.svelte',
         lists: 'src/lib/lists/_list.svelte'
       }
@@ -24,16 +25,13 @@ const config = {
           @import './src/styles/variables.scss';
           @import 'include-media/dist/_include-media.scss';
         `
-      }, 
-      postcss: {
-        plugins: [
-          autoprefixer,
-          postcsshfix
-        ]
       },
+      postcss: {
+        plugins: [autoprefixer, postcsshfix]
+      }
     })
   ],
-  
+
   extensions: ['.svelte', '.md', '.svx'],
 
   kit: {
@@ -45,9 +43,9 @@ const config = {
       resolve: {
         alias: {
           '@': resolve('./src'),
-          '$stores': resolve('./src/stores'),
-          '$types': resolve('./src/types'),
-          '$journal': resolve('./src/routes/journal'),
+          $stores: resolve('./src/stores'),
+          $types: resolve('./src/types'),
+          $journal: resolve('./src/routes/journal')
         }
       }
     },

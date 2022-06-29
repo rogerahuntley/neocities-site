@@ -1,7 +1,7 @@
-import JournalLink from "./JournalLink.svelte";
-import JournalsLink from "./JournalsLink.svelte";
-import JournalsList from "./JournalsList.svelte";
-import JournalTag from "./JournalTag.svelte";
+import JournalLink from './JournalLink.svelte';
+import JournalsLink from './JournalsLink.svelte';
+import JournalsList from './JournalsList.svelte';
+import JournalTag from './JournalTag.svelte';
 
 import type { journal, nestedDate, nestedDates } from '$types/journal.type';
 
@@ -14,12 +14,25 @@ function toMonthName(monthNumber) {
   });
 }
 
-function toMonthInt(monthName){
-  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+function toMonthInt(monthName) {
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
   return isNaN(monthName) ? months.indexOf(monthName) : monthName;
-};
+}
 
-function filter(journals: journal[], params: { year?: string; month?: string; travel?: string; }) {
+function filter(journals: journal[], params: { year?: string; month?: string; travel?: string }) {
   return journals.filter((journal) => {
     if (!params) return true;
 
@@ -30,7 +43,7 @@ function filter(journals: journal[], params: { year?: string; month?: string; tr
 
     return true;
   });
-};
+}
 
 function nestDates(journals: journal[]) {
   const dates = {} as nestedDates;
@@ -46,13 +59,22 @@ function nestDates(journals: journal[]) {
     const year = date.getFullYear();
     const month = date.getMonth() + 1;
 
-    var yearA = dates[year] || (dates[year] = {} as nestedDate);
-    var monthA = yearA[month] || (yearA[month] = [] as journal[]);
+    const yearA = dates[year] || (dates[year] = {} as nestedDate);
+    const monthA = yearA[month] || (yearA[month] = [] as journal[]);
 
     monthA.push(journal);
   });
 
   return { dates, undated };
-};
+}
 
-export { JournalLink, JournalsLink, JournalsList, JournalTag, toMonthName, toMonthInt, filter, nestDates };
+export {
+  JournalLink,
+  JournalsLink,
+  JournalsList,
+  JournalTag,
+  toMonthName,
+  toMonthInt,
+  filter,
+  nestDates
+};

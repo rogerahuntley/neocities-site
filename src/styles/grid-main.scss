@@ -1,31 +1,35 @@
 :global {
-  #grid-main { // basically body
+  #grid-main {
+    // basically body
     min-height: 100vh;
     display: grid;
     margin: auto;
-    gap: .2rem;
-    padding: .2rem;
+    gap: 0.2rem;
+    padding: 0.2rem;
 
-    grid-template-areas:  "header"
-                          "nav"
-                          "aside"
-                          "main"
-                          "footer";
+    grid-template-areas:
+      'header'
+      'nav'
+      'aside'
+      'main'
+      'footer';
     grid-template-rows: auto auto auto 1fr auto;
     max-width: 60rem;
 
-    @include media(">=tablet", "<desktop"){
-      grid-template-areas:  "header aside"
-                            "nav main"
-                            "footer footer";
+    @include media('>=tablet', '<desktop') {
+      grid-template-areas:
+        'header aside'
+        'nav main'
+        'footer footer';
       grid-template-rows: auto 1fr auto;
       grid-template-columns: 5rem 1fr;
     }
 
-    @include media(">=desktop"){
-      grid-template-areas:  "header aside empty"
-                            "nav main empty"
-                            "footer footer footer";
+    @include media('>=desktop') {
+      grid-template-areas:
+        'header aside empty'
+        'nav main empty'
+        'footer footer footer';
       grid-template-rows: auto 1fr auto;
       grid-template-columns: 5rem 1fr 5rem; // actually centers it hehe
       padding-inline: 5rem;
@@ -34,23 +38,33 @@
     // set defaults for children
     @mixin defaults($element) {
       grid-area: $element;
-      border-radius: .2rem;
-      padding: .2rem;
+      border-radius: 0.2rem;
+      padding: 0.2rem;
     }
 
-    & > .header, & > #header, & > header {
+    & > .header,
+    & > #header,
+    & > header {
       @include defaults(header);
     }
-    & > .nav, & > #nav, & > nav {
+    & > .nav,
+    & > #nav,
+    & > nav {
       @include defaults(nav);
     }
-    & > .aside, & > #aside, & > aside {
+    & > .aside,
+    & > #aside,
+    & > aside {
       @include defaults(aside);
     }
-    & > .main, & > #main, & > main {
+    & > .main,
+    & > #main,
+    & > main {
       @include defaults(main);
     }
-    & > .footer, & > #footer, & > footer {
+    & > .footer,
+    & > #footer,
+    & > footer {
       @include defaults(footer);
     }
   }

@@ -1,19 +1,17 @@
-
 // font imports //
 
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Fira+Code&family=Fira+Sans&family=Roboto+Slab&family=Concert+One&family=Rubik:wght@300&family=Ubuntu:ital@1&display=swap');
 // font styles //
 
-$font-title: "Concert One", "Roboto Slab", serif;
-$font-primary: "Rubik", sans-serif;//"Roboto Flex", sans-serif;
-$font-secondary: "Cabin", sans-serif;//"Cabin", "Roboto Flex", sans-serif;
+$font-title: 'Concert One', 'Roboto Slab', serif;
+$font-primary: 'Rubik', sans-serif; //"Roboto Flex", sans-serif;
+$font-secondary: 'Cabin', sans-serif; //"Cabin", "Roboto Flex", sans-serif;
 
-$font-accent: cursive;//"Dancing Script", cursive;
-$font-mono: 'Fira Code', monospace;//'Roboto Mono', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
-$font-aside: 'Ubuntu', sans-serif;//'Ubuntu';
+$font-accent: cursive; //"Dancing Script", cursive;
+$font-mono: 'Fira Code', monospace; //'Roboto Mono', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+$font-aside: 'Ubuntu', sans-serif; //'Ubuntu';
 
 :global {
-
   // base fonts
   .font-primary {
     font-family: $font-primary;
@@ -60,6 +58,5 @@ $font-aside: 'Ubuntu', sans-serif;//'Ubuntu';
   }
 
   .font-goofy {
-    
   }
 }

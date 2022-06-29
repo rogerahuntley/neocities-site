@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { journal } from '$types/journal.type';
+  import type { journal as journalType } from '$types/journal.type';
   import { JournalTag } from './index';
 
-  export let journal: journal;
+  export let journal: journalType;
   let tags = (journal.metadata.tags || '')
     .split(' ')
     .filter((i) => i)

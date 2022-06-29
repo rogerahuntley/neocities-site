@@ -1,6 +1,4 @@
 <script context="module">
-  import { filter } from '$lib/journals/index';
-
   export const load = async ({ fetch }) => {
     const journals = await fetch('/api/journals.json');
     const allJournals = await journals.json();
@@ -14,18 +12,9 @@
 </script>
 
 <script>
+  import { Iceland, LA } from '$lib/travel/index';
   export let journals;
-  const la_journals = filter(journals, { travel: 'Los Angeles' });
 </script>
 
-### Iceland
-
-Writeup needed
-
-Photos needed
-
-### California
-
-Writeup needed
-
-Photos needed
+<Iceland {journals} />
+<LA {journals} />

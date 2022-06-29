@@ -18,11 +18,11 @@ The two main things are:
 
 #### Title Bar
 
-I looking into a few solutions - stores were kind of strange / glitchy, useContext / setContent only sent data down, page.stuff only sent data down. They worked fine when Javascript was enabled (except for a short hydration delay), but they straight up just *didn't work* without Javascript. I was getting pages that rendered twice (lists.html, lists/index.html) with different titles -- it was really something. The problem was that `__layout.svelte` would generate with the default values, and then once those later components were nested and sent out the signal to update, `__layout.svelte` would no longer be listening. The solution I came to isn't my favorite, and maybe I'll learn what I needed to know at a later date to be able to fix it. I basically check the `page` path in the layout, take the first folder, and use that to determine what the title should be. This was weird and definetly not the svelte way, but it definetly works. I started with a dictionary, but I realized I can basically just Capitalize the first letter of that first folder, and it's exactly what I wanted it to be anywhere. This will automatically update if I add new folders as well, but if I want to make the title anything different, I'll have to go back and make some modifications.
+I looking into a few solutions - stores were kind of strange / glitchy, useContext / setContent only sent data down, page.stuff only sent data down. They worked fine when Javascript was enabled (except for a short hydration delay), but they straight up just *didn't work* without Javascript. I was getting pages that rendered twice (lists.html, lists/index.html) with different titles -- it was really something. The problem was that `__layout.svelte` would generate with the default values, and then once those later components were nested and sent out the signal to update, `__layout.svelte` would no longer be listening. The solution I came to isn't my favorite, and maybe I'll learn what I needed to know at a later date to be able to fix it. I basically check the `page` path in the layout, take the first folder, and use that to determine what the title should be. This was weird and definitely not the svelte way, but it definitely works. I started with a dictionary, but I realized I can basically just Capitalize the first letter of that first folder, and it's exactly what I wanted it to be anywhere. This will automatically update if I add new folders as well, but if I want to make the title anything different, I'll have to go back and make some modifications.
 
 #### Folders
 
-So by folders, I'm talking about what is currently the [tab-system for lexicon defintions](../../6/5) and [lists](/lists/). For the folders to be open when Javascript is disabled, I basically set their default value to the value of `browser` from [$app/env](https://kit.svelte.dev/docs/modules#$app-env). This way, it's set to hidden by default when rendered by the browser, and not hidden when rendered by the server. The only thing about this method is that you can see that they're open for a split-second when you reload the page, which is really annoying. I tried to set up a CSS animation to hide it for 1 second and then display it, but CSS animations can't use `display: none;`, and I didn't feel very good about that method anyways.
+So by folders, I'm talking about what is currently the [tab-system for lexicon definitions](../../6/5) and [lists](/lists/). For the folders to be open when Javascript is disabled, I basically set their default value to the value of `browser` from [$app/env](https://kit.svelte.dev/docs/modules#$app-env). This way, it's set to hidden by default when rendered by the browser, and not hidden when rendered by the server. The only thing about this method is that you can see that they're open for a split-second when you reload the page, which is really annoying. I tried to set up a CSS animation to hide it for 1 second and then display it, but CSS animations can't use `display: none;`, and I didn't feel very good about that method anyways.
 
 ### June 16
 
@@ -40,3 +40,10 @@ I went through the CSS and made more sense of the font variables, putting most o
 
 This is what it looks like now:
 ![Example of what the page looks like now](/images/journal/20220700/newcss.png "so pretty")
+
+### June 28
+
+1. Added Travel page for documenting trips.
+2. Uploaded and formatted LA Photos, split between raw pngs and small jpegs.
+3. Started setting up to add a gallery page.
+4. Added another new font.

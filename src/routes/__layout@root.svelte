@@ -59,7 +59,7 @@
       <li>
         <a sveltekit:prefetch href="/journal/">journal</a>
       </li>
-      <li style="display: none">
+      <li>
         <a sveltekit:prefetch href="/travel/">travel log</a>
       </li>
       <li style="display: none">

@@ -1,17 +1,17 @@
 // returns basic info from neocities
 import Neocities from 'neocities';
 export const get = async () => {
-  let data = await new Promise((resolve) => {
-    let api = new Neocities();
-    api.info('stealdog', response => {
+  const data = await new Promise((resolve) => {
+    const api = new Neocities();
+    api.info('stealdog', (response) => {
       resolve(response);
-    })
+    });
   });
 
   return {
     body: data
-  }
-}
+  };
+};
 
 // // returns data from neocities
 // export const get = async () => {
@@ -23,8 +23,7 @@ export const get = async () => {
 //   .then(response => response.json())
 //   .then(json => data = json)
 
-//   return { 
+//   return {
 //     body: data
 //   }
 // }
-

@@ -1,30 +1,30 @@
 <script>
-	import Folder from '$lib/Folder.svelte';
-	export let name = null,
-		site = null,
-		discord = null,
-		twitter = null;
+  import Folder from '$lib/Folder.svelte';
+  export let name = null,
+    site = null,
+    discord = null,
+    twitter = null;
 
-	var getAttributes = () => {
-		var attributes = [];
+  var getAttributes = () => {
+    var attributes = [];
 
-		var add = (name, url) => {
-			if (url) {
-				attributes.push({
-					name: name,
-					url: url
-				});
-			}
-		};
+    var add = (name, url) => {
+      if (url) {
+        attributes.push({
+          name: name,
+          url: url
+        });
+      }
+    };
 
-		add('website', site);
-		add('discord', discord);
-		add('twitter', twitter);
+    add('website', site);
+    add('discord', discord);
+    add('twitter', twitter);
 
-		return attributes;
-	};
+    return attributes;
+  };
 </script>
 
 <Folder {name} attributes={getAttributes()}>
-	<slot />
+  <slot />
 </Folder>
