@@ -12,6 +12,10 @@
   });
 </script>
 
+<svelte:head>
+  <title>{title}</title>
+</svelte:head>
+
 <div class="journal">
   <h1 class="journal-title">{title}</h1>
 
