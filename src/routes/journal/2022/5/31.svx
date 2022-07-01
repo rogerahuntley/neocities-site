@@ -5,7 +5,7 @@ tags: personal gamedev
 ---
 
 <script>
-  import { Godot, GodotWildJam, ItchIo } from '$lib/lexicon/index';
+  import { Godot, GodotWildJam, ItchIo } from '$lib/lexicon';
 </script>
 
 So, the next project I’m looking towards working on is… my last few projects. For me to explain, let’s take a few steps back.

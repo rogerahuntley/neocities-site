@@ -12,7 +12,7 @@
 </script>
 
 <script>
-  import { Iceland, LA } from '$lib/travel/index';
+  import { Iceland, LA } from '$lib/travel';
   export let journals;
 </script>
 

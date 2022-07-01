@@ -5,7 +5,7 @@ tags: meta
 ---
 
 <script>
-  import { Personal } from '$lib/lists/index';
+  import { Personal } from '$lib/lists';
 </script>
 
 gaming gaming gaming gaming gaming

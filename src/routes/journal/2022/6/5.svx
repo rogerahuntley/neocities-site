@@ -5,7 +5,7 @@ tags: meta programming
 ---
 
 <script>
-  import { Godot } from '$lib/lexicon/index';
+  import { Godot } from '$lib/lexicon';
   import GodotE from '$lib/examples/2022-6-5/example.svx';
 </script>
 

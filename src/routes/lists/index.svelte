@@ -1,5 +1,5 @@
 <script>
-  import * as _Lists from '$lib/lists/index';
+  import * as _Lists from '$lib/lists';
   const { Articles, Cyber, Friends, Lists, Other, Personal, Tools, ...lists } = _Lists;
 </script>
 

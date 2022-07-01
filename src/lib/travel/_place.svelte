@@ -1,5 +1,5 @@
 <script>
-  import { JournalLink, filter } from '$lib/journals/index';
+  import { JournalLink, filter } from '$lib/journals';
 
   export let fancy = '';
   export let travel = '';

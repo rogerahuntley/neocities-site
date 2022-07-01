@@ -16,7 +16,7 @@
 </script>
 
 <script>
-  import { JournalLink } from '$lib/journals/index';
+  import { JournalLink } from '$lib/journals';
 
   export let journals;
   export let data;
