@@ -1,15 +1,16 @@
 ---
-title: Monthly Site Updates
+title: June Monthly Site Update
 date: '2022-07'
 tags: meta
 hidden: true
+monthly: true
 ---
 
-In the middle of this month (June) I had a bunch of new updates that I wanted to talk about and the changes just keep coming. I made a decision to start grouping them into bigger posts *less often*. I didn't want all of my journals to be about site updates - I want to promote writing about other stuff and I don't want to overload the panel with `meta` tagged posts.
+In the middle of this month (June) I had a bunch of new updates that I wanted to talk about and the changes just keep coming. I made a decision to start grouping them into bigger posts and to post them *less often*. I didn't want all of my journals to be about site updates - I want to promote writing about other stuff and I don't want to overload the page with `meta` tagged posts.
 
 ### June 15
 
-I decided to look at how the site works without JavaScript - it worked mostly good! Sveltekit is really awesome. However, it didn't work entirely. There are a few bugs that I still have to patch out, and there's still some learning to do.
+I decided to look at how the site works **without JavaScript** - it worked mostly good! Sveltekit is really awesome. However, it didn't work entirely. There are a few bugs that I still have to patch out, and there's still some learning to do.
 
 The two main things are:
 
@@ -18,7 +19,7 @@ The two main things are:
 
 #### Title Bar
 
-I looking into a few solutions - stores were kind of strange / glitchy, useContext / setContent only sent data down, page.stuff only sent data down. They worked fine when Javascript was enabled (except for a short hydration delay), but they straight up just *didn't work* without Javascript. I was getting pages that rendered twice (lists.html, lists/index.html) with different titles -- it was really something. The problem was that `__layout.svelte` would generate with the default values, and then once those later components were nested and sent out the signal to update, `__layout.svelte` would no longer be listening. The solution I came to isn't my favorite, and maybe I'll learn what I needed to know at a later date to be able to fix it. I basically check the `page` path in the layout, take the first folder, and use that to determine what the title should be. This was weird and definitely not the svelte way, but it definitely works. I started with a dictionary, but I realized I can basically just Capitalize the first letter of that first folder, and it's exactly what I wanted it to be anywhere. This will automatically update if I add new folders as well, but if I want to make the title anything different, I'll have to go back and make some modifications.
+I looking into a few solutions - stores were kind of strange / glitchy, useContext / setContent only sent data down, page.stuff only sent data down. They worked fine when Javascript was enabled (except for a short hydration delay), but they straight up just *didn't work* without Javascript. I was getting pages that rendered twice (lists.html, lists/index.html) with different titles -- it was really something. The problem was that `__layout.svelte` would generate with the default values, and then once those later components were nested and sent out the signal to update, `__layout.svelte` would no longer be listening. The solution I came to isn't my favorite, and maybe I'll learn what I needed to know at a later date to be able to fix it. I basically check the `page` path in the layout, take the first folder, and use that to determine what the title should be. This was weird and definitely not the svelte way, but it definitely works. I started with a dictionary, but I realized I can basically just Capitalize the first letter of that first folder, and it's exactly what I wanted it to be anyway. This will automatically update if I add new folders as well, but if I want to make the title anything different, I'll have to go back and make some modifications.
 
 #### Folders
 
@@ -26,13 +27,13 @@ So by folders, I'm talking about what is currently the [tab-system for lexicon d
 
 ### June 16
 
-I added an optional 'hidden' value to the front matter / metadata of my journals, so any post marked hidden is now filtered out by the 'API'. I'll write more about that later, but for now: I have a pseudo-API that gets generated with all the other static stuff. If you want to check it out, there are only two 'endpoints' as listed:
+I added an optional 'hidden' value to the front matter / metadata of my journals, so any post marked hidden is now filtered out by the API. I'll write more about that later, but for now: I have a pseudo-API that gets generated with all the other static stuff. If you want to check it out, there are currently two 'endpoints' as listed:
 
 #### Journals [🔗](/api/journals.json)
 This is basically a generated list of all the metadata / front matter for each of my journal entries. If the metadata is marked as hidden, it won't show up on this list. Each journal page loads this list and filters items on the list based on dates. Eventually, I want to add an additional XML endpoint for RSS readers.
 
 #### Neocities Info [🔗](/api/neocities.json)
-This is basically a 'pseudo' forwarder to [neocities.org/api/list](https://neocities.org/api/info?sitename=stealdog). You can't directly ping the api from a neocities site because of cross-site scripting errors, [and I don't think that's changing anytime soon](https://github.com/neocities/neocities/pull/196). This stores the result at compile time and is then saved in this file, which can be accessed from this front end. Right now I have the view counter on the [home page](/), and this is how I do that. I originally just ran a 'fetch' on the api, but it needed some extra parameters, and I ended up installing the [neocities package for node](https://github.com/neocities/neocities-node).
+This is basically a 'pseudo-forwarder' to [neocities.org/api/list](https://neocities.org/api/info?sitename=stealdog). You can't directly ping the neocities API from a neocities site because of cross-site scripting errors, [and I don't think that's changing anytime soon](https://github.com/neocities/neocities/pull/196). This stores the result at compile time and is then saved in this file, which can be accessed from this front end. Right now I have the view counter on the [home page](/), and this is how I do that. I originally just ran a `fetch` on the API, but it needed some specific headers and technical stuff, so I ended up installing the [neocities package for node](https://github.com/neocities/neocities-node).
 
 ### June 21
 
@@ -43,7 +44,17 @@ This is what it looks like now:
 
 ### June 28
 
-1. Added Travel page for documenting trips.
+1. Added [travel](/travel/) page for documenting trips.
 2. Uploaded and formatted LA Photos, split between raw pngs and small jpegs.
 3. Started setting up to add a gallery page.
 4. Added another new font.
+
+### June 29
+
+Created [azlef900.neocities.org](https://azlef900.neocities.org)
+
+### June 30
+
+1. Started working on an experiments page to hold projects and stuff like [azlef900](/journal/2022/6/30/)
+2. Tried out other new fonts, still deciding...
+3. Installed `async-neocities`, wrote a new build script to deploy without GitHub Actions or Ruby and can be used across multiple project

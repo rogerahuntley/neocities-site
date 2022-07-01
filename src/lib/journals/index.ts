@@ -37,8 +37,8 @@ function filter(journals: journal[], params: { year?: string; month?: string; tr
     if (!params) return true;
 
     const date = new Date(journal.metadata.date);
-    if (params.year && date.getFullYear() != parseInt(params.year)) return false;
-    if (params.month && date.getMonth() + 1 != toMonthInt(params.month)) return false;
+    if (params.year && date.getUTCFullYear() != parseInt(params.year)) return false;
+    if (params.month && date.getUTCMonth() + 1 != toMonthInt(params.month)) return false;
     if (params.travel && journal.metadata.travel != params.travel) return false;
 
     return true;
@@ -56,8 +56,8 @@ function nestDates(journals: journal[]) {
     }
 
     const date = new Date(journal.metadata.date);
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1;
+    const year = date.getUTCFullYear();
+    const month = date.getUTCMonth() + 1;
 
     const yearA = dates[year] || (dates[year] = {} as nestedDate);
     const monthA = yearA[month] || (yearA[month] = [] as journal[]);
