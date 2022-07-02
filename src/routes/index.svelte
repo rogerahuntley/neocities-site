@@ -23,15 +23,20 @@
 </script>
 
 <h3>~ Welcome to my Home Page ~</h3>
-<div id="latest">
+<div class="line">
   latest journal:
-  <JournalLink journal={journals.at(-1)} />
+  <JournalLink hideTag={true} journal={journals.at(-1)} />
 </div>
 <p>Visitor count (at last compile): {data.info.views}</p>
-<p>New! Check out my <a href="/lists/">lists</a>!</p>
-<p>
-  Now with <a href="/journal/2022/6/13">GitHub Actions</a> 😉
-</p>
+<div class="line">
+  Check the changelog here: <a href="/journal/meta"><pre>Sort Journals by <code>meta</code></pre></a
+  >
+</div>
+<div class="line">
+  New experiment here: <a href="https://azlef900.neocities.org/"
+    ><pre>azlef900: a trip report simulator</pre></a
+  >
+</div>
 <p>
   Soon I'll write up a doc on using <code>emoji</code> as punctuation, but for now, here goes:
   <strong>Emoji can replace periods.</strong>
@@ -39,9 +44,8 @@
 </p>
 
 <style lang="scss">
-  #latest {
+  .line {
     margin-block: 0.5em; // prerendering mades <p> act weird, matched style but made it a div
-
     display: flex;
     gap: 1rem;
   }

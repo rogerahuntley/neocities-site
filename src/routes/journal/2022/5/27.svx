@@ -4,10 +4,14 @@ date: '2022-05-27'
 tags: personal
 ---
 
-I got a haircut
+I got a haircut!!
 
-from ponytail:
+<div class="center">from ponytail:</div>
+
 ![My haircut before](/images/journal/20220527/haircut/before.jpeg "Ye old haircut")
 
-to.. regular?
+<div class="hr">✂️✂️✂️✂️✂️✂️</div>
+
+<div class="center">to.. regular?</div>
+
 ![My haircut after](/images/journal/20220527/haircut/after.jpeg "My cut, G")
