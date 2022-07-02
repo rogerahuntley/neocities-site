@@ -32,14 +32,16 @@ function toMonthInt(monthName) {
   return isNaN(monthName) ? months.indexOf(monthName) : monthName;
 }
 
-function filter(journals: journal[], params: { year?: string; month?: string; travel?: string }) {
+function filter(journals: journal[], params: { year?: string; month?: string; day?: string, travel?: string, tag?: string }) {
   return journals.filter((journal) => {
     if (!params) return true;
 
     const date = new Date(journal.metadata.date);
     if (params.year && date.getUTCFullYear() != parseInt(params.year)) return false;
     if (params.month && date.getUTCMonth() + 1 != toMonthInt(params.month)) return false;
+    if (params.day && date.getUTCDate() != parseInt(params.day)) return false;
     if (params.travel && journal.metadata.travel != params.travel) return false;
+    if (params.tag && !journal.metadata.tags?.split(' ').includes(params.tag)) return false;
 
     return true;
   });

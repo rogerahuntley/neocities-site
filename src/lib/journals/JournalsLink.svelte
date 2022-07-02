@@ -16,19 +16,3 @@
     {month ? toMonthName(month) : year}
   </a>
 </div>
-
-<style lang="scss">
-  .journals-link {
-    &.year {
-      :before {
-        //content: 'year: ';
-      }
-    }
-
-    &.month {
-      :before {
-        //content: 'month: ';
-      }
-    }
-  }
-</style>

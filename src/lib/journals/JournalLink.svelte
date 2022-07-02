@@ -3,6 +3,7 @@
   import { JournalTag } from './index';
 
   export let journal: journalType;
+  export let hideTag = false;
   let tags = (journal.metadata.tags || '')
     .split(' ')
     .filter((i) => i)
@@ -12,11 +13,13 @@
 <div class="journal-link">
   <a href={`/journal/${journal.path}/`}>
     {journal.metadata.title}
-    <span class="tags">
-      {#each tags as tag}
-        <JournalTag {tag} />
-      {/each}
-    </span>
+    {#if !hideTag}
+      <span class="tags">
+        {#each tags as tag}
+          <JournalTag {tag} />
+        {/each}
+      </span>
+    {/if}
   </a>
 </div>
 
@@ -25,8 +28,7 @@
     line-height: normal;
     a {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.2em;
+      gap: 0.4em;
       align-items: center;
       justify-content: space-between;
       * {
