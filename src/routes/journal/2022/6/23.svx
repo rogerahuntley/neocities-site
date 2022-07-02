@@ -7,7 +7,7 @@ travel: Los Angeles
 ---
 <div class="banner-contents">
 
-![Have a nice day written in sticks on the mountainside](/travel/losangeles/2022/mountains/mountains-1.jpeg)
+![Have a nice day written in sticks on the mountainside](/images/travel/losangeles/2022/mountains/mountains-1-compressed.jpeg)
 
 </div>
 
