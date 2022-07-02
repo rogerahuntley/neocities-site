@@ -22,7 +22,7 @@ I am looking into a few solutions - `stores` were kind of strange / glitchy, `us
 
 #### Folders
 
-So by folders, I'm talking about what is currently the [tab-system for lexicon definitions](../../6/5) and [lists](/lists/). For the folders to be open when JavaScript is disabled, I basically set their default value to the value of `browser` from [$app/env](https://kit.svelte.dev/docs/modules#$app-env). This way, it's set to hidden by default when rendered by the browser, and not hidden when rendered by the server. The only thing about this method is that you can see that they're open for a split-second when you reload the page, which is really annoying. I tried to set up a CSS animation to hide it for 1 second and then display it, but CSS animations can't use `display: none;`, and I didn't feel very good about that method anyway.
+So by folders, I'm talking about what is currently the [tab-system for lexicon definitions](/journal/2022/6/5 and [lists](/lists/). For the folders to be open when JavaScript is disabled, I basically set their default value to the value of `browser` from [$app/env](https://kit.svelte.dev/docs/modules#$app-env). This way, it's set to hidden by default when rendered by the browser, and not hidden when rendered by the server. The only thing about this method is that you can see that they're open for a split-second when you reload the page, which is really annoying. I tried to set up a CSS animation to hide it for 1 second and then display it, but CSS animations can't use `display: none;`, and I didn't feel very good about that method anyway.
 
 ### June 16
 
