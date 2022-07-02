@@ -1,8 +1,9 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { toMonthName } from '$lib/journals';
+  import { toMonthName, toMonthInt } from '$lib/journals';
 
   let path: string[] = [];
+  let aliasPath: string[] = []; // used to change the display, maps aliasPath[2] => path[2], June => 6
   let links: string[] = [];
 
   $: if ($page) {
@@ -10,9 +11,9 @@
     if ($page.url.pathname.length > 0) {
       path = $page.url.pathname.split('/').filter((i) => i);
 
-      if (path[0] == 'journal' && path[2]) {
+      if (path[0] && path[0].toLowerCase() == 'journal' && path[2]) {
         // set month to readable
-        path[2] = toMonthName(path[2]);
+        aliasPath[2] = toMonthName(path[2]);
       }
 
       // break into links
@@ -25,7 +26,7 @@
 
 <div class="breadcrumbs">
   {#each links as link, i}
-    <a href={link}>{path[i]}</a>
+    <a class="breadcrumb" href={link}>{aliasPath[i] || path[i]}</a>
     {#if i < links.length - 1}
       <span class="arrow">➜</span>
     {/if}
@@ -37,6 +38,10 @@
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+  }
+
+  .breadcrumb::first-letter {
+    text-transform: capitalize;
   }
 
   .arrow {
