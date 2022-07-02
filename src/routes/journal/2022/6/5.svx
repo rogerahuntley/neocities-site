@@ -13,9 +13,9 @@ I added some components that can be abstracted away and referenced in multiple p
 
 * Lexicon (info on Godot, GWJ, Itch)
 * Lists (lists of related links I can drop anywhere)
-* Contant Info
+* Contact Info
 
-What's really nice about having these is that I can write them up in markdown using mdsvex, and by using front matter I can style that infomation using a mdsvex template.
+What's really nice about having this is that I can write them up in Markdown using mdsvex, and by using front matter I can style that information using a mdsvex template.
 
 Take this example, pulled from `Godot.svx`
 
@@ -61,7 +61,7 @@ which creates a component like you see here:
 
 > <GodotE />
 
-Althought I may have made some changes since writing this article, so here's the updated version:
+Although I may have made some changes since writing this article, so here's the updated version:
 
 <Godot />
 
@@ -73,11 +73,11 @@ Althought I may have made some changes since writing this article, so here's the
 
 So right now, the site looks kind of monkey. 🍌
 
-This is because I'm using a css lib ([the-new-css-reset](https://elad2412.github.io/the-new-css-reset/)) to clear all css styles. I was having issues with Safari where buttons and other elements looked completely different than expected. I was trying to override them, and when I went to look on my phone, the website looked completely different than it did on my Chrome Browser.
+This is because I'm using a CSS lib ([the-new-css-reset](https://elad2412.github.io/the-new-css-reset/)) to clear all CSS styles. I was having issues with Safari where buttons and other elements looked completely different from expected. After trying to override them, I went to look on my phone and the website looked completely different from it did on my Chrome Browser.
 
-I knew I needed a solution. There have been files and libs to do this for ages (css versioning is tricky, but [*CSS3* dates back to pre-Y2k](https://www.w3.org/Style/CSS20/)), but web browsers can do so much more now. the-new-css-reset is remarkably simple, and I like that simplicity. It also clears all css styles, making everything (buttons, links, etc) look like plain text. 🤯
+I knew I needed a solution. There have been files and libs to do this for ages (CSS versioning is tricky, but [*CSS3* dates back to pre-Y2k](https://www.w3.org/Style/CSS20/)), but web browsers can do so much more now. `the-new-css-reset` is remarkably simple, and I like that simplicity. It also clears all CSS styles, making everything (buttons, links, etc.) look like plain text. 🤯
 
-So the site looks like plain-text until I specifically re-enable any css feature. I've already done so with a few elements: hx, button, pre tags -- but there's still a lot of work to do. My `app.css` now looks something like this:
+So the site looks like plain-text until I specifically re-enable any CSS feature. I've already done so with a few elements: h3, button, pre tags -- but there's still a lot of work to do. My `app.css` now looks something like this:
 
 ```css
 // generic stuff
@@ -132,7 +132,7 @@ A huge part in making a website responsive is using media queries. For that, I'm
 }
 ```
 
-When sizing things later, I resize elements and text by setting their value in `rem`. Anything that depends on the size of nearby text (header padding, that sort of thing), I set their value in `em`. A good writeup on the differences and why/how to use them is available [here](https://css-tricks.com/rem-global-em-local/).
+When sizing things later, I resize elements and text by setting their value in `rem`. Anything that depends on the size of nearby text (header padding, that sort of thing), I set their value in `em`. A good write-up on the differences and why/how to use them is available [here](https://css-tricks.com/rem-global-em-local/).
 
 Additionally, the site is currently responsive and laid out using [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout). Grid is pretty cool for building out structures in more than one direction ([Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) changed my life, but you can't rely on `wrap` for everything), so I use it to build out the template for the header, nav, content, aside, footer. I can adjust this layout easily using [CSS Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) to other layouts that fit the content better.
 

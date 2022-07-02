@@ -14,11 +14,11 @@ It's been a few days and I want to keep writing, so I'm coming at you with anoth
 
 #### added mdsvex
 
-I added markdown support through sdsvex, a markdown preprocessor for svelte. A great article on this is [here](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog), featuring a ton of information on not just setting up mdsvex, but on setting up svelekit, configuring and extending it.
+I added markdown support through mdsvex, a Markdown preprocessor for svelte. A great article on this is [here](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog), featuring a ton of information on not just setting up mdsvex, but on setting up SvelteKit, configuring and extending it.
 
 #### looking into animated text
 
-So I spent some time looking around for some good libraries for animated text. I know with css there's a lot you can do, but most of the examples I could find were just code snippets. For reference, what I'm looking for is something like what you see in this:
+So I spent some time looking around for some good libraries for animated text. I know with CSS there's a lot you can do, but most of the examples I could find were just code snippets. For reference, what I'm looking for is something like what you see in this:
 
 * [Textreme 2](https://ash-k.itch.io/textreme-2)
 * [RichTextEffects in Godot](https://docs.godotengine.org/en/stable/tutorials/ui/bbcode_in_richtextlabel.html)
@@ -27,7 +27,7 @@ So I might have to roll a few components myself, and if I do then I'll post the 
 
 ### some other thoughts
 
-I did a *super rough* outline and formatted main front end, but I'm working on inital designs and media queries - might end up having a slim vesion for mobile and full for desktop/ tablet (wacky desktop styles are so much funner)
+I did a *super rough* outline and formatted main front end, but I'm working on initial designs and media queries - might end up having a slim version for mobile and full for desktop/ tablet (wacky desktop styles are so much funner)
 
 here are some personal sites I like the designs of for reference:
 
