@@ -52,7 +52,7 @@
   </header>
 
   <nav class:hidden>
-    <ul>
+    <ul class="no-margin">
       <li>
         <a sveltekit:prefetch href="/">home</a>
       </li>

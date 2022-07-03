@@ -117,12 +117,19 @@
     @extend .font-li;
   }
 
+  ol, ul {
+    li {
+      margin-block: 0.3em;
+    }
+    &.no-margin{
+      li{
+        margin-block: 0;
+      }
+    }
+  }
+
   ol {
     padding-left: 5%;
-    li {
-      display: list-item;
-      list-style-type: upper-roman;
-    }
   }
 
   // helpers

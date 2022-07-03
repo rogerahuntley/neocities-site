@@ -5,7 +5,7 @@
 </script>
 
 <div class="journals-list">
-  <ul>
+  <ul class="no-margin">
     {#each journals as journal}
       <li>
         <JournalLink {journal} />
