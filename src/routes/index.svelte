@@ -22,7 +22,10 @@
   export let data;
 </script>
 
-<h3>~ Welcome to my Home Page ~</h3>
+<h3 class="line text-center">
+  ~ <pre>Welcome to my Home Page</pre>
+  ~
+</h3>
 <div class="line">
   latest journal:
   <JournalLink hideTag={true} journal={journals.at(-1)} />
@@ -48,5 +51,9 @@
     margin-block: 0.5em; // prerendering mades <p> act weird, matched style but made it a div
     display: flex;
     gap: 1rem;
+  }
+
+  .text-center {
+    text-align: center;
   }
 </style>
