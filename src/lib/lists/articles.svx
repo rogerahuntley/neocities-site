@@ -2,3 +2,4 @@
 name: Articles
 ---
 * [Self-Dialogue as a Journaling Strategy](https://sadgrl.online/blog/entries/selfinterview.html) sadgrl.online
+* [The Grug Brained Developer](https://grugbrain.dev/#grug-on-soc) grugbrain.dev
