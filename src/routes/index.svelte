@@ -51,6 +51,16 @@
     margin-block: 0.5em; // prerendering mades <p> act weird, matched style but made it a div
     display: flex;
     gap: 1rem;
+
+    @include media('<desktop') {
+      justify-content: space-between;
+      align-items: center;
+
+      :global(a) {
+        flex-shrink: 2;
+        text-align: right;
+      }
+    }
   }
 
   .text-center {
