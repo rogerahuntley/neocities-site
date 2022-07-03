@@ -1,3 +1,4 @@
+import JournalHeader from './JournalHeader.svelte';
 import JournalLink from './JournalLink.svelte';
 import JournalsLink from './JournalsLink.svelte';
 import JournalsList from './JournalsList.svelte';
@@ -71,6 +72,7 @@ function nestDates(journals: journal[]) {
 }
 
 export {
+  JournalHeader,
   JournalLink,
   JournalsLink,
   JournalsList,
