@@ -48,7 +48,6 @@
     }
 
     :global(.journals-layer) {
-      // don't add ► to first child
       margin-top: 0.3em;
       gap: 0.1em;
     }

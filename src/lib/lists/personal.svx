@@ -1,6 +1,8 @@
 ---
 name: Personal Websites
 ---
+These are some personal sites I either think **are** cool, **look** cool, are useful for inspiration, or are simply a decent starting point when web-surfing.
+
 * [van life](https://vanlife.neocities.org/events.html)
 * [grossgirl94](https://grossgirl94.neocities.org/)
 * [scarbyte](https://scarbyte.com/)
@@ -16,3 +18,4 @@ name: Personal Websites
 * [lukesmith](https://lukesmith.xyz/)
 * [sempiternus](https://sempiternus.neocities.org/)
 * [wilton](https://wilton.neocities.org/)
+* [swyx.io](https://www.swyx.io/)

@@ -3,3 +3,4 @@ name: Articles
 ---
 * [Self-Dialogue as a Journaling Strategy](https://sadgrl.online/blog/entries/selfinterview.html) sadgrl.online
 * [The Grug Brained Developer](https://grugbrain.dev/) grugbrain.dev
+* [A half-hour to learn Rust](https://fasterthanli.me/articles/a-half-hour-to-learn-rust) fasterthanli.me
