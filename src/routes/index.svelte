@@ -45,6 +45,9 @@
   <strong>Emoji can replace periods.</strong>
   Full stop 🤯, but not commas. It just looks weird to end a line like this 😅.
 </p>
+<p>
+  Have feedback? Reach out to me <a href="https://neocities.org/site/stealdog">here</a>.
+</p>
 
 <style lang="scss">
   .line {
