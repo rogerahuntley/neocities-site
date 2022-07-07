@@ -25,3 +25,9 @@ I deployed the new version to [Google Play](https://play.google.com/store/apps/d
 6. Good fit for the platform and is also coming out on Steam?
 
 The App Store is a pain and is meant to be taken seriously, and I'm not in the polish phase of my journey yet. I think that focusing on small games as learning exercises and hosting those experiments on Itch.io will mean they are available enough so that I can share it with friends, and simultanously stay accessible enough as a developer to not get too caught up in App Store mandates and documentation.
+
+Some pictures of the new leaderboards feature:
+
+![New app home screen with your user name and high score](/images/journal/20220705/front.png)
+![New popup when you lose that asks you about posting your score to the leaderboard](/images/journal/20220705/leaderboard-lose.png)
+![New leaderboard page showing the leaderboard and your ranking](/images/journal/20220705/leaderboard.png)
