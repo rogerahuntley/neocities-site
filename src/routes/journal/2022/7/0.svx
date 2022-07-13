@@ -21,3 +21,7 @@ Finished those journal changes (easily enough, most of it I just moved back into
 For example: All journal entries are currently 2022. If you try to navigate to [/journal/2022/](/journal/2022), it will redirect you back to [/journal](/journal). However, once 2023 rolls around and I start adding journals for that year, [/journal/2022] will "specifically filter" out journals from 2023, and will stop redirecting you.
 
 Basically, the [◄](../) back button sends you one level up. With this feature implemented, you won't have to climb several layers to go from **May** to **2022** to **all journals** anymore, making navigation faster and more intuitive. We also do the same thing in reverse, hiding the link to filter the year or the month if it is the only category in that "scope".
+
+### July 13
+
+Started overhaul. Read more here: [Another Site Overhaul](/journal/7/13)

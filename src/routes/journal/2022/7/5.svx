@@ -1,6 +1,6 @@
 ---
 title: 2048 Updates
-date: '2022-07-5'
+date: '2022-07-05'
 tags: personal gamedev
 ---
 
