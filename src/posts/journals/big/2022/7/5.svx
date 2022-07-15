@@ -1,0 +1,33 @@
+---
+title: 2048 Updates
+date: '2022-07-5'
+tags: personal gamedev
+---
+
+Yesterday morning I woke up pretty early after a long night of hanging out with my friends. I would spend this independence day programming... But what to work on? Still holding [this](/journal/5/31) article in the back of my mind, and feeling good about the state of this site (there's only like, 3? new features in development 😉), I decided to work on one of my existing Godot projects. I've been thinking a lot about Godot lately - I really want to dive back into game jams, and as soon as Godot 4 has it's first beta release I'm gonna be working on something in 3D. Anyway, I've opened intima-sea a few times before and with the intent to work on the writing, but this time I wanted to try diving into 2048 to add leaderboards.
+
+The interesting thing about 2048 is that it was my first real Godot project. I made it to familiarize myself with the engine without having to design a whole lot, just to prove I could make something and quickly. For this reason, it's small and well-spirited, so it makes for a really good re-entry point as well. After looking through the code, I determined that I could definely do some maintainence - but it isn't broken, so let's not break it.
+
+Here's a changelog of sorts:
+
+1. Added Leaderboards from [silentwolf](https://silentwolf.com/) 🙏
+2. Converted audio to .wav, increased buffer - seemed to help with audio performance
+3. Adjusted swipe detection script to work better on smaller screen and pulled it into a seperate plugin to use in other projects
+4. Exported HTML5 version with scaling as viewport, it causes pixelation but performance is *much* better.
+
+I deployed the new version to [Google Play](https://play.google.com/store/apps/details?id=dog.steal.twozerofoureight), and uploaded the other versions to [itch.io](https://rogerahuntley.itch.io/2048). If I ever get a MacBook (hopefully this summer I'll pick up an M2 Air), I might work on a Linux, MacOS and iOS port. My other games don't have Google Play releases, but this app works *excellently* as a "get my feet wet" app, which makes it perfect for trying to deploy my first app to the Play Store. In future projects I probably won't bother with mobile app store releases unless at least a few of the following are true:
+
+1. It's designed from the start for mobile
+2. I can give it *serious attention* as a port
+3. I'm addicted to it
+4. It's really popular and I feel like I should monetize it
+5. Someone else clones my repo and tries to upload it
+6. Good fit for the platform and is also coming out on Steam?
+
+The App Store is a pain and is meant to be taken seriously, and I'm not in the polish phase of my journey yet. I think that focusing on small games as learning exercises and hosting those experiments on Itch.io will mean they are available enough so that I can share it with friends, and simultanously stay accessible enough as a developer to not get too caught up in App Store mandates and documentation.
+
+Some pictures of the new leaderboards feature:
+
+![New app home screen with your user name and high score](/images/journal/20220705/front.png)
+![New popup when you lose that asks you about posting your score to the leaderboard](/images/journal/20220705/leaderboard-lose.png)
+![New leaderboard page showing the leaderboard and your ranking](/images/journal/20220705/leaderboard.png)

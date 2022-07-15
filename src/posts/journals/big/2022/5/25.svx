@@ -1,0 +1,38 @@
+---
+title: Discovered Yesterweb
+date: '2022-05-25'
+tags: personal
+---
+
+Today I discovered yesterweb\* and this was so intriguing to me. Yesterweb is an entry-point to an underground network of a thriving Web 1.0. There is so much to explore and read - so much depth often lacking from social media - and so much collective effort put into blogs, art, essays and personal websites. People make such interesting stuff when they’re this far from operating under “web norms” and it just oozes nothing but passion. Its *punk*. The collective websites listed here could be explored for hours - and as they link into neocities, they could be explored forever. It feels like diving into a deep and cold ocean of creativity and personality. Is this what surfing the web is supposed to be like?
+
+Free and detached from the requirements of social media - the idea of having a space to exist, to share ideas, to be connected with others and on the receiving end of others’ (internet) connections is calling my name. On the surface, these sites appear to ring with themes of outdatedness, amateurism, and of a time long ago. To me, however, these sites ring with themes of freedom, of hope, meaning, place, and safety. There are sites on here from people with a lot to say - whether it’s about themselves, the web, or their van.
+
+---
+
+### Let's take it again from the top.
+
+Today I discovered yesterweb\* and this was so intriguing to me - I’m a web developer by trade, and trying to keep up and learn new technologies is both exhausting and exhilarating. I’m also mostly self-taught, which includes inventing wheel after wheel (simply because I couldn’t find any answers that didn’t require jQuery and I had a point to make), but that got me where I am today. I have been making websites for myself since 2014, and in March of this year (2022) I discovered what AngularJS actually does. Of course - this kind of thing is around "these days" (React, Vue), but I had no idea they've been around for *that long*. It's hard to imagine how much time and effort it would have afforded me if I hadn’t just really *enjoyed* the feeling of opening a blank <abbr title="HyperText Markup Language">`HTML`</abbr> document and wiring stuff up from scratch. Having tried some of them since, Vue, React and Angular all require a mind-boggling amount of boilerplate - factories, controllers, directives. They all use JavaScript weirdness operate, leading to a distorted sense of JavaScript fundamentals. I may have been better off not knowing.
+
+> Note: I have been playing around with Svelte and I absolutely love it. Moving forward, this is going to be my framework of choice. I feel that it keeps the spirit of clean, hand-rolled web development intact. For example, each svelte file is split up into the following:
+> ```svelte
+> <script\>
+> 
+> html
+> 
+> <style\>
+> ```
+>Svelte can be pre-compiled in a number of ways and is reactive! This site was generated using SvelteKit and `adapter-static`.
+
+---
+
+### cool entry points to this part of the web
+* [yesterweb](https://yesterweb.org/)
+* [sadgrl.online](https://sadgrl.online/)
+* [neocities](https://neocities.org/)
+
+### these sites stuck out to me on my initial look
+* [low tech magazine (runs on solar panels)](https://solar.lowtechmagazine.com/)
+* [van life](https://vanlife.neocities.org/events.html)
+* [lainchan](https://lainchan.org/)
+* [grossgirl94](https://grossgirl94.neocities.org/)

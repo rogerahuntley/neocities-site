@@ -1,0 +1,51 @@
+---
+title: Next Game Projects
+date: '2022-05-31'
+tags: personal gamedev
+---
+
+<script>
+  import { Godot, GodotWildJam, ItchIo } from '$lib/lexicon';
+</script>
+
+So, the next project I’m looking towards working on is… my last few projects. For me to explain, let’s take a few steps back.
+
+*big bang*
+*dinosaur images*
+*baby*
+*halo system link lan parties*
+*minecraft*
+*GODOT*
+
+<Godot />
+<GodotWildJam />
+<ItchIo />
+
+---
+
+In the summer of 2021, I made a few games with Godot. It was part of an initiative to start small and start building bigger projects. It worked for a while – life got in the way – but I deeply desire to get back into the swing of things and start participating in game jams and hobby development again. However, I left 3 games unpolished, nearly unfinished, and I would like to go back and clean those up a bit before I proceed.
+
+#### 2048 [🔗](https://rogerahuntley.itch.io/2048)
+
+This was the first game that I took seriously from start to finish. I drafted a design document, I knew exactly what to do (because I was cloning another game), and I had something to prove. This title is largely finished, but there is one thing I want to add for my friends who still play the game: Leaderboards.
+
+#### Boneman’s Buttons [🔗](https://rogerahuntley.itch.io/bonemans-buttons)
+
+This was a cool little puzzle game, I really stepped up the game as far as creating mechanics and assets – I really worked to make this design responsive, it worked... Somewhat. My problem with this game, however, was the message I left on the title screen.
+
+![New levels coming soon!](/images/journal/20220531/newlevels.png "My big mistake")
+
+That’s right – new levels coming soon!! I’ve been waiting for a while though, and they still aren’t here... So maybe this means I come back and add a few levels - heck, I don’t even need to finish it completely. I’d just like to clean up the mechanics a bit and add another 15 or so levels.
+
+#### Intima-sea [🔗](https://rogerahuntley.itch.io/intima-sea)
+
+So this game was largely finished in the span of a week because I did it for a game jam, and I was super happy about my progress and scale. This was my first entry into the Godot Wild Jam, now that I had become familiar with Godot and the tool set. It was a wonderful time, and I largely delivered on what I wanted to set out to do. However: I was sitting down on the last day to finish up the story, sound effects, and add a few more mini-games, when...
+
+***I realize I only had 16 minutes to upload the final project***
+
+So I rushed the main menu and the last final touches, hoping the HTML5 export would be good enough and uploaded it to itch.io. The version on my itch.io page mainly works, but it never got that polish I intended to add in the end. That 16-minute sprint added in a few bugs as I rushed to add credits and fix other last-minute bugs. I’m still very pleased with the project, I just want to put the bow on top.
+
+### Future
+
+And that’s it! After that, I want to run through some more game-jams and maybe revisit some other old projects. Once I clean these up, I can take giant leap forward with nothing on my chest.
+
