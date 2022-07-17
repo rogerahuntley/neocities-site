@@ -64,8 +64,3 @@ export function toMonthInt(monthName) {
   ];
   return isNaN(monthName) ? months.indexOf(monthName) : monthName;
 }
-
-export function convert(path){
-
-  return "ape";
-}

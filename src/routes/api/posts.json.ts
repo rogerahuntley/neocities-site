@@ -1,11 +1,9 @@
 
-import { compile } from 'mdsvex';
 import { filter } from '$lib/posts';
+import { toPublicPath } from '$lib/posts';
 import type { post } from '@/types/post.type';
 
-const content = async () => {
-  return await compile(`# Hello friends`);
-};
+// ### ENDPOINTS ###
 
 // returns list of posts as filtered
 export const get = async ({ url }) => {
@@ -24,14 +22,13 @@ export const get = async ({ url }) => {
 
       const _post: post = {
         metadata,
-        path: path.replace('.svx', ''),
+        path: toPublicPath(path),
       };
 
       return _post;
     }
   ))).filter(i => i) as post[];
 
-  console.log(params);
   const filtered = filter(_posts, params);
 
   // sort by date

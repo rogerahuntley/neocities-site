@@ -1,0 +1,2 @@
+- [post](/blog/post)
+- [post](/blog/journal/2022/6/5)

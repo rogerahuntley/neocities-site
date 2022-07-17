@@ -3,7 +3,8 @@ import JournalLink from './JournalLink.svelte';
 import JournalsLink from './JournalsLink.svelte';
 import JournalsList from './JournalsList.svelte';
 import JournalTag from './JournalTag.svelte';
-import { toMonthInt, toMonthName, filter, nestDates, convert } from './post-convert';
+import { toMonthInt, toMonthName, filter, nestDates } from './post-frontend';
+import { toPublicPath, toLocalPath } from './post-backend';
 
 export {
   JournalHeader,
@@ -15,5 +16,6 @@ export {
   toMonthName,
   filter,
   nestDates,
-  convert
+  toPublicPath,
+  toLocalPath
 };
