@@ -5,7 +5,8 @@ type journal = {
     tags?: string;
     travel?: string;
     hidden?: boolean;
-  };
+    type?: string;
+  }
   path: string;
 };
 

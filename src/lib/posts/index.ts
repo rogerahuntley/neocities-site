@@ -1,10 +1,9 @@
-import JournalHeader from './JournalHeader.svelte';
-import JournalLink from './JournalLink.svelte';
-import JournalsLink from './JournalsLink.svelte';
-import JournalsList from './JournalsList.svelte';
-import JournalTag from './JournalTag.svelte';
-import { toMonthInt, toMonthName, filter, nestDates } from './post-frontend';
-import { toPublicPath, toLocalPath } from './post-backend';
+import JournalHeader from './components/JournalHeader.svelte';
+import JournalLink from './components/JournalLink.svelte';
+import JournalsLink from './components/JournalsLink.svelte';
+import JournalsList from './components/JournalsList.svelte';
+import JournalTag from './components/JournalTag.svelte';
+import { toMonthInt, toMonthName, filter, nestDates } from './post-functions';
 
 export {
   JournalHeader,
@@ -16,6 +15,4 @@ export {
   toMonthName,
   filter,
   nestDates,
-  toPublicPath,
-  toLocalPath
 };

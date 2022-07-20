@@ -21,7 +21,9 @@
       "@/*": ["src/*"],
       "$stores/*": ["src/stores/*"],
       "$types/*": ["src/types/*"],
-      "$journal/*": ["src/routes/journal/*"]
+      "$journal/*": ["src/routes/journal/*"],
+      "$posts": ["src/posts"],
+      "$posts/*": ["src/posts/*"],
     }
   }
 }

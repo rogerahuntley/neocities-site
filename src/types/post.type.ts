@@ -1,12 +1,15 @@
 type post = {
-  metadata: {
-    title: string;
-    date: string;
-    tags?: string;
-    travel?: string;
-    hidden?: boolean;
-  };
   path: string;
+  post: {
+      [key: string]: any;
+  };
 };
 
-export type { post };
+type post_endpoint = {
+  path: string;
+  metadata: {
+      [key: string]: any;
+  };
+}
+
+export type { post, post_endpoint };

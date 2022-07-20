@@ -19,6 +19,7 @@
   import { JournalLink } from '$lib/journals';
 
   export let journals;
+  console.log(journals);
   export let data;
 </script>
 

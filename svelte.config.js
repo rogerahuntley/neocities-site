@@ -13,7 +13,6 @@ const config = {
     mdsvex({
       extensions: ['.md', '.svx'],
       layout: {
-        journal: 'src/routes/journal/_journal.svelte',
         travel: 'src/lib/travel/_place.svelte',
         lexicon: 'src/lib/lexicon/_lexicon.svelte',
         lists: 'src/lib/lists/_list.svelte'
@@ -45,7 +44,8 @@ const config = {
           '@': resolve('./src'),
           $stores: resolve('./src/stores'),
           $types: resolve('./src/types'),
-          $journal: resolve('./src/routes/journal')
+          $journal: resolve('./src/routes/journal'),
+          $posts: resolve('./src/posts'),
         }
       }
     },
