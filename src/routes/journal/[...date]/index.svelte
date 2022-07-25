@@ -7,7 +7,7 @@
     JournalsList,
     JournalsLink,
     toMonthName
-  } from '$lib/journals';
+  } from '$lib/posts';
   import type { nestedDates } from '$types/journal.type';
 
   export const load = async ({ params, stuff }) => {

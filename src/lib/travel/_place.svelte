@@ -1,5 +1,5 @@
 <script>
-  import { JournalLink, filter } from '$lib/journals';
+  import { PostLink, filter } from '$lib/posts';
 
   export let fancy = '';
   export let travel = '';
@@ -11,7 +11,7 @@
 <h3>{fancy}</h3>
 
 {#each filtered as journal}
-  <JournalLink {journal} />
+  <PostLink {journal} />
 {/each}
 
 <slot />

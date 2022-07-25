@@ -1,6 +1,6 @@
 type post = {
   path: string;
-  post: {
+  data: {
       [key: string]: any;
   };
 };

@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
   // get wanted journals
-  import { JournalHeader, JournalsList, filter } from '$lib/journals';
+  import { JournalHeader, JournalsList, filter } from '$lib/posts';
 
   export const load = async ({ params, stuff }) => {
     const tag = params.tag;

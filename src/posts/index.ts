@@ -14,7 +14,7 @@ const getAllPosts = async (showHidden = false) => {
       // else
       return {
         path,
-        post
+        data: post
       }
     })
   )
@@ -23,17 +23,22 @@ const getAllPosts = async (showHidden = false) => {
 const allPosts = getAllPosts();
 
 // filter posts by type
-const filterByType = async (type: string) => {
+const getPostsOfType = async (type: string) => {
   const group = getGroupByFilter({ type });
   if(!group) return;
   // check if type and add
   const _posts = (await allPosts).map(_post => {
-    const isType = _post.post.metadata.type?.split(' ').includes(type) || _post.path.split('/').includes(group.postsFolder);
+    const isType = _post.data.metadata.type?.split(' ').includes(type) || _post.path.split('/').includes(group.postsFolder);
     if(isType) return _post
   })
   // filter out undefined
   return _posts.filter(i => i) as post[];
 };
+
+// get group by type
+const getGroupByName = (name: string) => {
+  return groups[name] || {};
+}
 
 // get group by filter
 const getGroupByFilter = (filter = {}) => {
@@ -50,19 +55,15 @@ const getGroupByFilter = (filter = {}) => {
   })
 }
 
-const getGroupByName = (name: string) => {
-  return groups[name] || {};
-}
-
 // transform array of posts for an endpoint
-const publicizePosts = async (params: string) => {
+const publicizeGroup = async (params: string) => {
   const group = getGroupByName(params);
   if(!group) return;
 
-  const _posts: post_endpoint[] = (await filterByType(group.type) as post[]).map(journal => {
+  const _posts: post_endpoint[] = (await getPostsOfType(group.type) as post[]).map(journal => {
     return {
       path: journal.path.replace('.', '').replace('.svx', '').replace(group.postsFolder, group.routesFolder),
-      metadata: journal.post.metadata as post_endpoint["metadata"]
+      metadata: journal.data.metadata as post_endpoint["metadata"]
     }})
   return _posts;
 }
@@ -80,4 +81,4 @@ const groups = {
   },
 }
 
-export { publicizePosts }
+export { publicizeGroup, getPostsOfType }

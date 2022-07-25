@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { toMonthName, toMonthInt } from '$lib/journals';
+  import { toMonthName, toMonthInt } from '$lib/posts';
 
   let path: string[] = [];
   let aliasPath: string[] = []; // used to change the display, maps aliasPath[2] => path[2], June => 6
