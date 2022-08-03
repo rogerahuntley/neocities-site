@@ -1,12 +1,4 @@
 <script context="module" lang="ts">
-  import { journals } from '@/posts';
-  export const load = async () => {
-    return {
-      props: {
-        posts: await journals
-      }
-    };
-  };
 </script>
 
 <script>

@@ -1,5 +1,5 @@
 <script context="module">
-  import { getPostsOfType } from '@/posts';
+  import { getPostsOfType } from '$stores/post.store';
 
   export const load = async ({ fetch }) => {
     const allJournals = await getPostsOfType('journal');
@@ -19,7 +19,6 @@
   import { PostLink } from '$lib/posts';
 
   export let journals;
-  console.log(journals);
   export let data;
 </script>
 

@@ -7,7 +7,6 @@
 
   export let post: postType;
   export let hideTag = false;
-  console.log(post);
   let tags = (post.data.metadata.tags || '')
     .split(' ')
     .filter((i) => i)
@@ -15,7 +14,7 @@
 </script>
 
 <div class="post-link">
-  <a href={`${post.path}/`}>
+  <a href={`${post.publicPath}/`}>
     {post.data.metadata.title}
     {#if !hideTag}
       <span class="tags">
@@ -47,10 +46,6 @@
       display: flex;
       gap: 0.4em;
       align-items: center;
-      justify-content: space-between;
-      * {
-        flex: 1 0 auto;
-      }
     }
 
     .tags {

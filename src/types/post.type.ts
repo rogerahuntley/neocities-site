@@ -1,5 +1,6 @@
 type post = {
-  path: string;
+  filePath: string;
+  publicPath: string;
   data: {
       [key: string]: any;
   };

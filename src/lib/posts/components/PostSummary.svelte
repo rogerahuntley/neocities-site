@@ -7,7 +7,6 @@
 
   export let post: postType;
   export let hideTag = false;
-  console.log(post);
   let tags = (post.data.metadata.tags || '')
     .split(' ')
     .filter((i) => i)

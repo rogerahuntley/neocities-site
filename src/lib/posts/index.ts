@@ -3,7 +3,7 @@ import JournalsLink from './components/JournalsLink.svelte';
 import JournalsList from './components/JournalsList.svelte';
 
 import PostLink from './components/PostLink.svelte';
-import { toMonthInt, toMonthName, filter, nestDates } from './post-functions';
+import { toMonthInt, toMonthName, filter, nestDates } from './functions';
 
 export {
   JournalHeader,
