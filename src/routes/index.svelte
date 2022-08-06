@@ -32,7 +32,8 @@
 </div>
 <p>Visitor count (at last compile): {data.info.views}</p>
 <div class="line">
-  Check the changelog here: <a href="/journal/meta"><pre>Sort Journals by <code>meta</code></pre></a
+  Check the changelog here: <a href="/journal/meta/"
+    ><pre>Sort Journals by <code>meta</code></pre></a
   >
 </div>
 <div class="line">

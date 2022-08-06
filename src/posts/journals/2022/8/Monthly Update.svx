@@ -20,5 +20,5 @@ This doesn't mark `feature complete`, but the website now works as it used to ag
 
 2. I can determine file pathing much better now, and can determine the function of path generation based on the main type of the post. This means I can name journals / blogs whatever I want and do the routing based on metadata, for example.
 
-3. I load posts in dynamically as external components instead of based on routes
+3. I load posts in dynamically as external components instead of based on routes. This means I can link the from multiple locations, and based on more complex filters.
 

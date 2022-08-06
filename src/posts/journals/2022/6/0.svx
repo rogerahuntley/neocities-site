@@ -28,7 +28,7 @@ So by folders, I'm talking about what is currently the [tab-system for lexicon d
 
 There is now support for an optional 'hidden' value to the front matter / metadata of my journals, so any post marked hidden is now filtered out by the API. I'll write more about that later, but for now: I have a pseudo-API that gets generated with all the other static stuff. If you want to check it out, there are currently two 'endpoints' as listed:
 
-#### Journals [🔗](/api/journals.json)
+#### Journals [🔗](/api/posts/journals.json)
 This is basically a generated list of all the metadata / front matter for each of my journal entries. If the metadata is marked as hidden, it won't show up on this list. Each journal page loads this list and filters items on the list based on dates. Eventually, I want to add an XML endpoint for RSS readers.
 
 #### Neocities Info [🔗](/api/neocities.json)

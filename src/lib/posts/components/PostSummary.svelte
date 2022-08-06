@@ -5,28 +5,20 @@
 <script lang="ts">
   import type { post as postType } from '$types/post.type';
 
+  import { PostLink } from '../';
+
   export let post: postType;
-  export let hideTag = false;
   let tags = (post.data.metadata.tags || '')
     .split(' ')
     .filter((i) => i)
     .sort();
 </script>
 
-<div class="post-link">
-  <a href={`${post.publicPath}/`}>
-    {post.data.metadata.title}
-    {#if !hideTag}
-      <span class="tags">
-        {#each tags as tag}
-          <span class="post-link-tag">
-            {tag}
-          </span>
-        {/each}
-      </span>
-    {/if}
-  </a>
-</div>
+{#if post.data.metadata.layout?.includes('small')}
+  <svelte:component this={post.data.default} />
+{:else}
+  <PostLink {post} />
+{/if}
 
 <style lang="scss">
   $tag-color: $accent-color;
@@ -46,10 +38,6 @@
       display: flex;
       gap: 0.4em;
       align-items: center;
-      justify-content: space-between;
-      * {
-        flex: 1 0 auto;
-      }
     }
 
     .tags {
