@@ -1,31 +1,16 @@
 import type { journal, nestedDate, nestedDates } from '$types/journal.type';
 
-export function filter(journals: journal[], params: { year?: string; month?: string; day?: string, travel?: string, tag?: string }) {
-  return journals.filter((journal) => {
-    if (!params) return true;
-
-    const date = new Date(journal.metadata.date);
-    if (params.year && date.getUTCFullYear() != parseInt(params.year)) return false;
-    if (params.month && date.getUTCMonth() + 1 != toMonthInt(params.month)) return false;
-    if (params.day && date.getUTCDate() != parseInt(params.day)) return false;
-    if (params.travel && journal.metadata.travel != params.travel) return false;
-    if (params.tag && !journal.metadata.tags?.split(' ').includes(params.tag)) return false;
-
-    return true;
-  });
-}
-
 export function nestDates(journals: journal[]) {
   const dates = {} as nestedDates;
   const undated = [] as journal[];
 
   journals.forEach((journal: journal) => {
-    if (journal && !journal.metadata.date) {
+    if (journal && !journal.data.metadata.date) {
       undated.push(journal);
       return;
     }
 
-    const date = new Date(journal.metadata.date);
+    const date = new Date(journal.data.metadata.date);
     const year = date.getUTCFullYear();
     const month = date.getUTCMonth() + 1;
 

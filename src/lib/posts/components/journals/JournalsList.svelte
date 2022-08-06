@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { PostLink } from '../';
-  import type { journal } from '$types/journal.type';
-  export let journals: journal[];
+  import { PostLink } from '../../';
+  import type { post } from '$types/post.type';
+  export let journals: post[];
 </script>
 
 <div class="journals-list">
   <ul class="no-margin">
     {#each journals as journal}
       <li>
-        <PostLink {journal} />
+        <PostLink post={journal} />
       </li>
     {/each}
   </ul>

@@ -1,14 +1,6 @@
-type journal = {
-  metadata: {
-    title: string;
-    date: string;
-    tags?: string;
-    travel?: string;
-    hidden?: boolean;
-    type?: string;
-  }
-  path: string;
-};
+import type { post } from '$types/post.type';
+
+type journal = post;
 
 type nestedDate = {
   [key: string]: journal[];

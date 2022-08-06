@@ -1,8 +1,8 @@
 <script context="module">
-  import { getPostsOfType } from '$stores/post.store';
+  import { getPostsByFilter } from '$stores/post.store';
 
   export const load = async ({ fetch }) => {
-    const allJournals = await getPostsOfType('journal');
+    const allJournals = await getPostsByFilter({ type: 'journal' });
     const data = await fetch('api/neocities.json');
     const jsonData = await data.json();
 

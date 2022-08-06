@@ -1,12 +1,13 @@
 import { writable } from "svelte/store";
 import type { post, post_endpoint } from '$types/post.type';
+import { toMonthInt } from "$lib/posts";
 
 // get all files
 const _postFiles = import.meta.glob('$posts/**/*.svx');
 
 // gathers array of all posts in $posts
 const getAllPosts = async (showHidden = false) => {
-  return await Promise.all(
+  const _posts = await Promise.all(
     Object.entries(_postFiles).filter(async ([path, resolver]) => {
       const post = await resolver();
       // remove if hidden
@@ -18,15 +19,19 @@ const getAllPosts = async (showHidden = false) => {
       // get url for front-end routing
       var publicPath = filePath.replace('../posts', '').replace('.svx', '');
 
-      // if group is known, adjust url
-      const postsFolder = publicPath.split('/')[1];
+      const postsFolder = filePath.split('/')[2];
       const group = getGroupByName(postsFolder);
+      
+      // if group is known, adjust url
       if(group){
         publicPath = publicPath.replace(group.postsFolder, group.routesFolder);
       }
 
+      // if group has custom route, replace with that instead
+      if(group.customRoute){
+        publicPath = group.customRoute(publicPath, post);
+      }
 
-      console.log(filePath, publicPath)
       // else
       return {
         filePath,
@@ -35,39 +40,64 @@ const getAllPosts = async (showHidden = false) => {
       }
     })
   )
+  
+  return _posts.sort((a, b) => {
+    return Date.parse(a.data.metadata.date) - Date.parse(b.data.metadata.date);
+  })
 };
 
 var allPosts = getAllPosts();
 
-// get posts by type
-const getPostsOfType = async (type: string) => {
-  return getPostsByFilter({ type });
-};
-
-// get posts by filter
+// get posts by filter ("global", filters from all posts)
 const getPostsByFilter = async (filter: post['data']['metadata'] = {}) => {
+  const _posts = await allPosts;
+  return filterPosts(_posts, filter);
+}
+
+// filter posts (filters from passed in array subset)
+const filterPosts = (posts, filter) => {
   // see if one of the common groups and get postsFolder
   const postsFolder = getGroupByFilter(filter)?.postsFolder;
 
   // check if type and add
-  const _posts = (await allPosts).map(_post => {
+  const _posts = posts.map(_post => {
     let matchesFilter = true;
+    let data = _post.data.metadata;
 
     // loop through filter
     Object.entries(filter).forEach(entry => {
-      const [key, value] = entry;
+
+      const [key, value] = entry as [string, string];
+
+      if(value == undefined){
+        return;
+      }
+
+      let isGood = true;
+
+      const date = data.date ? new Date(data.date) : new Date(0);
+
       switch (key){
         case 'type':
-          let isType = filter.type
-            ? _post.data.metadata.type?.split(' ').includes(filter.type)
-              || (postsFolder && _post.filePath.split('/').includes(postsFolder))
-            : true;
-          
-          matchesFilter = matchesFilter && isType;
-        break;
+          isGood = data.type?.split(' ').includes(filter.type)
+              || (postsFolder && _post.filePath.split('/').includes(postsFolder));
+          break;
+        case 'year':
+          isGood = date.getUTCFullYear() == parseInt(value);
+          break;
+        case 'month':
+          isGood = date.getUTCMonth() + 1 == toMonthInt(value);
+          break;
+        case 'day':
+          isGood = date.getUTCDate() == parseInt(value);
+          break;
+        case 'tag':
+          isGood = data.tags?.split(' ').includes(value);
+          break;
         default:
-          matchesFilter = matchesFilter && _post.data.metadata[key] == value;
+          isGood = _post.data.metadata[key] == value;
       }
+      matchesFilter = matchesFilter && isGood;
     });
 
     if(matchesFilter) return _post;
@@ -92,12 +122,18 @@ const getGroupByFilter = (filter = {}) => {
   })
 }
 
+const journalPublicPath = (_publicPath, data) => {
+  const date = new Date(data.metadata.date);
+  return `/journal/${date.getUTCFullYear()}/${date.getUTCMonth() + 1}/${date.getUTCDate()}`;
+}
+
 const groups = {
   'journals' : {
     type: 'journal',
     postsFolder: 'journals',
     routesFolder: 'journal',
     posts: [],
+    customRoute: journalPublicPath,
   },
   'articles' : {
     type: 'article',
@@ -117,18 +153,18 @@ const publicizeGroup = async (name: string) => {
   const group = getGroupByName(name);
   if(!group) return;
 
-  const _posts: post_endpoint[] = (await getPostsOfType(group.type) as post[]).map(journal => {
+  const _posts: post_endpoint[] = (await getPostsByFilter({ type: group.type }) as post[]).map(journal => {
     return {
       path: journal.publicPath,
       metadata: journal.data.metadata as post_endpoint["metadata"]
     }})
   return _posts;
 }
-
+// set up store
 const postStore = writable(allPosts);
 
 postStore.subscribe(value => {
   allPosts = value;
 })
 
-export { postStore, publicizeGroup, getPostsOfType, getPostsByFilter }
+export { postStore, publicizeGroup, filterPosts, getPostsByFilter }

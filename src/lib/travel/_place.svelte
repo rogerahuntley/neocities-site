@@ -6,8 +6,7 @@
   export let travel = '';
 
   // can't use `load` with these... *sigh*
-  // but this seems to work fine, and it's static anyway
-  export let travelPosts = getPostsByFilter({ travel });
+  export let travelPosts;
 </script>
 
 <h3>{fancy}</h3>
