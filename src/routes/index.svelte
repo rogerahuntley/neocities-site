@@ -1,8 +1,8 @@
 <script context="module">
-  export const load = async ({ fetch }) => {
-    const journals = await fetch('/api/journals.json');
-    const allJournals = await journals.json();
+  import { getPostsByFilter } from '$stores/post.store';
 
+  export const load = async ({ fetch }) => {
+    const allJournals = await getPostsByFilter({ type: 'journal' });
     const data = await fetch('api/neocities.json');
     const jsonData = await data.json();
 
@@ -16,7 +16,7 @@
 </script>
 
 <script>
-  import { JournalLink } from '$lib/journals';
+  import { PostLink } from '$lib/posts';
 
   export let journals;
   export let data;
@@ -28,7 +28,7 @@
 </h3>
 <div class="line">
   latest journal:
-  <JournalLink hideTag={true} journal={journals.at(-1)} />
+  <PostLink hideTag={true} post={journals.at(-1)} />
 </div>
 <p>Visitor count (at last compile): {data.info.views}</p>
 <div class="line">

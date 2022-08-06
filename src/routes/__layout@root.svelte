@@ -24,7 +24,7 @@
 
 <script>
   import Breadcrumbs from '$lib/main/Breadcrumbs.svelte';
-  import { title as titleStore } from '$stores/title.store';
+  import { title as titleStore } from '@/stores/title.store';
   import { page } from '$app/stores';
   import { browser } from '$app/env';
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { toMonthName } from './index';
+  import { toMonthName } from '../../';
 
   export let year: string | undefined = undefined;
   export let month: string | undefined = undefined;

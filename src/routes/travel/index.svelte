@@ -1,11 +1,10 @@
 <script context="module">
+  import { getPostsByFilter } from '@/stores/post.store';
   export const load = async ({ fetch }) => {
-    const journals = await fetch('/api/journals.json');
-    const allJournals = await journals.json();
-
     return {
       props: {
-        journals: allJournals
+        iceland: await getPostsByFilter({ travel: 'Iceland' }),
+        la: await getPostsByFilter({ travel: 'Los Angeles' })
       }
     };
   };
@@ -13,8 +12,10 @@
 
 <script>
   import { Iceland, LA } from '$lib/travel';
-  export let journals;
+
+  // this is so hacky but components can't pre-render and i want the site to work without js
+  export var iceland, la;
 </script>
 
-<Iceland {journals} />
-<LA {journals} />
+<Iceland travelPosts={iceland} />
+<LA travelPosts={la} />

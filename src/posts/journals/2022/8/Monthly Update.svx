@@ -1,0 +1,24 @@
+---
+title: August Monthly Site Update
+date: '2022-08-30T12:00'
+tags: meta monthly
+monthly: true
+hidden: true
+---
+
+### August 6th
+
+Finally... the light...
+
+Everything is hooked up again and *should* be working. There might be some leftover code from journals, most of it got pulled into "posts" and some of it will stay specific to journals. Travel entries are running entirely as posts now.
+
+This doesn't mark `feature complete`, but the website now works as it used to again. There's a lot more yet to be added, but the groundwork was laid.
+
+#### I fleshed out some things on the way:
+
+1. The api endpoints are different - instead of `/api/journal.json` it's now `api/posts/journals.json`. I'm not sure if that endpoint will be generated without being linked to from somewhere. It's built with dynamic keywords, so `/api/posts/articles.json` will actually trigger the same file. Because it's statically-rendered, something needs to actually ping these dynamic endpoints at compilation time to cause them to be created. I might have to build a site-map to trigger endpoint generation.
+
+2. I can determine file pathing much better now, and can determine the function of path generation based on the main type of the post. This means I can name journals / blogs whatever I want and do the routing based on metadata, for example.
+
+3. I load posts in dynamically as external components instead of based on routes
+

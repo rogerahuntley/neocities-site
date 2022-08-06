@@ -1,13 +1,10 @@
 <script context="module" lang="ts">
-  export const load = async ({ fetch, stuff }) => {
-    // pull journal data
-    const journalData = await fetch('/api/journals.json');
-    const journals = await journalData.json();
+  import { getPostsByFilter } from '@/stores/post.store';
+  export const load = async ({ stuff }) => {
+    // get journal data
+    const journals = await getPostsByFilter({ type: 'journal' });
 
     return {
-      props: {
-        journals
-      },
       stuff: {
         ...stuff,
         journals
@@ -17,12 +14,12 @@
 </script>
 
 <script lang="ts">
-  import type { journal } from '$types/journal.type';
-  import { setContext } from 'svelte';
+  //import type { post } from '$types/post.type';
+  //import { setContext } from 'svelte';
 
-  export let journals: journal[];
+  //export let journals: post[];
 
-  setContext('journals', journals);
+  //setContext('journals', journals);
 </script>
 
 <div class="journals">

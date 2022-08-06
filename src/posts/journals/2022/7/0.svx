@@ -3,7 +3,6 @@ title: July Monthly Site Update
 date: '2022-07-31T12:00'
 tags: meta monthly
 monthly: true
-hidden: true
 ---
 
 ### July 1
