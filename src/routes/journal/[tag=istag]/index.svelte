@@ -1,6 +1,7 @@
 <script context="module" lang="ts">
   // get wanted journals
-  import { JournalHeader, JournalsList, filter } from '$lib/posts';
+  import { JournalHeader, JournalsList } from '$lib/posts';
+  import { filterPosts } from '$stores/post.store';
 
   export const load = async ({ params, stuff }) => {
     const tag = params.tag;
@@ -8,7 +9,7 @@
     // pull journal data
     const journals = stuff.journals;
 
-    const tagJournals = filter(journals, { tag });
+    const tagJournals = filterPosts(journals, { tag });
 
     return {
       props: {
