@@ -64,6 +64,11 @@ const filterPosts = (posts, filter) => {
     let matchesFilter = true;
     let data = _post.data.metadata;
 
+    // check if hidden
+    if(data.hidden){
+      return;
+    }
+
     // loop through filter
     Object.entries(filter).forEach(entry => {
 
@@ -150,6 +155,11 @@ const getGroupByName = (name: string) => {
 
 // transform array of posts for an endpoint
 const publicizeGroup = async (name: string) => {
+  // return all
+  if(name == 'all'){
+    return getPostsByFilter();
+  }
+
   const group = getGroupByName(name);
   if(!group) return;
 

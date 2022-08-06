@@ -1,7 +1,7 @@
 <script lang="ts">
   import { PostLink } from '../../';
-  import type { post } from '$types/post.type';
-  export let journals: post[];
+  import type { journal } from '$types/journal.type';
+  export let journals: journal[];
 </script>
 
 <div class="journals-list">

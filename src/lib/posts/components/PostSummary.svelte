@@ -14,7 +14,7 @@
 </script>
 
 <div class="post-link">
-  <a href={`${post.path}/`}>
+  <a href={`${post.publicPath}/`}>
     {post.data.metadata.title}
     {#if !hideTag}
       <span class="tags">
