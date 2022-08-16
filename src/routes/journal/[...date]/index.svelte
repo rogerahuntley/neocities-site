@@ -43,7 +43,7 @@
         redirect: Array(backSteps).fill('../').join('')
       };
     } else {
-      const filtered = filterPosts(journals, { year, month, day });
+      const filtered = filterPosts(journals, { year, month, day }).reverse();
       const dates = nestDates(filtered).dates;
 
       return {
@@ -51,8 +51,7 @@
           dates,
           year,
           month,
-          day,
-          beforeNote: !month
+          day
         }
       };
     }
@@ -62,16 +61,16 @@
 <script lang="ts">
   // get wanted journals
   import { JournalHeader, JournalsList, JournalsLink, nestDates, toMonthName } from '$lib/posts';
+  import { PostBig } from '$lib/posts';
   import type { nestedDates } from '$types/journal.type';
   import { filterPosts } from '$stores/post.store';
 
   export let year: number, month: number, day: number;
   export let dates: nestedDates = {};
-  export let beforeNote: boolean = true;
 </script>
 
 {#if day && dates[year][month].length > 0}
-  <svelte:component this={dates[year][month][0].data.default} />
+  <PostBig post={dates[year][month][0]} />
 {:else}
   {#if year}
     <JournalHeader text={(month ? `${toMonthName(month)} ${year}` : year).toString()} link="../" />
@@ -83,12 +82,16 @@
       {/if}
       <li>
         <ul class="journals-layer month">
-          {#each Object.entries(yearA) as [month, monthA]}
-            {#if month && Object.keys(yearA).length > 1}
-              <JournalsLink {year} {month} />
+          <ul class="journal-months">
+            {#if Object.keys(yearA).length > 1}
+              {#each Object.entries(yearA) as [month]}
+                <li><JournalsLink {year} {month} /></li>
+              {/each}
             {/if}
+          </ul>
+          {#each Object.entries(yearA).reverse() as [month, monthA]}
             <li>
-              <div class="journals-layer day" class:beforeNote>
+              <div class="journals-layer day">
                 <JournalsList journals={monthA} />
               </div>
             </li>
@@ -101,16 +104,10 @@
 {/if}
 
 <style lang="scss">
-  .beforeNote {
-    :global(.journals-list) {
-      display: flex;
-    }
-
-    > :global(*:before) {
-      margin-inline: 0.2rem;
-      line-height: 1.2rem;
-      font-size: 0.5rem;
-      content: '►';
-    }
+  .journal-months {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+    flex-wrap: wrap;
   }
 </style>

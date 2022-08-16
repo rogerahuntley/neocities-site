@@ -16,8 +16,6 @@ const config = {
         travel: 'src/lib/travel/_place.svelte',
         lexicon: 'src/lib/lexicon/_lexicon.svelte',
         lists: 'src/lib/lists/_list.svelte',
-        journals: 'src/lib/posts/templates/_journal.svelte',
-        journal_small:  'src/lib/posts/templates/_journal_small.svelte',
       }
     }),
     sveltePreprocess({

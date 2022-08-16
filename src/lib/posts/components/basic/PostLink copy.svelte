@@ -1,15 +1,19 @@
-<!-- 
-  Post Summary
-  Use: show a link for big content, but print out small content
+<!--
+  Post Link
+  Use: Links to an individual post, tags shown
 -->
 <script lang="ts">
   import type { post as postType } from '$types/post.type';
-  import { PostLink, PostTag, PostSmall } from '../';
-  export let post: postType;
 
+  export let post: postType;
+  export let hideTag = false;
+  let tags = (post.data.metadata.tags || '')
+    .split(' ')
+    .filter((i) => i)
+    .sort();
   const date = post.data.metadata.date;
   const title = post.data.metadata.title;
-  const tags = post.data.metadata.tags.split(' ');
+
   const formattedDate = new Date(date).toLocaleDateString('en-us', {
     month: 'short',
     day: 'numeric',
@@ -17,42 +21,57 @@
   });
 </script>
 
-<div class="post-summary">
+<div class="post-link">
   <div class="header">
     {formattedDate}
-    {#if tags.length > 0}
+    {#if !hideTag}
       <span class="tags">
         {#each tags as tag}
           <span class="post-link-tag">
-            <PostTag {tag} independent={false} />
+            {tag}
           </span>
         {/each}
       </span>
     {/if}
   </div>
   <div class="body">
-    {#if post.data.metadata.size?.includes('small')}
-      <PostSmall {post} />
-    {:else}
-      <PostLink {post} hideTag={true} />
-    {/if}
+    <a href={`${post.publicPath}/`}>
+      {title}
+    </a>
   </div>
 </div>
 
 <style lang="scss">
-  .post-summary {
-    display: flex;
-    flex-direction: column;
-    padding-block: 0.25rem;
-    align-items: flex-start;
+  $tag-color: $accent-color;
+
+  .post-link-tag {
+    font-size: 0.4em;
+    border-radius: $rounded;
+    background-color: $tag-color;
+    margin-top: 0.4em;
+    padding: 0.5em;
+    text-decoration: inherit;
+  }
+
+  .post-link {
+    line-height: normal;
+    a {
+      display: flex;
+      gap: 0.4em;
+      align-items: center;
+    }
 
     .tags {
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 0.2rem;
-      margin-left: 0.4rem;
+      gap: 0.2em;
     }
+  }
+
+  .post-link {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    align-items: flex-start;
 
     .header {
       display: flex;
@@ -71,8 +90,7 @@
       border-radius: $rounded;
       background-color: $accent-color;
       font-size: 1rem;
-      :global(a),
-      :global(p) {
+      a {
         padding: 1em;
       }
     }

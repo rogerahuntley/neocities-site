@@ -4,6 +4,7 @@
 -->
 <script lang="ts">
   import type { post as postType } from '$types/post.type';
+  import { PostTag } from '../../';
 
   export let post: postType;
   export let hideTag = false;
@@ -20,7 +21,7 @@
       <span class="tags">
         {#each tags as tag}
           <span class="post-link-tag">
-            {tag}
+            <PostTag {tag} />
           </span>
         {/each}
       </span>
@@ -29,17 +30,6 @@
 </div>
 
 <style lang="scss">
-  $tag-color: $accent-color;
-
-  .post-link-tag {
-    font-size: 0.4em;
-    border-radius: $rounded;
-    background-color: $tag-color;
-    margin-top: 0.4em;
-    padding: 0.5em;
-    text-decoration: inherit;
-  }
-
   .post-link {
     line-height: normal;
     a {
