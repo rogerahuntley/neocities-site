@@ -16,8 +16,8 @@
 
 <script lang="ts">
   import { PostLink } from '$lib/posts';
+  import { blogStore } from '$stores/blog.store';
   export let articles;
-  console.log(articles);
 </script>
 
 {#each articles as article}

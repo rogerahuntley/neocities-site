@@ -3,8 +3,8 @@
     // get page params
     const [year, month, day] = params.date.split('/').filter((i) => i != '');
 
-    // pull journal data
-    const journals = stuff.journals;
+    // pull journal data, filter journals without dates
+    const journals = stuff.journals.filter((j) => j.data.metadata.date);
 
     // if we go forward we skip the year page, but if we go 'back' we won't, so let's check to see if we should reroute
     let backSteps = 0;
@@ -48,6 +48,7 @@
 
       return {
         props: {
+          filtered,
           dates,
           year,
           month,
@@ -62,52 +63,50 @@
   // get wanted journals
   import { JournalHeader, JournalsList, JournalsLink, nestDates, toMonthName } from '$lib/posts';
   import { PostBig } from '$lib/posts';
-  import type { nestedDates } from '$types/journal.type';
+  import type { nestedDates, journal } from '$types/journal.type';
   import { filterPosts } from '$stores/post.store';
 
   export let year: number, month: number, day: number;
+  export let filtered: journal[];
   export let dates: nestedDates = {};
 </script>
 
-{#if day && dates[year][month].length > 0}
-  <PostBig post={dates[year][month][0]} />
+{#if day || (filtered.length == 1 && !filtered[0].data.metadata.size.includes('small'))}
+  <PostBig post={filtered[0]} />
 {:else}
   {#if year}
     <JournalHeader text={(month ? `${toMonthName(month)} ${year}` : year).toString()} link="../" />
   {/if}
-  <ul class="journals-layer year">
+
+  {#if !year}
     {#each Object.entries(dates) as [year, yearA]}
-      {#if Object.keys(dates).length > 1}
-        <JournalsLink {year} />
-      {/if}
-      <li>
-        <ul class="journals-layer month">
-          <ul class="journal-months">
-            {#if Object.keys(yearA).length > 1}
-              {#each Object.entries(yearA) as [month]}
-                <li><JournalsLink {year} {month} /></li>
-              {/each}
-            {/if}
-          </ul>
-          {#each Object.entries(yearA).reverse() as [month, monthA]}
-            <li>
-              <div class="journals-layer day">
-                <JournalsList journals={monthA} />
-              </div>
-            </li>
-          {/each}
-        </ul>
-        <ul />
-      </li>
+      <ul class="journals-sort">
+        <li>Sort:</li>
+        {#each Object.entries(yearA) as [month]}
+          <li>
+            <JournalsLink {year} {month} />
+          </li>
+        {/each}
+      </ul>
     {/each}
+  {/if}
+
+  <ul class="journals-list">
+    <JournalsList journals={filtered} />
   </ul>
 {/if}
 
 <style lang="scss">
-  .journal-months {
+  .journals-sort {
     display: flex;
     flex-direction: row;
     gap: 0.3rem;
     flex-wrap: wrap;
+    padding-bottom: 0.2rem;
+    border-bottom: 4px solid $accent-color;
+    margin-bottom: 0.5rem;
+    li {
+      margin: 0;
+    }
   }
 </style>

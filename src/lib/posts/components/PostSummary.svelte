@@ -7,19 +7,28 @@
   import { PostLink, PostTag, PostSmall } from '../';
   export let post: postType;
 
-  const date = post.data.metadata.date;
   const title = post.data.metadata.title;
   const tags = post.data.metadata.tags.split(' ');
-  const formattedDate = new Date(date).toLocaleDateString('en-us', {
-    month: 'short',
-    day: 'numeric',
-    timeZone: 'UTC'
-  });
+
+  export let dateTile = false;
+  let date, formattedDate;
+  $: if (dateTile) {
+    date = post.data.metadata.date;
+    formattedDate = new Date(date).toLocaleDateString('en-us', {
+      month: 'short',
+      day: 'numeric',
+      timeZone: 'UTC'
+    });
+  }
 </script>
 
 <div class="post-summary">
   <div class="header">
-    {formattedDate}
+    {#if dateTile}
+      {formattedDate}
+    {:else}
+      {title}
+    {/if}
     {#if tags.length > 0}
       <span class="tags">
         {#each tags as tag}

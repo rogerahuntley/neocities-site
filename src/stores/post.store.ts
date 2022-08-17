@@ -132,19 +132,23 @@ const journalPublicPath = (_publicPath, data) => {
   return `/journal/${date.getUTCFullYear()}/${date.getUTCMonth() + 1}/${date.getUTCDate()}`;
 }
 
+const blogPublicPath = (_publicPath, data) => {
+  const title = encodeURIComponent(data.metadata.title.toLowerCase().replace(" ", "-"));
+  return `/blog/${title}`
+}
+
 const groups = {
   'journals' : {
     type: 'journal',
     postsFolder: 'journals',
     routesFolder: 'journal',
-    posts: [],
     customRoute: journalPublicPath,
   },
   'articles' : {
     type: 'article',
     postsFolder: 'articles',
     routesFolder: 'blog',
-    posts: [],
+    customRoute: blogPublicPath,
   },
 }
 
@@ -170,6 +174,7 @@ const publicizeGroup = async (name: string) => {
     }})
   return _posts;
 }
+
 // set up store
 const postStore = writable(allPosts);
 
@@ -177,4 +182,11 @@ postStore.subscribe(value => {
   allPosts = value;
 })
 
-export { postStore, publicizeGroup, filterPosts, getPostsByFilter }
+export {
+  journalPublicPath,
+  blogPublicPath,
+  postStore,
+  publicizeGroup,
+  filterPosts,
+  getPostsByFilter
+}

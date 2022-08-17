@@ -7,7 +7,7 @@
 <ul class="journals-list no-margin">
   {#each journals as journal}
     <li>
-      <PostSummary post={journal} />
+      <PostSummary post={journal} dateTile={true} />
     </li>
   {/each}
 </ul>
