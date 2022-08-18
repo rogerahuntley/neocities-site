@@ -10,6 +10,8 @@
   const title = post.data.metadata.title;
   const tags = post.data.metadata.tags.split(' ');
 
+  const type = post.data.metadata.size?.split(' ')[0];
+
   export let dateTile = false;
   let date, formattedDate;
   $: if (dateTile) {
@@ -40,7 +42,7 @@
     {/if}
   </div>
   <div class="body">
-    {#if post.data.metadata.size?.includes('small')}
+    {#if type == 'small' || type == 'video'}
       <PostSmall {post} />
     {:else}
       <PostLink {post} hideTag={true} />
@@ -52,7 +54,7 @@
   .post-summary {
     display: flex;
     flex-direction: column;
-    padding-block: 0.25rem;
+    margin-block: 0.5rem;
     align-items: flex-start;
 
     .tags {
@@ -81,8 +83,10 @@
       background-color: $accent-color;
       font-size: 1rem;
       :global(a),
-      :global(p) {
-        padding: 1em;
+      :global(p),
+      :global(iframe) {
+        display: block;
+        margin: 1em;
       }
     }
   }

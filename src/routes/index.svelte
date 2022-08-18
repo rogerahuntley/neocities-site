@@ -16,7 +16,7 @@
 </script>
 
 <script>
-  import { PostLink } from '$lib/posts';
+  import { PostSummary } from '$lib/posts';
 
   export let journals;
   export let data;
@@ -26,10 +26,8 @@
   ~ <pre>Welcome to my Home Page</pre>
   ~
 </h3>
-<div class="line">
-  latest journal:
-  <PostLink hideTag={true} post={journals.at(-1)} />
-</div>
+latest journal:
+<PostSummary post={journals.at(-1)} />
 <p>Visitor count (at last compile): {data.info.views}</p>
 <div class="line">
   Check the changelog here: <a href="/journal/meta/"
@@ -55,6 +53,10 @@
     margin-block: 0.5em; // prerendering mades <p> act weird, matched style but made it a div
     display: flex;
     gap: 1rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
 
     @include media('<desktop') {
       justify-content: space-between;

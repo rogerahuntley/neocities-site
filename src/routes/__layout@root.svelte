@@ -60,6 +60,9 @@
         <a sveltekit:prefetch href="/journal/">journal</a>
       </li>
       <li>
+        <a sveltekit:prefetch href="/blog/">blog</a>
+      </li>
+      <li>
         <a sveltekit:prefetch href="/travel/">travel log</a>
       </li>
       <li style="display: none">
@@ -81,7 +84,7 @@
 
   <footer class="center">
     <span class="hide-mobile">
-      <Breadcrumbs />
+      <!-- <Breadcrumbs /> -->
     </span>
   </footer>
 </div>

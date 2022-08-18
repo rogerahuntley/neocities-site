@@ -1,8 +1,8 @@
 <script context="module" lang="ts">
-  import { getPostsByFilter } from '@/stores/post.store';
+  import { mapBlog } from '$lib/posts';
   export const load = async ({ stuff }) => {
     // get blog data
-    const articles = await getPostsByFilter({ type: 'article' });
+    const articles = await mapBlog();
 
     return {
       stuff: {
