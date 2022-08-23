@@ -12,8 +12,9 @@
 
   const type = post.data.metadata.size?.split(' ')[0];
 
-  export let dateTile = false;
-  let date, formattedDate;
+  let date = post.data.metadata.date,
+    formattedDate;
+  export let dateTile = !!date;
   $: if (dateTile) {
     date = post.data.metadata.date;
     formattedDate = new Date(date).toLocaleDateString('en-us', {

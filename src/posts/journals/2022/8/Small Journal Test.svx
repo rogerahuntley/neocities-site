@@ -1,7 +1,0 @@
----
-title: Small Journal Test
-date: '2022-08-06'
-tags: meta monthly
-size: small
----
-This is a small journal test. This should appear as basic text instead of a link to a full page.

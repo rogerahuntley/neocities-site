@@ -4,18 +4,10 @@
   export let journals: journal[];
 </script>
 
-<ul class="journals-list no-margin">
+<ul class="journals-list">
   {#each journals as journal}
     <li>
-      <PostSummary post={journal} dateTile={true} />
+      <PostSummary post={journal} />
     </li>
   {/each}
 </ul>
-
-<style lang="scss">
-  .journals-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-</style>

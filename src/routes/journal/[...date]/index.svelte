@@ -91,9 +91,7 @@
     {/each}
   {/if}
 
-  <ul class="journals-list">
-    <JournalsList journals={filtered} />
-  </ul>
+  <JournalsList journals={filtered} />
 {/if}
 
 <style lang="scss">
