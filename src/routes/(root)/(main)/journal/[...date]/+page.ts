@@ -3,7 +3,6 @@ import { filterPosts } from '$lib/posts';
 import { redirect } from '@sveltejs/kit';
 
 export const load = async ({ params, parent }) => {
-  console.log(params);
   const stuff = await parent();
 
   // get page params
