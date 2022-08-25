@@ -5,7 +5,7 @@
 
 {#if text && link}
   <div class="journals-header">
-    <a class="journals-back" href={link}> ◄ </a>
+    <a sveltekit:reload class="journals-back" href={link}> ◄ </a>
     <div class="journals-title">
       {text}
     </div>

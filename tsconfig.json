@@ -18,7 +18,6 @@
     "paths": {
       "$lib": ["src/lib"],
       "$lib/*": ["src/lib/*"],
-      "@/*": ["src/*"],
       "$stores/*": ["src/stores/*"],
       "$types/*": ["src/types/*"],
       "$journal/*": ["src/routes/journal/*"],

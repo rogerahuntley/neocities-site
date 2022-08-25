@@ -10,6 +10,13 @@ import PostBig from './components/basic/PostBig.svelte';
 
 import { toMonthInt, toMonthName, nestDates } from './journal-functions';
 import { mapBlog } from './blog-functions';
+import {
+  journalPublicPath,
+  blogPublicPath,
+  publicizeGroup,
+  filterPosts,
+  getPostsByFilter
+} from './post-functions'
 
 export {
   // posts
@@ -31,4 +38,11 @@ export {
 
   // blog functions
   mapBlog,
+
+  // post functions
+  journalPublicPath,
+  blogPublicPath,
+  publicizeGroup,
+  filterPosts,
+  getPostsByFilter
 };

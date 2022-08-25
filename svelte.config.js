@@ -1,6 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
 import sveltePreprocess from 'svelte-preprocess';
-import { resolve } from 'path';
 import { mdsvex } from 'mdsvex';
 import autoprefixer from 'autoprefixer';
 import postcsshfix from 'postcss-100vh-fix';
@@ -38,18 +37,13 @@ const config = {
     prerender: {
       default: true
     },
-    vite: {
-      resolve: {
-        alias: {
-          '@': resolve('./src'),
-          $stores: resolve('./src/stores'),
-          $types: resolve('./src/types'),
-          $journal: resolve('./src/routes/journal'),
-          $posts: resolve('./src/posts'),
-        }
-      }
-    },
-    trailingSlash: 'ignore'
+    trailingSlash: 'ignore',
+    alias: {
+      '$stores': 'src/stores',
+      '$types': 'src/types',
+      '$journal': 'src/routes/journal',
+      '$posts': 'src/posts',
+    }
   }
 };
 

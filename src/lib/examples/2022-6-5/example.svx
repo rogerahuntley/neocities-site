@@ -17,9 +17,9 @@
 <button on:click={toggle}>{name}</button>
 {#if !hidden}
   <aside>
-    <a href={site}>website</a>
-    <a href={discord}>discord</a>
-    <a href={twitter}>twitter</a>
+    <a sveltekit:reload href={site}>website</a>
+    <a sveltekit:reload href={discord}>discord</a>
+    <a sveltekit:reload href={twitter}>twitter</a>
     <Godot />
   </aside>
 {/if}

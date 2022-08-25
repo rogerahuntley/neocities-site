@@ -1,15 +1,14 @@
 // font imports //
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Fira+Code&family=Fira+Sans&family=Roboto+Slab&family=Concert+One&family=Indie+Flower&family=Rubik:wght@300&family=Arvo&family=Yuji+Boku&family=Ubuntu:ital@1&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Fira+Code&family=Fira+Sans&family=Roboto+Slab&family=Concert+One&family=Rubik:wght@300&family=Arvo&family=Yuji+Boku&family=Ubuntu:ital@1&display=swap');
 // font styles //
-
 $font-title: 'Arvo', 'Concert One', 'Roboto Slab', serif;
-$font-primary: 'Rubik', sans-serif; //"Roboto Flex", sans-serif;
-$font-secondary: 'Cabin', sans-serif; //"Cabin", "Roboto Flex", sans-serif;
+$font-primary: 'Rubik', sans-serif;
+$font-secondary: 'Cabin', sans-serif;
 
-$font-accent: cursive; //"Dancing Script", cursive;
-$font-mono: 'Fira Code', monospace; //'Roboto Mono', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
-$font-aside: 'Ubuntu', sans-serif; //'Ubuntu';
+$font-accent: 'Indie Flower', cursive;
+$font-mono: 'Fira Code', monospace;
+$font-aside: 'Ubuntu', sans-serif;
 
 $font-bubbly: 'Concert One', serif;
 $font-handwritten: 'Yuji Boku', serif;

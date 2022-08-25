@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getPostsByFilter } from '$stores/post.store';
+  import { getPostsByFilter } from '$lib/posts';
   import { PostLink } from '$lib/posts';
 
   export let fancy = '';

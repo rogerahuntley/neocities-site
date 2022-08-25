@@ -82,6 +82,7 @@
 
   a {
     @extend .font-link;
+    @extend .underline;
     color: $link;
 
     &:hover {
@@ -93,23 +94,22 @@
     }
   }
 
-  p a {
-    @extend .underline;
-  }
-
   // responsive stuff
 
   // root sizes
 
   :root {
     @include media('<tablet') {
-      font-size: clamp(3vw, 6vw, 8vh);
+      font-size: 3rem;
+      // font-size: clamp(3vw, 6vw, 8vh);
     }
     @include media('>=tablet', '<desktop') {
-      font-size: clamp(2vw, 3.6vw, 5.6vh);
+      font-size: 2rem;
+      // font-size: clamp(2vw, 3.6vw, 5.6vh);
     }
     @include media('>=desktop') {
-      font-size: clamp(1vw, 1.8vw, 1.8rem);
+      font-size: 2rem;
+      // font-size: clamp(1vw, 1.8vw, 1.8rem);
     }
   }
 

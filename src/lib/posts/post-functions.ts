@@ -19,7 +19,8 @@ const getAllPosts = async (showHidden = false) => {
       // get url for front-end routing
       var publicPath = filePath.replace('../posts', '').replace('.svx', '');
 
-      const postsFolder = filePath.split('/')[2];
+      const postsFolder = filePath.split('/')[3];
+
       const group = getGroupByName(postsFolder);
       
       // if group is known, adjust url
@@ -175,17 +176,9 @@ const publicizeGroup = async (name: string) => {
   return _posts;
 }
 
-// set up store
-const postStore = writable(allPosts);
-
-postStore.subscribe(value => {
-  allPosts = value;
-})
-
 export {
   journalPublicPath,
   blogPublicPath,
-  postStore,
   publicizeGroup,
   filterPosts,
   getPostsByFilter

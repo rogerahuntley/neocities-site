@@ -7,6 +7,7 @@
   import { PostTag } from '../../';
 
   export let post: postType;
+
   export let hideTag = false;
   let tags = (post.data.metadata.tags || '')
     .split(' ')
@@ -15,7 +16,7 @@
 </script>
 
 <div class="post-link">
-  <a href={`${post.publicPath}/`}>
+  <a sveltekit:reload href={`${post.publicPath}/`}>
     {post.data.metadata.title}
     {#if !hideTag}
       <span class="tags">

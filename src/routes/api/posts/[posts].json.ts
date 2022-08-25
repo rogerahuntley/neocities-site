@@ -1,5 +1,5 @@
 // these change based on endpoint, rest should be good
-import { publicizeGroup } from '$stores/post.store';
+import { publicizeGroup } from '$lib/posts';
 
 // returns list of posts as filtered
 export const get = async ({ params }) => {

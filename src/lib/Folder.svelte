@@ -26,7 +26,7 @@
       <ul>
         {#each attributes as attr}
           <li>
-            <a class="folder-attribute" href={attr.url}>{attr.name}</a>
+            <a sveltekit:reload class="folder-attribute" href={attr.url}>{attr.name}</a>
           </li>
         {/each}
       </ul>
@@ -82,10 +82,6 @@
       &.browser {
         display: none;
       }
-    }
-
-    a {
-      @extend .underline;
     }
   }
 

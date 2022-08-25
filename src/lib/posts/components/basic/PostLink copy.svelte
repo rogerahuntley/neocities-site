@@ -35,7 +35,7 @@
     {/if}
   </div>
   <div class="body">
-    <a href={`${post.publicPath}/`}>
+    <a sveltekit:reload href={`${post.publicPath}/`}>
       {title}
     </a>
   </div>

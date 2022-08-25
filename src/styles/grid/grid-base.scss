@@ -1,0 +1,50 @@
+:global {
+  // set defaults for children
+  @mixin defaults($element) {
+    grid-area: $element;
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+  }
+
+  .grid-base {
+    // basically body
+    min-height: 100vh;
+    display: grid;
+    margin: auto;
+    padding: 0.2rem;
+
+    @include media('>=desktop') {
+      max-width: 35rem;
+    }
+
+    @include media('<desktop'){
+      max-width: 100%;
+    }
+
+    & > .header,
+    & > #header,
+    & > header {
+      @include defaults(header);
+    }
+    & > .nav,
+    & > #nav,
+    & > nav {
+      @include defaults(nav);
+    }
+    & > .aside,
+    & > #aside,
+    & > aside {
+      @include defaults(aside);
+    }
+    & > .main,
+    & > #main,
+    & > main {
+      @include defaults(main);
+    }
+    & > .footer,
+    & > #footer,
+    & > footer {
+      @include defaults(footer);
+    }
+  }
+}

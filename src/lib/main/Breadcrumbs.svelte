@@ -26,7 +26,7 @@
 
 <div class="breadcrumbs">
   {#each links as link, i}
-    <a class="breadcrumb" href={link}>{aliasPath[i] || path[i]}</a>
+    <a sveltekit:reload class="breadcrumb" href={link}>{aliasPath[i] || path[i]}</a>
     {#if i < links.length - 1}
       <span class="arrow">➜</span>
     {/if}

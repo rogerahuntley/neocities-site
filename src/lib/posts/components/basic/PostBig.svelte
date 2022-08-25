@@ -17,10 +17,6 @@
   });
 </script>
 
-<svelte:head>
-  <title>{title}</title>
-</svelte:head>
-
 <div class="post big">
   <h1 class="post-title">{title}</h1>
 

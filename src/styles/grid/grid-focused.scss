@@ -1,0 +1,13 @@
+@import './grid-base.scss';
+
+:global {
+  #grid-focused {
+    @extend .grid-base;
+    grid-template-areas:
+      'header'
+      'main'
+      'footer';
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+  }
+}

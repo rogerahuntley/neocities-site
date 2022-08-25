@@ -1,4 +1,4 @@
-import { blogPublicPath, getPostsByFilter } from '$stores/post.store';
+import { blogPublicPath, getPostsByFilter } from '$lib/posts';
 import type { blogMap } from '$types/blog.type';
 
 const getBlogs = async () => {
