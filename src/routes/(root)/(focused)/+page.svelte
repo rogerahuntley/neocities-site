@@ -18,7 +18,7 @@
     </div>
     <div class="box">
       <div class="box-header">Visitor count</div>
-      <div class="box-contents">{300}</div>
+      <div class="box-contents">{neocities.info.views}</div>
     </div>
     <div class="box">
       <div class="box-header">Latest experiment</div>
