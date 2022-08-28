@@ -1,5 +1,4 @@
-import { writable } from "svelte/store";
-import type { post, post_endpoint } from '$types/post.type';
+import type { post, post_raw, post_public } from '$types/post.type';
 import { toMonthInt } from "$lib/posts";
 
 // get all files
@@ -9,7 +8,7 @@ const _postFiles = import.meta.glob('$posts/**/*.svx');
 const getAllPosts = async (showHidden = false) => {
   const _posts = await Promise.all(
     Object.entries(_postFiles).filter(async ([path, resolver]) => {
-      const post = await resolver();
+      const post = await resolver() as post_raw;
       // remove if hidden
       if(post.metadata.hidden && !showHidden) return false;
       return true;
@@ -40,7 +39,7 @@ const getAllPosts = async (showHidden = false) => {
         data: post
       }
     })
-  )
+  ) as post[]
   
   return _posts.sort((a, b) => {
     return Date.parse(a.data.metadata.date) - Date.parse(b.data.metadata.date);
@@ -101,7 +100,7 @@ const filterPosts = (posts, filter) => {
           isGood = data.tags?.split(' ').includes(value);
           break;
         default:
-          isGood = _post.data.metadata[key] == value;
+          isGood = _post.data.metadata[key] == (value);
       }
       matchesFilter = matchesFilter && isGood;
     });
@@ -129,13 +128,20 @@ const getGroupByFilter = (filter = {}) => {
 }
 
 const journalPublicPath = (_publicPath, data) => {
+  // get a path based on the date: 2022/06/02
   const date = new Date(data.metadata.date);
   return `/journal/${date.getUTCFullYear()}/${date.getUTCMonth() + 1}/${date.getUTCDate()}`;
 }
 
 const blogPublicPath = (_publicPath, data) => {
+  // get a path based on the title: example-title
   const title = encodeURIComponent(data.metadata.title.toLowerCase().replace(" ", "-"));
   return `/blog/${title}`
+}
+
+const projectsPublicPath = (_publicPath, data) => {
+  // get a path based on?
+
 }
 
 const groups = {
@@ -150,6 +156,11 @@ const groups = {
     postsFolder: 'articles',
     routesFolder: 'blog',
     customRoute: blogPublicPath,
+  },
+  'projects' : {
+    type: 'project',
+    postsFolder: 'projects',
+    routesFolder: 'projects'
   },
 }
 
@@ -168,10 +179,10 @@ const publicizeGroup = async (name: string) => {
   const group = getGroupByName(name);
   if(!group) return;
 
-  const _posts: post_endpoint[] = (await getPostsByFilter({ type: group.type }) as post[]).map(journal => {
+  const _posts: post_public[] = (await getPostsByFilter({ type: group.type }) as post[]).map(journal => {
     return {
       path: journal.publicPath,
-      metadata: journal.data.metadata as post_endpoint["metadata"]
+      metadata: journal.data.metadata as post_public["metadata"]
     }})
   return _posts;
 }

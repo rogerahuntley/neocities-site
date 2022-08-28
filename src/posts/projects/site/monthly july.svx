@@ -3,6 +3,7 @@ title: July Monthly Site Update
 date: '2022-07-31'
 tags: meta monthly
 monthly: true
+project: stealdog
 ---
 
 ### July 1

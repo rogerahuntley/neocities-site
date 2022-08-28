@@ -9,7 +9,7 @@ import PostSmall from './components/basic/PostSmall.svelte';
 import PostBig from './components/basic/PostBig.svelte';
 
 import { toMonthInt, toMonthName, nestDates } from './journal-functions';
-import { mapBlog } from './blog-functions';
+import { getBlogs, mapBlogs } from './blog-functions';
 import {
   journalPublicPath,
   blogPublicPath,
@@ -37,7 +37,8 @@ export {
   nestDates,
 
   // blog functions
-  mapBlog,
+  getBlogs,
+  mapBlogs,
 
   // post functions
   journalPublicPath,

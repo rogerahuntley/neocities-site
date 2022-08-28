@@ -2,6 +2,7 @@
 title: Working Copy / Server
 date: '2022-06-06'
 tags: meta
+project: stealdog
 ---
 
 Now *this* is awesome. I downloaded an app on my iPhone called [Working Copy](https://workingcopyapp.com/) which allows me to clone my project, edit files, and push back to my server -- using Git. At home I have a server that runs a script on the `post-receive` git hook, and when I push onto the `main` branch it triggers the hook -- my server will copy the branch, build the project and deploy it to Neocities.

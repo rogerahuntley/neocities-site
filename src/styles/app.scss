@@ -100,7 +100,7 @@
 
   :root {
     @include media('<tablet') {
-      font-size: 3rem;
+      font-size: 2rem;
       // font-size: clamp(3vw, 6vw, 8vh);
     }
     @include media('>=tablet', '<desktop') {

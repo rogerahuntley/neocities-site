@@ -5,7 +5,7 @@ const getBlogs = async () => {
   return await getPostsByFilter({ type: 'article' });
 }
 
-const mapBlog = async (posts?): Promise<{ [key: string]: blogMap }> => {
+const mapBlogs = async (posts?): Promise<{ [key: string]: blogMap }> => {
   posts = await posts || await getBlogs();
   const blogs = {} as { [key: string]: blogMap };
   posts.map((p) => {
@@ -14,4 +14,4 @@ const mapBlog = async (posts?): Promise<{ [key: string]: blogMap }> => {
   return blogs;
 }
 
-export { mapBlog }
+export { getBlogs, mapBlogs }

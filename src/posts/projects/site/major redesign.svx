@@ -2,6 +2,7 @@
 title: Another Page Redesign
 date: '2022-07-13'
 tags: meta personal
+project: stealdog
 ---
 
 I just wanted to make a note here. As I've been growing and evolving, my idea of writing has been changing. There is this inner conflict between wanting to journal my thoughts, but to also write blog posts that are well-thought-out, distinct and reference-able. The site is easily changed, but from a writing perspective it's very rigid. I've found myself journaling little and rushing blog posts because everything I was writing was trying to be both. I think there was this stress starting out to write blog posts and to post every day, and they ended up getting confused. The way I had it structured made it seem like every journal needed a title and was presented as important, but I came to realize that the structure doesn't reflect what I was trying to do. 

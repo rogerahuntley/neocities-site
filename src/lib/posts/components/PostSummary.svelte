@@ -3,8 +3,10 @@
   Use: show a link for big content, but print out small content
 -->
 <script lang="ts">
+  import Bubble from '../../Bubble.svelte';
   import type { post as postType } from '$types/post.type';
   import { PostLink, PostTag, PostSmall } from '../';
+  import Breadcrumbs from '$lib/main/Breadcrumbs.svelte';
   export let post: postType;
 
   const title = post.data.metadata.title;
@@ -25,8 +27,8 @@
   }
 </script>
 
-<div class="post-summary">
-  <div class="header">
+<Bubble>
+  <span class="header" slot="header">
     {#if dateTile}
       {formattedDate}
     {:else}
@@ -41,54 +43,26 @@
         {/each}
       </span>
     {/if}
-  </div>
-  <div class="body">
+  </span>
+  <span slot="body">
     {#if type == 'small' || type == 'video'}
       <PostSmall {post} />
     {:else}
       <PostLink {post} hideTag={true} />
     {/if}
-  </div>
-</div>
+  </span>
+</Bubble>
 
 <style lang="scss">
-  .post-summary {
+  .header {
     display: flex;
-    flex-direction: column;
-    margin-block: 0.5rem;
-    align-items: flex-start;
-
-    .tags {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 0.2rem;
-      margin-left: 0.4rem;
-    }
-
-    .header {
-      display: flex;
-      flex-direction: row;
-
-      font-size: 0.7rem;
-      border-radius: $rounded;
-      background-color: $accent-color;
-      margin-left: 1.5rem;
-      margin-bottom: -0.5rem;
-      padding: 0.5rem;
-      z-index: 1;
-    }
-
-    .body {
-      border-radius: $rounded;
-      background-color: $accent-color;
-      font-size: 1rem;
-      :global(a),
-      :global(p),
-      :global(iframe) {
-        display: block;
-        margin: 1em;
-      }
-    }
+    flex-direction: row;
+  }
+  .tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2rem;
+    margin-left: 0.4rem;
   }
 </style>

@@ -2,6 +2,7 @@
 title: Lexicons & Basic CSS
 date: '2022-06-05'
 tags: meta programming
+project: stealdog
 ---
 
 <script>

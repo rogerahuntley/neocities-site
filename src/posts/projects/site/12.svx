@@ -4,6 +4,7 @@
 title: Stealdog CSS Overhaul
 date: '2022-06-12'
 tags: meta
+project: stealdog
 ---
 
 This is a sneak preview of the site updates. Well, technically it's not even a preview *nor* is it a sneak -- these features are now live! I wanted to do some more documentation on them, but they ended up being a lot more time-consuming / exhausting than I anticipated. Anyway, here's ~~wonder wall~~ some pictures.

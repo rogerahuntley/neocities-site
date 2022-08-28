@@ -3,6 +3,7 @@ title: June Monthly Site Update
 date: '2022-06-31'
 tags: meta monthly
 monthly: true
+project: stealdog
 ---
 
 In the middle of this month (June) I had a bunch of new updates that I wanted to talk about, and the changes just keep coming. I made a decision to start grouping them into bigger posts and to post them *less often*. I didn't want all of my journals to be about site updates - I want to promote writing about other stuff and I don't want to overload the page with `meta` tagged posts.

@@ -13,6 +13,7 @@ const config = {
       extensions: ['.md', '.svx'],
       layout: {
         travel: 'src/lib/travel/_place.svelte',
+        projects: 'src/lib/projects/_project.svelte',
         lexicon: 'src/lib/lexicon/_lexicon.svelte',
         lists: 'src/lib/lists/_list.svelte',
       }

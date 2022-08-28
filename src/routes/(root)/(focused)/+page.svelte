@@ -1,5 +1,7 @@
 <script lang="ts">
   import { PostLink } from '$lib/posts';
+  import Folder from '$lib/Folder.svelte';
+  import Bubble from '$lib/Bubble.svelte';
 
   export let data;
   const { journals, neocities } = data;
@@ -7,27 +9,8 @@
 
 <div id="index">
   <h3 class="text-center">
-    Welcome to <a sveltekit:reload href="/" id="logo">stealdog.neocities.org</a>
+    Welcome to <a sveltekit:reload href="/" id="logo">stealdog.<wbr />neocities.org</a>
   </h3>
-  <div class="boxes">
-    <div class="box">
-      <div class="box-header">Latest journal</div>
-      <div class="box-contents">
-        <PostLink post={journals.at(-1)} hideTag={true} />
-      </div>
-    </div>
-    <div class="box">
-      <div class="box-header">Visitor count</div>
-      <div class="box-contents">{neocities.info.views}</div>
-    </div>
-    <div class="box">
-      <div class="box-header">Latest experiment</div>
-      <div class="box-contents">
-        <a sveltekit:reload href="https://azlef900.neocities.org/"><pre>azlef900</pre></a>
-      </div>
-    </div>
-  </div>
-
   <div id="description">
     <p>Hello! Welcome to my website! 😉</p>
 
@@ -42,6 +25,26 @@
       <a sveltekit:reload href="/lists/">lists here</a>.
     </p>
   </div>
+  <div id="bubbles">
+    <Bubble>
+      <span slot="header">Latest Journal</span>
+      <span slot="body">
+        <PostLink post={journals.at(-1)} hideTag={true} />
+      </span>
+    </Bubble>
+    <Bubble>
+      <span slot="header">Visitor Count</span>
+      <span slot="body">
+        {neocities.info.views}
+      </span>
+    </Bubble>
+    <Bubble>
+      <span slot="header">Latest Experiment</span>
+      <span slot="body">
+        <a sveltekit:reload href="https://azlef900.neocities.org/"><pre>azlef900</pre></a>
+      </span>
+    </Bubble>
+  </div>
 
   <div id="feedback">
     <span
@@ -54,46 +57,10 @@
 
 <style lang="scss">
   #index {
-    height: 100%;
     display: flex;
     flex-direction: column;
-  }
-
-  .boxes {
-    margin-block: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.2rem;
-    text-align: center;
-
-    .box {
-      width: 10rem;
-      flex-grow: 0;
-      border-radius: $rounded;
-      background-color: $accent-color;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      .box-header {
-        text-transform: capitalize;
-        top: 0;
-        border-bottom: 2px solid $accent-color-2;
-        width: 100%;
-        padding: 0.8rem;
-      }
-
-      .box-contents {
-        width: 100%;
-        height: 100%;
-        display: grid;
-        place-content: center;
-        padding: 0.8rem;
-      }
-    }
+    justify-content: space-between;
+    height: 100%;
   }
 
   .text-center {
@@ -106,17 +73,17 @@
     font-size: 1.2em;
   }
 
-  #description {
-    @include media('>=desktop') {
-      width: 80%;
-      margin: auto;
+  #bubbles {
+    @include media('>=tablet') {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 0.2rem;
     }
   }
 
   #feedback {
     display: flex;
-    align-items: flex-end;
     justify-content: center;
-    flex-grow: 1;
   }
 </style>

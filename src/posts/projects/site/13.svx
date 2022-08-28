@@ -4,6 +4,7 @@
 title: Github Actions / Public Repo
 date: '2022-06-13'
 tags: meta
+project: stealdog
 ---
 
 So in a funny twist of fate, the last time I wrote an entry using Working Copy I mentioned that I wanted to look into GitHub Actions.

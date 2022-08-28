@@ -1,7 +1,7 @@
-import { mapBlog } from '$lib/posts';
+import { mapBlogs } from '$lib/posts';
 export const load = async () => {
   // get blog data
-  const articles = await mapBlog();
+  const articles = await mapBlogs();
 
   return {
     articles,

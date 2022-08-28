@@ -2,6 +2,7 @@
 title: Updates to the site
 date: '2022-06-03'
 tags: meta
+project: stealdog
 ---
 
 <script>

@@ -4,6 +4,7 @@ date: '2022-08-31'
 tags: meta monthly
 monthly: true
 hidden: true
+project: stealdog
 ---
 
 ### August 6th
