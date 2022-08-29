@@ -1,9 +1,9 @@
 <script lang="ts">
   import { PostSummary } from '$lib/posts';
-  import type { blogMap } from '$types/blog.type';
+  import type { blog_map } from '$types/blog.type';
 
   export let data;
-  const { articles }: { articles: blogMap } = data;
+  const { articles }: { articles: blog_map } = data;
 </script>
 
 {#each Object.entries(articles) as [path, article]}

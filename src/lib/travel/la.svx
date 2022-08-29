@@ -1,4 +1,0 @@
----
-fancy: Los Angeles, California
-travel: Los Angeles
----

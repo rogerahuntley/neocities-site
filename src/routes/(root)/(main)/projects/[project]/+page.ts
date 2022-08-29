@@ -5,9 +5,7 @@ export const load = async ({ params, parent }) => {
   const projects = stuff.projects;
 
   const project = projects[params.project];
-
   const updates = await getPostsByFilter({ type: 'project', project: project.metadata.project });
-  console.log(updates)
 
   if (project) {
     return {

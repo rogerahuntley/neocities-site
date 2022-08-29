@@ -1,6 +1,7 @@
 ---
-title: 2048
-project: 2048
+title: Azlef900
+project: azlef
+type: experiment
 ---
 
 this is the very website you're reading on right now!

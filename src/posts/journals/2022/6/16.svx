@@ -3,7 +3,7 @@
 title: Going to California
 date: '2022-06-16'
 tags: personal travel
-travel: Los Angeles
+travel: los_angeles
 ---
 
 # I'm GOING CALIFORNIA

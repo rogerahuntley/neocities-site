@@ -1,1 +1,1 @@
-<p>Oops! Looking for <a sveltekit:reload href="/">this</a>?</p>
+<p>Oops! Looking for <a href="/">this</a>?</p>

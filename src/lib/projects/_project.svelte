@@ -1,7 +1,6 @@
 <script lang="ts">
   import { PostLink } from '$lib/posts';
   export let title = '';
-
   export let updatePosts = [];
 </script>
 

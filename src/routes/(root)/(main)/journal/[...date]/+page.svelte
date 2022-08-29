@@ -5,13 +5,14 @@
   import type { nestedDates, journal } from '$types/journal.type';
 
   export let data;
-  var {
-    year,
-    month,
-    day,
-    filtered,
-    dates
-  }: { year: number; month: number; day: number; filtered: journal[]; dates: nestedDates } = data;
+  var year: number, month: number, day: number, filtered: journal[], dates: nestedDates;
+  $: if (data) {
+    year = data.year;
+    month = data.month;
+    day = data.day;
+    filtered = data.filtered;
+    dates = data.dates;
+  }
 </script>
 
 {#if day || (filtered.length == 1 && !filtered[0].data.metadata.size.includes('small'))}

@@ -1,6 +1,8 @@
 ---
 fancy: Reykjavík, Iceland
-travel: Iceland
+regular: Iceland
+travel: iceland
+order: 1
 ---
 Went to Iceland in March of 2022. I'll write more here later...
 <!--Writeup needed

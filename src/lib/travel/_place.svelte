@@ -1,9 +1,6 @@
 <script lang="ts">
   import { PostLink } from '$lib/posts';
-
   export let fancy = '';
-  export let travel = '';
-
   export let travelPosts = [];
 </script>
 

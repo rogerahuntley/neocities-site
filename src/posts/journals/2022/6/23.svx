@@ -3,7 +3,7 @@
 title: California Travel Log
 date: '2022-06-23'
 tags: personal travel
-travel: Los Angeles
+travel: los_angeles
 ---
 <div class="banner-contents">
 

@@ -11,29 +11,32 @@
 
 <div id="grid-main">
   <header>
-    <a sveltekit:reload href="/">stealdog</a>
+    <a href="/">stealdog</a>
     <span on:click={toggle} id="mobile-menu" class="material-icons">menu</span>
   </header>
 
   <nav class:hidden>
     <ul class="no-margin">
       <li style="display: none">
-        <a sveltekit:reload sveltekit:prefetch href="/">home</a>
+        <a sveltekit:prefetch href="/">home</a>
       </li>
       <li>
-        <a sveltekit:reload sveltekit:prefetch href="/journal/">journal</a>
+        <a sveltekit:prefetch href="/journal/">journal</a>
       </li>
       <li style="display: none">
-        <a sveltekit:reload sveltekit:prefetch href="/blog/">blog</a>
+        <a sveltekit:prefetch href="/blog/">blog</a>
       </li>
       <li style="display: none">
-        <a sveltekit:reload sveltekit:prefetch href="/travel/">travel log</a>
+        <a sveltekit:prefetch href="/blog/">blog</a>
       </li>
       <li style="display: none">
-        <a sveltekit:reload sveltekit:prefetch href="/lists/">shrines</a>
+        <a sveltekit:prefetch href="/travel/">travel log</a>
+      </li>
+      <li style="display: none">
+        <a sveltekit:prefetch href="/lists/">shrines</a>
       </li>
       <li>
-        <a sveltekit:reload sveltekit:prefetch href="/lists/">lists</a>
+        <a sveltekit:prefetch href="/lists/">lists</a>
       </li>
     </ul>
   </nav>

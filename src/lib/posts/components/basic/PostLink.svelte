@@ -16,7 +16,7 @@
 </script>
 
 <div class="post-link">
-  <a sveltekit:reload href={`${post.publicPath}/`}>
+  <a href={`${post.publicPath}/`}>
     {post.data.metadata.title}
     {#if !hideTag}
       <span class="tags">

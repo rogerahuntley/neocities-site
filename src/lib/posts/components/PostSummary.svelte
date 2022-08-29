@@ -3,10 +3,9 @@
   Use: show a link for big content, but print out small content
 -->
 <script lang="ts">
-  import Bubble from '../../Bubble.svelte';
+  import Bubble from '../../item/Bubble.svelte';
   import type { post as postType } from '$types/post.type';
   import { PostLink, PostTag, PostSmall } from '../';
-  import Breadcrumbs from '$lib/main/Breadcrumbs.svelte';
   export let post: postType;
 
   const title = post.data.metadata.title;

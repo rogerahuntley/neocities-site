@@ -2,12 +2,15 @@
   Bubble
   Use: show a bubble with a header and content
 -->
+<script>
+  export let full = false;
+</script>
 
 <div class="bubble">
   <div class="header">
     <slot name="header" />
   </div>
-  <div class="body">
+  <div class="body" class:full>
     <slot name="body" />
   </div>
 </div>
@@ -46,6 +49,10 @@
         margin: 1em;
         display: block;
         margin: 1em;
+      }
+
+      &.full {
+        width: 100%;
       }
 
       :global(iframe) {

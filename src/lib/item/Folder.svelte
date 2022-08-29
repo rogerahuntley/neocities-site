@@ -26,7 +26,7 @@
       <ul>
         {#each attributes as attr}
           <li>
-            <a sveltekit:reload class="folder-attribute" href={attr.url}>{attr.name}</a>
+            <a class="folder-attribute" href={attr.url}>{attr.name}</a>
           </li>
         {/each}
       </ul>

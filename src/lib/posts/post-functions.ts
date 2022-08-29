@@ -127,6 +127,7 @@ const getGroupByFilter = (filter = {}) => {
   })
 }
 
+// TODO: maybe move these into their respective files
 const journalPublicPath = (_publicPath, data) => {
   // get a path based on the date: 2022/06/02
   const date = new Date(data.metadata.date);
@@ -139,9 +140,10 @@ const blogPublicPath = (_publicPath, data) => {
   return `/blog/${title}`
 }
 
-const projectsPublicPath = (_publicPath, data) => {
-  // get a path based on?
-
+const projectUpdatePublicPath = (_publicPath, data) => {
+  // get a path based on the update date
+  const date = new Date(data.metadata.date);
+  return `/projects/${data.metadata.project}/${date.toISOString().substring(0, 10).replace(/-/g,'')}`;
 }
 
 const groups = {
@@ -160,7 +162,8 @@ const groups = {
   'projects' : {
     type: 'project',
     postsFolder: 'projects',
-    routesFolder: 'projects'
+    routesFolder: 'projects',
+    customRoute: projectUpdatePublicPath,
   },
 }
 
@@ -190,6 +193,7 @@ const publicizeGroup = async (name: string) => {
 export {
   journalPublicPath,
   blogPublicPath,
+  projectUpdatePublicPath,
   publicizeGroup,
   filterPosts,
   getPostsByFilter

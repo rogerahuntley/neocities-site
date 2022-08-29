@@ -1,7 +1,6 @@
 <script lang="ts">
   import { PostLink } from '$lib/posts';
-  import Folder from '$lib/Folder.svelte';
-  import Bubble from '$lib/Bubble.svelte';
+  import Bubble from '$lib/item/Bubble.svelte';
 
   export let data;
   const { journals, neocities } = data;
@@ -9,7 +8,7 @@
 
 <div id="index">
   <h3 class="text-center">
-    Welcome to <a sveltekit:reload href="/" id="logo">stealdog.<wbr />neocities.org</a>
+    Welcome to <a href="/" id="logo">stealdog.<wbr />neocities.org</a>
   </h3>
   <div id="description">
     <p>Hello! Welcome to my website! 😉</p>
@@ -20,9 +19,8 @@
     </p>
 
     <p>
-      For right now, you can find <a sveltekit:reload href="/journal/">journals here</a>, and some
-      assorted
-      <a sveltekit:reload href="/lists/">lists here</a>.
+      For right now, you can find <a href="/journal/">journals here</a>, and some assorted
+      <a href="/lists/">lists here</a>.
     </p>
   </div>
   <div id="bubbles">
@@ -41,16 +39,14 @@
     <Bubble>
       <span slot="header">Latest Experiment</span>
       <span slot="body">
-        <a sveltekit:reload href="https://azlef900.neocities.org/"><pre>azlef900</pre></a>
+        <a href="https://azlef900.neocities.org/"><pre>azlef900</pre></a>
       </span>
     </Bubble>
   </div>
 
   <div id="feedback">
     <span
-      >Have feedback? Reach out to me <a sveltekit:reload href="https://neocities.org/site/stealdog"
-        >here</a
-      >.</span
+      >Have feedback? Reach out to me <a href="https://neocities.org/site/stealdog">here</a>.</span
     >
   </div>
 </div>

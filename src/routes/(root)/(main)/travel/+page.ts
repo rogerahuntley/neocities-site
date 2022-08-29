@@ -1,8 +1,11 @@
-import { getPostsByFilter } from '$lib/posts';
+import { getPlaces, getTravelLogs } from '$lib/travel';
 export const load = async () => {
+  const places = await getPlaces();
+  const travelLogs = await getTravelLogs(places);
+
   return {
-    iceland: await getPostsByFilter({ travel: 'Iceland' }),
-    la: await getPostsByFilter({ travel: 'Los Angeles' }),
-    title: 'Travel'
+    places,
+    travelLogs,
+    title: 'Travel',
   };
 };

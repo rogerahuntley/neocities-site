@@ -1,5 +1,5 @@
 <script>
-  import Folder from '$lib/Folder.svelte';
+  import Folder from '$lib/item/Folder.svelte';
   export let name = null,
     site = null,
     discord = null,

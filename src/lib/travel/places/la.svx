@@ -1,0 +1,6 @@
+---
+fancy: Los Angeles, California
+regular: Los Angeles
+travel: los_angeles
+order: 2
+---

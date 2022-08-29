@@ -1,13 +1,16 @@
 <script>
-  import Folder from '$lib/Folder.svelte';
+  import Bubble from '$lib/item/Bubble.svelte';
   export let name = null;
 </script>
 
-<Folder {name}>
-  <div class="lists">
+<Bubble full>
+  <span slot="header">
+    {name}
+  </span>
+  <span slot="body" class="lists">
     <slot />
-  </div>
-</Folder>
+  </span>
+</Bubble>
 
 <style lang="scss">
   .lists :global(li) {

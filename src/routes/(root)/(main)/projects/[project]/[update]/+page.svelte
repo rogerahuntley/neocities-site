@@ -1,7 +1,7 @@
 <script lang="ts">
   import { PostBig } from '$lib/posts';
   export let data;
-  const { article } = data;
+  const { update } = data;
 </script>
 
-<PostBig post={article} />
+<PostBig post={update} />

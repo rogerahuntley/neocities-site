@@ -12,7 +12,7 @@
 </script>
 
 <div class="journals-link {style}">
-  <a sveltekit:reload href={path}>
+  <a href={path}>
     {month ? toMonthName(month) : year}
   </a>
 </div>

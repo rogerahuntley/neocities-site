@@ -1,13 +1,13 @@
 import { blogPublicPath, getPostsByFilter } from '$lib/posts';
-import type { blogMap } from '$types/blog.type';
+import type { blog_map } from '$types/blog.type';
 
 const getBlogs = async () => {
   return await getPostsByFilter({ type: 'article' });
 }
 
-const mapBlogs = async (posts?): Promise<{ [key: string]: blogMap }> => {
+const mapBlogs = async (posts?): Promise<{ [key: string]: blog_map }> => {
   posts = await posts || await getBlogs();
-  const blogs = {} as { [key: string]: blogMap };
+  const blogs = {} as { [key: string]: blog_map };
   posts.map((p) => {
     blogs[blogPublicPath('', p.data).replace('/blog/', '')] = p;
   })

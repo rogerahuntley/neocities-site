@@ -1,4 +1,5 @@
 import type { mdsvexComponent } from "./mdsvex.type";
+import type { post } from '$types/post.type'
 
 type project = {
   component: any,
@@ -14,4 +15,8 @@ type project_raw = mdsvexComponent & {
   }
 }
 
-export type { project, project_raw };
+type update = post;
+
+type update_map = { [key: string]: update }
+
+export type { project, project_raw, update, update_map };
