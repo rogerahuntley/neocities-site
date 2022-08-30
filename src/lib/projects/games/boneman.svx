@@ -2,6 +2,7 @@
 title: Boneman's Buttons
 project: boneman
 type: game
+link: https://rogerahuntley.itch.io/bonemans-buttons
 ---
 
-this is the very website you're reading on right now!
+Push barrels and maneuver around chess pieces in this super cool and super fun puzzle game. WASD to move, or swipe for touch devices.

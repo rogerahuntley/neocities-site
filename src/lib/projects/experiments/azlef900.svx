@@ -2,6 +2,13 @@
 title: Azlef900
 project: azlef
 type: experiment
+link: azlef900.neocities.org
 ---
 
-this is the very website you're reading on right now!
+I made this for [azlef900](https://www.youtube.com/channel/UCkZjdCdkmeF2ebOGHQOF1gA) as an experiment, shows off one of his playlists
+
+Built using SvelteKit, once compiled - works without JavaScript. Animations are CSS-only.
+
+You can check the live version of the site at [azlef900.neocities.org](https://azlef900.neocities.org/)
+
+Can be set to use any video as a background / any playlist by modifying environment variables.

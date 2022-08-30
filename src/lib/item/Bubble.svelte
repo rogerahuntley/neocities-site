@@ -19,8 +19,15 @@
   .bubble {
     display: flex;
     flex-direction: column;
-    margin-block: 0.5rem;
     align-items: flex-start;
+
+    &:not(:first-child) {
+      margin-top: 0.5rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
 
     .header {
       font-size: 0.7rem;

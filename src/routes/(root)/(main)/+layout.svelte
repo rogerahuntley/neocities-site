@@ -23,13 +23,13 @@
       <li>
         <a sveltekit:prefetch href="/journal/">journal</a>
       </li>
-      <li style="display: none">
-        <a sveltekit:prefetch href="/blog/">blog</a>
+      <li>
+        <a sveltekit:prefetch href="/projects/">projects</a>
       </li>
       <li style="display: none">
         <a sveltekit:prefetch href="/blog/">blog</a>
       </li>
-      <li style="display: none">
+      <li>
         <a sveltekit:prefetch href="/travel/">travel log</a>
       </li>
       <li style="display: none">

@@ -25,7 +25,6 @@ const getPlaces = async() => {
 
 const getTravelLogs = async(places?) => {
   places = places || await getPlaces();
-  console.log(places)
   const travelLogs = {};
   await Promise.all((Object.values(places) as place[]).map(async place => {
     const place_key = place.metadata.travel;

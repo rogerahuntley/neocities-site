@@ -3,6 +3,7 @@
   Use: This is a big post, usually linked to and standing on it's own
 -->
 <script lang="ts">
+  import Bubble from '$lib/item/Bubble.svelte';
   import type { post as postType } from '$types/post.type';
   export let post: postType;
   const title = post.data.metadata.title;
@@ -18,11 +19,15 @@
 </script>
 
 <div class="post big">
-  <h1 class="post-title">{title}</h1>
-
-  <p class="post-details">{formattedDate}</p>
-
-  <svelte:component this={post.data.default} class="post-body" />
+  <Bubble>
+    <span slot="header">
+      <h1 class="post-title">{title}</h1>
+      <p class="post-details">{formattedDate}</p>
+    </span>
+    <span slot="body">
+      <svelte:component this={post.data.default} class="post-body" />
+    </span>
+  </Bubble>
 </div>
 
 <style lang="scss">

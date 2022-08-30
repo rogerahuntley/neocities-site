@@ -20,7 +20,7 @@ const getAllPosts = async (showHidden = false) => {
 
       const postsFolder = filePath.split('/')[3];
 
-      const group = getGroupByName(postsFolder);
+      const group = getGroupByPostsFolder(postsFolder);
       
       // if group is known, adjust url
       if(group){
@@ -99,6 +99,9 @@ const filterPosts = (posts, filter) => {
         case 'tag':
           isGood = data.tags?.split(' ').includes(value);
           break;
+        case 'project':
+          isGood = data.project?.toString().toLowerCase().includes(value.toString().toLowerCase());
+          break;
         default:
           isGood = _post.data.metadata[key] == (value);
       }
@@ -161,7 +164,7 @@ const groups = {
   },
   'projects' : {
     type: 'project',
-    postsFolder: 'projects',
+    postsFolder: 'updates',
     routesFolder: 'projects',
     customRoute: projectUpdatePublicPath,
   },
@@ -170,6 +173,14 @@ const groups = {
 // get group by name
 const getGroupByName = (name: string) => {
   return groups[name] || {};
+}
+
+// get group by local folder
+const getGroupByPostsFolder = (folder: string) => {
+  const group = Object.values(groups).find(group => {
+    return group.postsFolder == folder;
+  })
+  return group
 }
 
 // transform array of posts for an endpoint

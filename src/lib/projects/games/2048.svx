@@ -2,6 +2,7 @@
 title: 2048
 project: 2048
 type: game
+link: https://rogerahuntley.itch.io/2048
 ---
 
-this is the very website you're reading on right now!
+Use the arrow keys to move tiles around a small area! Boxes of similar number will combine: Boxes of 2 combine to become a single box of 4. Reach 2048 to beat the game.

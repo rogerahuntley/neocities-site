@@ -23,26 +23,32 @@
       <a href="/lists/">lists here</a>.
     </p>
   </div>
-  <div id="bubbles">
-    <Bubble>
-      <span slot="header">Latest Journal</span>
-      <span slot="body">
-        <PostLink post={journals.at(-1)} hideTag={true} />
-      </span>
-    </Bubble>
-    <Bubble>
-      <span slot="header">Visitor Count</span>
-      <span slot="body">
-        {neocities.info.views}
-      </span>
-    </Bubble>
-    <Bubble>
-      <span slot="header">Latest Experiment</span>
-      <span slot="body">
-        <a href="https://azlef900.neocities.org/"><pre>azlef900</pre></a>
-      </span>
-    </Bubble>
-  </div>
+  <ul id="bubbles">
+    <li>
+      <Bubble>
+        <span slot="header">Latest Journal</span>
+        <span slot="body">
+          <PostLink post={journals.at(-1)} hideTag={true} />
+        </span>
+      </Bubble>
+    </li>
+    <li>
+      <Bubble>
+        <span slot="header">Visitor Count</span>
+        <span slot="body">
+          {neocities.info.views}
+        </span>
+      </Bubble>
+    </li>
+    <li>
+      <Bubble>
+        <span slot="header">Latest Experiment</span>
+        <span slot="body">
+          <a href="https://azlef900.neocities.org/"><pre>azlef900</pre></a>
+        </span>
+      </Bubble>
+    </li>
+  </ul>
 
   <div id="feedback">
     <span

@@ -2,6 +2,7 @@
 title: stealdog.neocities.org
 project: stealdog
 type: web
+link: stealdog.neocities.org
 ---
 
 this is the very website you're reading on right now!

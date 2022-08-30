@@ -1,9 +1,15 @@
-write a blog post about the /api
--> add .xml for rss?
-
-move css into a "default.css" file meme - precompile?
-redo lists page
-document journey in LA
-write notes on no longer human while reading, book review
 make a shrine to resident evil
+
+experiment ideas:
 create html embed based on https://mydora.restorativland.org/
+web rust
+
+stuff i want to do:
+gamedev
+hardware engineering projects
+music projects
+
+stuff i want to/ can write about:
+music synths
+programming concepts
+gamedev design

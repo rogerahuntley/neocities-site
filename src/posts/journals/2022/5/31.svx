@@ -2,6 +2,7 @@
 title: Next Game Projects
 date: '2022-05-31'
 tags: personal gamedev
+project: boneman 2048 intimasea
 ---
 
 <script>

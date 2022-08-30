@@ -15,6 +15,7 @@ type post_raw = mdsvexComponent & {
     size: string,
     hidden: boolean,
     date: string,
+    project: string,
   }
 }
 

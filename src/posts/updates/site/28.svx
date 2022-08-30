@@ -1,6 +1,7 @@
 ---
 title: Personal Website Planning
 date: '2022-05-28'
+layout: journal
 tags: meta
 project: stealdog
 ---

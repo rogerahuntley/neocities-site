@@ -2,6 +2,9 @@
 title: Intima-sea
 project: intimasea
 type: game
+link: https://rogerahuntley.itch.io/intima-sea
 ---
 
-this is the very website you're reading on right now!
+Ocean-theme dating gameshow with minigames. 
+
+Made for Godot Wild Jame #41

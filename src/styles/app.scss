@@ -99,18 +99,19 @@
   // root sizes
 
   :root {
-    @include media('<tablet') {
-      font-size: 2rem;
-      // font-size: clamp(3vw, 6vw, 8vh);
-    }
-    @include media('>=tablet', '<desktop') {
-      font-size: 2rem;
-      // font-size: clamp(2vw, 3.6vw, 5.6vh);
-    }
-    @include media('>=desktop') {
-      font-size: 2rem;
-      // font-size: clamp(1vw, 1.8vw, 1.8rem);
-    }
+    // @include media('<tablet') {
+    //   font-size: 1rem;
+    //   // font-size: clamp(3vw, 6vw, 8vh);
+    // }
+    // @include media('>=tablet', '<desktop') {
+    //   font-size: 1rem;
+    //   // font-size: clamp(2vw, 3.6vw, 5.6vh);
+    // }
+    // @include media('>=desktop') {
+    //   font-size: 1rem;
+    //   // font-size: clamp(1vw, 1.8vw, 1.8rem);
+    // }
+    font-size:1.6rem;
   }
 
   li {
