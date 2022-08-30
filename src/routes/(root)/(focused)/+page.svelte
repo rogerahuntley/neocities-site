@@ -75,17 +75,23 @@
     font-size: 1.2em;
   }
 
+  #description {
+    margin-top: 1rem;
+  }
+
   #bubbles {
-    @include media('>=tablet') {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      gap: 0.2rem;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    margin-block: 1rem;
   }
 
   #feedback {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
+    flex: 2;
   }
 </style>

@@ -1,6 +1,7 @@
 <script>
   import { page } from '$app/stores';
   import { browser } from '$app/env';
+  import { dataset_dev } from 'svelte/internal';
 
   let hidden = browser;
 
@@ -42,7 +43,13 @@
   </nav>
 
   <aside>
-    <span class="font-title">{$page.data.title || 'Home'}</span>
+    <span class="font-title">
+      {#if $page.data.titleLink}
+        <a href={$page.data.titleLink}>{$page.data.title}</a>
+      {:else}
+        {$page.data.title || 'Home'}
+      {/if}
+    </span>
   </aside>
 
   <main>

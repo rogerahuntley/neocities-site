@@ -1,5 +1,6 @@
 export const load = () => {
   return {
-    title: "Lists"
+    title: "Lists",
+    titleLink: "/lists/",
   };
 };

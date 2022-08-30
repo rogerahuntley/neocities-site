@@ -7,5 +7,6 @@ export const load = async () => {
     places,
     travelLogs,
     title: 'Travel',
+    titleLink: '/travel/',
   };
 };

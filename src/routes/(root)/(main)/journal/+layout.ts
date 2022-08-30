@@ -5,6 +5,7 @@ export const load = async () => {
 
   return {
     journals,
-    title: 'Journals'
+    title: 'Journals',
+    titleLink: '/journal/',
   };
 };
