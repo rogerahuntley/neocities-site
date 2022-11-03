@@ -6,6 +6,8 @@
   import Bubble from '$lib/item/Bubble.svelte';
   import type { post as postType } from '$types/post.type';
   export let post: postType;
+  export let extra = '';
+  console.log(extra);
   const title = post.data.metadata.title;
   const date = post.data.metadata.date;
 
@@ -23,6 +25,9 @@
     <span slot="header">
       <h1 class="post-title">{title}</h1>
       <p class="post-details">{formattedDate}</p>
+      {#if extra}
+        <p class="post-details">{extra}</p>
+      {/if}
     </span>
     <span slot="body">
       <svelte:component this={post.data.default} class="post-body" />
@@ -36,7 +41,9 @@
   }
 
   .post-details {
-    margin-top: 0.1em;
-    margin-bottom: 1em;
+    margin-block: 0.1em;
+    &:last-child {
+      margin-bottom: 1em;
+    }
   }
 </style>

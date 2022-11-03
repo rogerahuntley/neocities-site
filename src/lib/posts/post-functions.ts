@@ -10,7 +10,7 @@ const getAllPosts = async (showHidden = false) => {
     Object.entries(_postFiles).filter(async ([path, resolver]) => {
       const post = await resolver() as post_raw;
       // remove if hidden
-      if(post.metadata.hidden && !showHidden) return false;
+      if(post.metadata.hidden || !showHidden) return false;
       return true;
     }).map(async ([filePath, resolver]) => {
       const post = await resolver();

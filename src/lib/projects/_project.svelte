@@ -1,6 +1,5 @@
 <script lang="ts">
   import Bubble from '$lib/item/Bubble.svelte';
-  import Folder from '$lib/item/Folder.svelte';
   import { PostLink } from '$lib/posts';
   export let title = '';
   export let link;
@@ -13,12 +12,12 @@
     <!-- title -->
     <h3>
       {title}
-      {#if link}
-        <a href={link}>🔗</a>
-      {/if}
     </h3>
   </span>
   <span slot="body">
+    {#if link}
+      link to: <a href={link}>{title}</a>
+    {/if}
     <!-- content -->
     <slot />
   </span>

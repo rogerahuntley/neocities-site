@@ -1,5 +1,5 @@
 ---
-title: Another Page Redesign
+title: Redesign Spec
 date: '2022-07-13'
 tags: meta personal
 project: stealdog
@@ -13,7 +13,7 @@ With those ideas and that article brewing in my mind, I want to work on a refres
 
 I'm going to do this in a few phases.
 
-### Phase 1: Back-end Updates
+## Phase 1: Back-end Updates
 
 This project will start with putting in more on the back-end to restructure the content. I'm going to be shifting stuff around - I should probably revisit the existing entries, but I'm not sure how everything is going to fit in.
 
@@ -21,7 +21,7 @@ This is kind of what I'm thinking:
 
 I'm gonna have a big pool of "blogs", which holds journals, blogs, posts, update logs. I'll probably use front-matter tags to differentiate between them, because there are situations where I want to cross-reference or include something in more than one category. I'll use filters to continuously filter as you traverse into nested folders, without having to regenerate the array on every page.
 
-#### Journals
+### Journals
 
 Journals will continue to be sorted by date, but they might not be given individual pages (except to preserve links). Instead, I think I will have slimmer journal entries (like tweets). An example of this is here: [cyuucat](https://cyuucat.neocities.org/diary.html). I will still have "thicker" journal entries in their own separate pages, but linked to in the same interface. The idea it that I want to be able to add little notes like "I've been working with Godot 4" without having to make an entire post about it. I also really don't care to draw a lot of attention to these journals, because they're more for me than anything. An example might be something like:
 
@@ -29,7 +29,7 @@ Journals will continue to be sorted by date, but they might not be given individ
 
 It might be possible to import my recent tweets, but I don't tweet often and especially not with life updates, so I won't be looking into that for now.
 
-#### Blogs
+### Blogs
 
 Blogs will be more "living" documents (they already are, but moreso), and accessible for reading and to be shared around. They won't be specifically dated, but they may have published-on and updated-on data. They should be available in chronological order if viewed as "All Blogs", but with their dates tucked away inside the post. These will most often consist of either opinion, news, or tutorials - I may differentiate between them more in the future.
 
@@ -44,7 +44,7 @@ As a final note, if I write out some blogs or tutorials and want to put them on 
 
 The blog with associate video would be pretty easy to do, because that would just be a regular blog with an `<embed>` or `<video` in it. For a video blog, that's going to be a blog marked as video content, with an associated link to a video or video platform. That way, there isn't a blog title with a body of a video - the blog title will be replaced with the video itself. That may prove to be undesirable, but I won't be able to tell until it's put into practice.
 
-#### Project Update Logs
+### Project Update Logs
 
 Update Logs aren't super common right now but I imagine they will be going forward, and they're already sort of a problem. They don't fit very well as either a blog or a journal, and they call a lot of attention to themselves while being basically meaningless to most readers. Most "Update logs" right now are the site updates, but there are a few for my Godot projects as well. Once I introduce a `projects` tab, and a `project` page, I'll be able to link `update logs` underneath that. They should be out of the way for the most part. If I implement them similarly to the planned journal update, I won't have to jump over hurdles to justify every update with a title and a page. It can just read something like:
 
@@ -54,21 +54,21 @@ Bigger posts such as launches, cumulative updates, or big features might deserve
 
 > March 24, 2022: [Version 1.0 released](/)
 
-#### Travel Logs
+### Travel Logs
 
 Since I'm not travelings, things can be basically summed up in a big blog post. However, I might transition this into a style more like project logs and regular journals to facilitate logging *while* traveling (as opposed to waiting until the end), just to keep things consistent. I'll also need better dedicated "Travel session" pages, much like I will need "Project" pages. This is to keep the relevant information organized in one place.
 
-#### Galleries
+### Galleries
 
 This is sort of a different type of update, running in parallel. I'm going to implement galleries to show off group of images - probably 3 or more? Showing things off in blog posts is weird right now because images are just block element and run in a vertical row, causing a lot of scrolling. Additionally, I want to have some galleries with 20+ images, to go with travel logs. There are a lot of features I could implement here - sorting and organizing images - but I first need to get them working.
 
-### Phase 2: Content Updates
+## Phase 2: Content Updates
 
-#### Existing Content
+### Existing Content
 
 Step 1 is to clean out old journal entries and figure out what is going to go where. Some of it will be converted to journals, some - blogs, and some - update logs. If it's a blog, it might have to be re-written or re-formatted. Information like "this is going on *right now*" or other information unrelated to the core idea of that blog post will be move either to another blog post or to a journal entry.
 
-#### Glue (between front page and new content)
+### Glue (between front page and new content)
 
 Step 2 is for content that got moved into update logs or about projects with no existing information associated with them. I'll have to write landing pages for the different games and projects that I talk about so that I have somewhere to put their update logs. There won't be pages for everything, but I'll play by ear with the following method: 
 
@@ -76,8 +76,8 @@ Step 2 is for content that got moved into update logs or about projects with no 
 
 If I go back and update something I haven't worked on in a long time, I'll draft up a page for it then. It shouldn't feel like I need to address old projects unless there's something I want to say about it, and there shouldn't be a bunch of projects on my home page without any information attached to them.
 
-### Phase 3: CSS Updates
+## Phase 3: CSS Updates
 
-#### CSS Updates
+### CSS Updates
 
 I'm gonna flesh this out in a follow-up post. I want to get all the info, links and organizing working and onto the site so that all the data is available in the right spots, and then I want to take a refreshed look at what I want the site to look like. The current look of the site is functional enough that it will carry us pretty far without breaking down.

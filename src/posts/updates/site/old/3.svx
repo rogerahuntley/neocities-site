@@ -3,6 +3,7 @@ title: Updates to the site
 date: '2022-06-03'
 tags: meta
 project: stealdog
+hidden: true
 ---
 
 <script>
@@ -13,11 +14,11 @@ gaming gaming gaming gaming gaming
 
 It's been a few days and I want to keep writing, so I'm coming at you with another journal entry (I'm gonna start calling them journals)
 
-#### added mdsvex
+### added mdsvex
 
 I added markdown support through mdsvex, a Markdown preprocessor for svelte. A great article on this is [here](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog), featuring a ton of information on not just setting up mdsvex, but on setting up SvelteKit, configuring and extending it.
 
-#### looking into animated text
+### looking into animated text
 
 So I spent some time looking around for some good libraries for animated text. I know with CSS there's a lot you can do, but most of the examples I could find were just code snippets. For reference, what I'm looking for is something like what you see in this:
 
@@ -26,7 +27,7 @@ So I spent some time looking around for some good libraries for animated text. I
 
 So I might have to roll a few components myself, and if I do then I'll post the file here or put that together and make it a repo / node package.
 
-### some other thoughts
+## some other thoughts
 
 I did a *super rough* outline and formatted main front end, but I'm working on initial designs and media queries - might end up having a slim version for mobile and full for desktop/ tablet (wacky desktop styles are so much funner)
 

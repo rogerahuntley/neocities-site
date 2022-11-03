@@ -3,6 +3,7 @@ title: Lexicons & Basic CSS
 date: '2022-06-05'
 tags: meta programming
 project: stealdog
+hidden: true
 ---
 
 <script>
@@ -68,9 +69,9 @@ Although I may have made some changes since writing this article, so here's the 
 
 > Note: I went back and converted some existing content from previous articles into these components, turning these into "living" entries
 
-### Style Updates
+## Style Updates
 
-#### CSS Features
+### CSS Features
 
 So right now, the site looks kind of monkey. 🍌
 
@@ -115,7 +116,7 @@ p {
 
 >Note: I did have to install [postcss-100vh-fix](https://www.npmjs.com/package/postcss-100vh-fix) to handle selectively replace `100vh` with `-webkit-fill-available` (it doesn't work right on Safari)
 
-#### Media Queries
+### Media Queries
 
 A huge part in making a website responsive is using media queries. For that, I'm using [`include-media`](https://www.npmjs.com/package/include-media) and [`svelte-media-query`](https://www.npmjs.com/package/svelte-media-query). The main section of code driving the website and its scale looks like this:
 

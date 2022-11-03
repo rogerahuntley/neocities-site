@@ -3,7 +3,7 @@
   import Bubble from '$lib/item/Bubble.svelte';
 
   export let data;
-  const { journals, neocities } = data;
+  const { journal, update, neocities } = data;
 </script>
 
 <div id="index">
@@ -19,8 +19,8 @@
     </p>
 
     <p>
-      For right now, you can find <a href="/journal/">journals here</a>, and some assorted
-      <a href="/lists/">lists here</a>.
+      A good starting place would be <a href="/journal/">journals</a> or
+      <a href="/lists/">lists</a>.
     </p>
   </div>
   <ul id="bubbles">
@@ -28,7 +28,15 @@
       <Bubble>
         <span slot="header">Latest Journal</span>
         <span slot="body">
-          <PostLink post={journals.at(-1)} hideTag={true} />
+          <PostLink post={journal} hideTag={true} />
+        </span>
+      </Bubble>
+    </li>
+    <li>
+      <Bubble>
+        <span slot="header">Latest Update</span>
+        <span slot="body">
+          <PostLink post={update} hideTag={true} />
         </span>
       </Bubble>
     </li>

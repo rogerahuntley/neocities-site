@@ -2,7 +2,7 @@
 title: Azlef900
 project: azlef
 type: experiment
-link: azlef900.neocities.org
+link: https://azlef900.neocities.org
 ---
 
 I made this for [azlef900](https://www.youtube.com/channel/UCkZjdCdkmeF2ebOGHQOF1gA) as an experiment, shows off one of his playlists

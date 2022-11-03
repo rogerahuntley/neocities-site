@@ -11,15 +11,15 @@ travel: los_angeles
 
 </div>
 
-### Friday
+## Friday
 
-#### DET
+### DET
 
 Arrived at the airport at 5:30 am for an 8am flight anticipating delays. There was a massive line on the way in, but seemingly nobody was using the kiosks. I got my boarding pass and walked through security - they had this funny walkway where you needed a partner and you’d walk in front of a dog. My gate was immediately past the end of the security lines, so I had no walking to do to find anything. I was pretty worried about being late, but it took all of 10 minutes from front door to gate. I sat in the waiting area of my gate while everybody got on a flight to New Orleans. 🤓
 
 I spent $4 on an airport monster (energy) and it was warm. After walking around for a bit, I decided that those flat hallway conveyor belts are a cheat code. I found a spot to sit and started reading the book I had brought, *No Longer Human*.
 
-#### Airplane 
+### Airplane 
 
 The flight there wasn’t awesome - the gentlemen next to me kept falling asleep, dropping his head and then waking up. The guy across the isle from me ordered a Bloody Mary and a Sprite - they charged him $24. The gentleman behind me would be forced (not much room) to keep his knees nestled into the back of my seat, and I would intimately feel every shift of his knees across my back. The attendant would walk through with her cart and sing the song of flight attendants on repeat with an almost robotic presence:
 
@@ -41,7 +41,7 @@ We wouldn’t land for another hour, and I decided that I really need to downloa
 
 My girlfriend had told me in advance that this was the best part: going from only seeing the tops of the clouds, to dipping through and watching the **grand** reveal of the city underneath. The transition was pretty awesome - except as I was watching, the lady in the window seat was putting in her contact lenses right in front of the window. I will never forget that.
 
-#### LAX
+### LAX
 
 Seth picked me up from the airport and we met with his brother Jordan and his roommate Jeff. We got burgers and boba tea. I got a coffee with regular boba in it, and I found out boba was chewy?? I really liked it though. The pineapple burger was sooooo good.
 
@@ -51,7 +51,7 @@ Seth’s roommate Jeff was in a cool production called *We’re Not Sure Yet*. I
 
 We went to the Airbnb afterwards. It’s a really nice place - there’s a lot of horror stories about Airbnb, but I’ve never found any of them to be true. We tried to watch The Quiet Place Part II but I fell asleep basically instantly.
 
-### Saturday
+## Saturday
 
 We walked around downtown for a while, I had an insanely nice meal from the Mendocino Farms (the Impossible Taco Salad). It was seasoned well, and I’m glad I had gotten the dressing on the side because it was so good that I didn’t need it. We also bought some shorts to go to the beach sometime this week, and then we walked around downtown for a while. We sat by a water fountain with orange steps (famous fountain) and then left for the Airbnb. Seth worked on homework, and we planned to go to the Grove theater to see Lightyear later that day.
 
@@ -69,7 +69,7 @@ I looked it up and it’s supposed to be somewhere between 7 and 10 hours to rea
 
 On the way out I popped off because it had gotten pretty dark, and with the streetlamps on it was all *very* beautiful. This one restaurant in particular completely stunned me, but I wasn’t fast enough for a picture. I’ll have to try to find one online.
 
-### Sunday
+## Sunday
 
 This was our last day of the weekend, and knowing that I’d be working 9 hours each day for the next three days, Sunday was our last *real* day to do anything.
 
@@ -81,17 +81,17 @@ We checked into a new Airbnb that night. It wasn’t as nice as the other one...
 
 The main thing was that there was no hot water. I ended up really liking the couch, instead of a static "back" it had these hardened cushions with rubber on the bottom so could adjust them individually for how far back you wanted to sit, and it has a huge overhead lamp. The couch lifted up and had this space underneath it for storage too. It was cozy enough to work in and relax for the next few days.
 
-### Monday
+## Monday
 
 After work, we went to walk around Little Tokyo. We stopped at some anime merch stores which was funny at first, but we don’t really care about character merch and there were a bunch of stores exactly like that, so the novelty wore off pretty quickly. I had us stop at a shoe store hoping for some like, themed shoes or something, but it ended up just being a regular outlet shoe store. Seth was getting hungry for ramen and he had found a place to eat, and so we were loosely meandering in that direction when we came across a few of those smaller communal areas I love so much. In the first one we stopped at a local bookstore, which I really enjoyed. They had a huge wall of manga, separated into both Japanese and English. We looked for *Trigun* again, but still to no avail. They had a lot of other books that B&N didn’t, so I enjoyed poking through the video game themed cookbooks and other miscellaneous sections. In another communal area stopped for lunch at Las Galas, where Seth got ramen, I got sushi (sunset roll), and we shared a plate of mozzarella sticks. The sushi was amazing and I really tried to make it last. It was probably my favorite meal, or it at least ties with the Men. Farms meal.
 
 For dinner, we had picked up some groceries for a chicken / quinoa salad, but Seth forgot to bring any dressing. We walked to the nearest grocer: the **Hong Kong Supermarket**. Walking in made Seth anxious: "I hate walking into a building and suddenly I can’t read or talk" 😂😂 We found some sesame soy dressing and it turned out to be pretty good.
 
-### Tuesday
+## Tuesday
 
 After work, we went to the gym and then Sizzlers. I wasn’t sure how the meal worked, I didn’t want to spend a lot of money, and I wasn’t super hungry - so I ended up just getting a small boy steak with the salad buffet. It turned out alright. The salad buffet was pretty sick, and had a lot more than just salad on it. I got a few types of salad (which was fun), and I also had some fruit and a small ice cream cone. The first time around the spaghetti looked epic, but after having eaten the steak and salad it did not look as appetizing. Ultimately I was more tired than hungry, but I’m glad we got to see it. That night I helped Seth with some API training assignment he had to do, which made me really excited to get my hands dirty with different technologies.
 
-### Wednesday
+## Wednesday
 
 One of the things I was looking forward to most the entire trip was going to the Santa Monica beach. I’ve been feeling the itch to go swimming for weeks and it's an iconic beach so it just made sense. We kept looking at the temperatures for this week and it was supposed to be hot every day, so it didn’t matter what day we went - rumor was that as a general rule, it’s always cooler by the water and the ocean water stays cold until the fall, so you have to go on a really hot day. The morning of Wednesday however, we were woken up by a super *freaking* **crazy** storm with booming thunder and flash flooding. The thunder persisted at random for the entirety of the work day, as we watched the temperature report drop significantly.
 
@@ -109,6 +109,6 @@ Once the cars picked up some speed through, it was actually a blast - pushing us
 
 After that, we went back to Airbnb, with a brief stop at Seth’s apartment so he could shower in hot water. I just felt so tired. I had wanted to watch a movie after the beach to actually make use of the gigantic TV in there, but I was just exhausted and fell asleep early. 
 
-### Thursday
+## Thursday
 
 We did the chores to clean up the Airbnb and left for the airport. Traffic was wild, so the length of the drive was like 30 minutes longer than expected. We got there with plenty of time to spare though, hugged and said goodbye. The airport experience was again very smooth - I’m feeling much more confident about flying alone now. The flight was much better and felt much shorter (return trips from any vacation usually do). This was my first time on the west coast, and although in some ways it feels like home, I still can't wait to go back.

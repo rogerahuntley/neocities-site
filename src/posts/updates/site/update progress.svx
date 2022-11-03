@@ -1,0 +1,26 @@
+---
+title: Update Progress
+date: '2022-08-29'
+tags: meta personal
+project: stealdog
+---
+
+Hi!
+
+I just wanted to get back in the swing of writing again, as well as mark the end of the first major phase of the redesign.
+
+A lot has happened. I have a few small sketch journal entries written down, I may flesh them out or post them as they are.
+
+The site? Well, it doesn't look amazing... But it works! It works super well.
+
+Halfway through I even had a major SvelteKit update and had to migrate everything [to the new system](https://github.com/sveltejs/kit/discussions/5748).
+
+Luckily, I already had most of the logic work done. Thanks to a flexible base - the "post" system, I can pull out post entries from a huge folder and pass them around the site. I can add different layouts with mdsvex too, *AND* I was able to easily build out the project/travel pages in a brand new way that's much more dynamic.
+
+That dynamic-ness needs work visually, and the content isn't all there. However, if you take a look around, you will be able to see that everything is much more organized and navigable than before.
+
+Video content just *works* with the small journal type, and they're much more filterable than before. That's how a lot of this magic happens.
+
+Anyway... Now that this is done, I might take some time to do some writing and work on other projects.
+
+After that, I'm gonna be filling out some of this content, and then focusing on making it look nice and responsive. I'm currently getting a *loooot* of milage out of the Bubble element I created. You'll see it all over the site.

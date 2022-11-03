@@ -71,7 +71,7 @@
   @for $i from 1 through 6 {
     h#{7 - $i} {
       @extend .font-title;
-      font-size: calc(1.6rem / 6 * $i);
+      font-size: calc(1.4rem / 6 * $i);
       font-weight: calc(300 + 500 / 6 * $i);
       letter-spacing: 0em;
       &:not(:first-child) {
@@ -99,19 +99,15 @@
   // root sizes
 
   :root {
-    // @include media('<tablet') {
-    //   font-size: 1rem;
-    //   // font-size: clamp(3vw, 6vw, 8vh);
-    // }
-    // @include media('>=tablet', '<desktop') {
-    //   font-size: 1rem;
-    //   // font-size: clamp(2vw, 3.6vw, 5.6vh);
-    // }
-    // @include media('>=desktop') {
-    //   font-size: 1rem;
-    //   // font-size: clamp(1vw, 1.8vw, 1.8rem);
-    // }
-    font-size:1.6rem;
+    @include media('<tablet') {
+      font-size: clamp(3vw, 6vw, 8vh);
+    }
+    @include media('>=tablet', '<desktop') {
+      font-size: clamp(2vw, 3.6vw, 5.6vh);
+    }
+    @include media('>=desktop') {
+      font-size: 2rem;
+    }
   }
 
   li {

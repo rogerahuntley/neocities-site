@@ -10,7 +10,7 @@ Free and detached from the requirements of social media - the idea of having a s
 
 ---
 
-### Let's take it again from the top.
+## Let's take it again from the top.
 
 Today I discovered yesterweb\* and this was so intriguing to me - I’m a web developer by trade, and trying to keep up and learn new technologies is both exhausting and exhilarating. I’m also mostly self-taught, which includes inventing wheel after wheel (simply because I couldn’t find any answers that didn’t require jQuery and I had a point to make), but that got me where I am today. I have been making websites for myself since 2014, and in March of this year (2022) I discovered what AngularJS actually does. Of course - this kind of thing is around "these days" (React, Vue), but I had no idea they've been around for *that long*. It's hard to imagine how much time and effort it would have afforded me if I hadn’t just really *enjoyed* the feeling of opening a blank <abbr title="HyperText Markup Language">`HTML`</abbr> document and wiring stuff up from scratch. Having tried some of them since, Vue, React and Angular all require a mind-boggling amount of boilerplate - factories, controllers, directives. They all use JavaScript weirdness operate, leading to a distorted sense of JavaScript fundamentals. I may have been better off not knowing.
 
@@ -26,12 +26,12 @@ Today I discovered yesterweb\* and this was so intriguing to me - I’m a web de
 
 ---
 
-### cool entry points to this part of the web
+## cool entry points to this part of the web
 * [yesterweb](https://yesterweb.org/)
 * [sadgrl.online](https://sadgrl.online/)
 * [neocities](https://neocities.org/)
 
-### these sites stuck out to me on my initial look
+## these sites stuck out to me on my initial look
 * [low tech magazine (runs on solar panels)](https://solar.lowtechmagazine.com/)
 * [van life](https://vanlife.neocities.org/events.html)
 * [lainchan](https://lainchan.org/)

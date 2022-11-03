@@ -6,6 +6,6 @@ export const load = async () => {
   return {
     articles,
     title: 'Blogs',
-    titleLink: '/blogs/',
+    titleLink: '/blog/',
   };
 };

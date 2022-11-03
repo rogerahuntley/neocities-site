@@ -3,11 +3,11 @@ title: August Monthly Site Update
 date: '2022-08-31'
 tags: meta monthly
 monthly: true
-hidden: true
 project: stealdog
+hidden: true
 ---
 
-### August 6th
+## August 6th
 
 Finally... the light...
 
@@ -15,7 +15,7 @@ Everything is hooked up again and *should* be working. There might be some lefto
 
 This doesn't mark `feature complete`, but the website now works as it used to again. There's a lot more yet to be added, but the groundwork was laid.
 
-#### I fleshed out some things on the way:
+### I fleshed out some things on the way:
 
 1. The api endpoints are different - instead of `/api/journal.json` it's now `api/posts/journals.json`. I'm not sure if that endpoint will be generated without being linked to from somewhere. It's built with dynamic keywords, so `/api/posts/articles.json` will actually trigger the same file. Because it's statically-rendered, something needs to actually ping these dynamic endpoints at compilation time to cause them to be created. I might have to build a site-map to trigger endpoint generation.
 

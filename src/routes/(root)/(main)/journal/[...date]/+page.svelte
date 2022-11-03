@@ -18,23 +18,6 @@
 {#if day || (filtered.length == 1 && !filtered[0].data.metadata.size.includes('small'))}
   <PostBig post={filtered[0]} />
 {:else}
-  <!-- {#if year}
-    <JournalHeader text={(month ? `${toMonthName(month)} ${year}` : year).toString()} link="../" />
-  {/if} -->
-
-  <!-- {#if !year}
-    {#each Object.entries(dates) as [year, yearA]}
-      <ul class="journals-sort">
-        <li>Sort:</li>
-        {#each Object.entries(yearA) as [month]}
-          <li>
-            <JournalsLink {year} {month} />
-          </li>
-        {/each}
-      </ul>
-    {/each}
-  {/if} -->
-
   <JournalsList journals={filtered} />
 {/if}
 
